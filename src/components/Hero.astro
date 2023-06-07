@@ -1,0 +1,30 @@
+---
+import {getLangFromUrl, useTranslations } from '../i18n/utils'
+import '../styles/hero.scss'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+
+<div class="hero-container">
+  <div class="left-col">
+    <div class="content-col">
+      <div class="content-wrap">
+        <div class="head">
+          <h6 >{t("hero.question")}</h6>
+          <h1 >{t("hero.title")}</h1>
+        </div>
+        <p >{t("hero.subtitle")}</p>
+        <div class="content_btns">          
+          <button class="btn-stroke-yellow">Our Strategy</button>
+          <button class="btn-line-blue">Free Consultant Know</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-col">
+    <img src="../../../public/hero1.jpg" alt="">
+  </div>
+</div>
+
