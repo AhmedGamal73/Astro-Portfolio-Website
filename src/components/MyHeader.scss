@@ -3,15 +3,24 @@ $prim2: #27355e;
 $prim3: #DFC063; 
 
 
+.sticky {
+  position: fixed;
+  top: -80px;
+  z-index: 9999;
+  transition: top .3s ease-in-out;
+  width: 100%;
+}
+
+.sticky.show {
+  top: 0
+}
 
 header {
-  width: 100%;
   background-color: $prim1;
   padding-block:  .7rem;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
+  border-radius: 0 0 10px 10px;
 }
+
 
 
 .header-container {
@@ -165,9 +174,9 @@ nav {
     align-items: center;
     gap: 1.3rem;
     width: 100%;
-    background-color: $prim2;
     padding-block: 1.3rem;
     max-height: 0;
+    margin-top: -36px;
     background: $prim2;
     transition: max-height 0.3s ease-in-out;
     overflow: hidden; 

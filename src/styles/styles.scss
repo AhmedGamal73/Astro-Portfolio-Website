@@ -48,7 +48,7 @@ h6 {
   color: $prim1;
 }
 p {
-  font-size: .9vw!important;
+  font-size: 1.3vw!important;
   color: $prim1;
   font-family: "Poppins Light";
 }
@@ -189,18 +189,19 @@ p {
 
 .btn-line-blue {
   display: inline-block;
-  padding: 6px 12px;
+  padding-top: 8px;
   cursor: pointer;
   color: $blue;
   background: transparent;
   border: none;
   font-size: 12px;
-  transition: 200ms;
+  transition: 500ms;
   text: {
     decoration: none;
   }
   &:hover {
     color: $prim1;
+    transform: translateX(1vw);
   }
   &::after {
     content: '';

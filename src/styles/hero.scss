@@ -1,30 +1,32 @@
 @import './colors.scss';
 
 .hero-container {
+  padding-top: 3rem;
   display: flex;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);;
-
+  background: linear-gradient(7deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);
   .left-col {
     width: 50%;
     display: flex;
-    height: 80vh;
+    height: 90vh;
     justify-content: start;
 
     .content-col {
       display: flex;
+      position: relative;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-inline-start: 5vw;
       &::after {
+      transform: rotate(90deg) ;
         content: '';
         background-image: url('../icons/arrow-right-up.svg');
         display: block;
         position: absolute;
-        bottom: 2vw;
-        left: 1vw;
-        width: 2vw;
-        height: 3vw;
+        top: 13vw;
+        left: 0;
+        width: 32px;
+        height: 32px;
         background-size: contain;
         background-repeat: no-repeat;
       }
@@ -37,17 +39,20 @@
       gap: 1.5rem;
 
       h6 {
-      color: $blue;
+        display: none;
+      color: $prim2;
       }
       h1 {
-        color: $prim2
+        color: $prim2;
+        span {
+          color: $blue;
+      }
       }
       .head {
         max-width: 80%;
       }
       p {
         width: 90%;
-        font-size: 1.3vw!important;
       }
 
 
@@ -58,12 +63,14 @@
       display: flex;
       flex-direction: start;
       align-items: start;
+      gap: 20px;
+
       button:nth-child(1) {
       border: 0;
       font-size: 12px;
     }
       button:nth-child(2) {
-      color: $prim2
+      color: $prim2;
     }
     }
   }

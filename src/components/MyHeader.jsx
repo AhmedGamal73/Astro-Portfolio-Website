@@ -1,19 +1,36 @@
 import './MyHeader.scss'
 import {logo} from '../icons'
-import { useState } from 'react'
-
-
+import { useEffect, useState } from 'react'
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen ] = useState(false);
+  const [isSticky, setIsSticky ] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = 70;
+      const scrollPosition = window.scrollY
+
+      if(scrollPosition >= headerHeight) {
+        setIsSticky(true)
+      }else {
+        setIsSticky(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+  }, []);
   const toggleHandler = () => {
     setIsOpen(!isOpen)
     console.log(isOpen)
   }
 
  return  (
-    <header>
+    <header className={isSticky ? 'sticky show' : 'sticky'}>
       <div className='header-container'>
         <div className="header-start">
           <img 
