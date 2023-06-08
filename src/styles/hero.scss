@@ -91,3 +91,39 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    padding: 0;
+
+    .left-col {
+      height: 50vh;
+
+      .content-wrap {
+        align-items: center!important;
+        justify-content:center
+      }
+    }
+    .content-col {
+      height: 40vh;
+      &::after{
+        top: 0!important;
+        width: 3rem!important;
+      }
+    }
+    .right-col {
+      padding-top: 0;
+      img {
+        border-top-left-radius: 0px;
+      }
+    }
+
+    .child {
+      width: 100%;
+    }
+
+    .content_btns {
+      justify-content: center;
+    }
+  }
+}

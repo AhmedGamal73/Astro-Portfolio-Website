@@ -1,0 +1,56 @@
+---
+import '../styles/Bookkeeping.scss'
+import Content2 from './content/Content2.astro';
+import {bk1, bk2} from '../../public/'
+
+---
+
+<section >
+  <div class="book-container">
+    <div class="upper-col">
+
+      <div class="start-col">
+        <Content2 
+          title="Don't bother with tax"
+          span= "calculations"
+          subtitle="We can help explain what it means and even solve the problem for you."
+          btn1="Book Appointment"
+          btn2="Know More About Us"
+          btn1Src="#"
+          btn2Src="#"
+        />
+      </div>
+
+      <div class="end-col">
+        <div class="bgc">
+          <img src={bk1} alt=""> 
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="lower-col">
+
+      <div class="start-col1">
+        <Content2 
+          title="Don't bother with calculations"
+          span= "Tax"
+          subtitle="We can help explain what it means and even solve the problem for you."
+          btn1="Book Appointment"
+          btn2="Know More About Us"
+          btn1Src="#"
+          btn2Src="#"
+        />
+
+      </div>
+      <div class="end-col2">
+        <div class="bgc">
+          <img src={bk2} alt=""> 
+        </div>
+      </div>
+
+    </div>
+  </div >
+   
+</section> 

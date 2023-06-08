@@ -61,6 +61,7 @@ nav {
       a {
         font-size: 13px!important;
         color: white;
+        transition: 300ms;
         &:hover {
           color: $prim3;
         }

@@ -3,18 +3,9 @@
 @import './fonts.scss';
 @import './colors.scss';
 
-/* html { */
-/*   font-size: 16px; */
-/*      */
-/*   @media screen and (min-width: 900px) { */
-/*     font-size: 18px; */
-/*   } */
-/*      */
-/*   @media screen and (min-width: 1200px) { */
-/*     font-size: 20px; */
-/*   } */
-/* } 
-*/
+html {
+  overflow-x: hidden!important;
+}
 
 ::after, ::before {
   box-sizing: border-box;
@@ -22,33 +13,33 @@
 
 /* /* Global Headings size */ 
 h1 {
-  font-size: 2.7vw!important;
+  font-size: 2.7vw;
   color: $prim1;
 }
 h2 {
-  font-size: 2.1vw!important;
+  font-size: 2.1vw;
   color: $prim1;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 1.7vw!important;
+  font-size: 1.7vw;
   color: $prim1;
 }
 h4 {
-  font-size: 1.3vw!important;
+  font-size: 1.3vw;
   color: $prim1;
 }
 h5 {
-  font-size: 1.1vw!important;
+  font-size: 1.1vw;
   color: $prim1;
 }
 h6 {
-  font-size: 0.9vw!important;
+  font-size: 0.9vw;
   color: $prim1;
 }
 p {
-  font-size: 1.3vw!important;
+  font-size: 1.3vw;
   color: $prim1;
   font-family: "Poppins Light";
 }
@@ -56,12 +47,14 @@ p {
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
+    text-align: center;
   }
   h2 {
     font-size: 5.3vw;
   }
   h3 {
-    font-size: 4vw;
+    font-size: 6vw;
+    text-align: center;
   }
   h4 {
     font-size: 3.5vw;
@@ -70,11 +63,21 @@ p {
     font-size: 2.5vw;
   }
   h6 {
-    font-size: 1.8vw;
+    font-size: 3vw;
   }
 
   p {
-    font-size: 3vw;
+    font-size: 3vw!important;
+    text-align: center;
+  }
+
+  a {
+    font-size: 3vw!important;
+  }
+
+  /* buttons */
+  .btn-stroke-yellow {
+    font-size: 3vw!important;
   }
 }
 
@@ -84,8 +87,10 @@ p {
   background: $prim4;
   a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: .9vw;
+    font-family: "Poppins Light";
   }
+
   li {
     list-style: none;
     margin: 0;
@@ -131,7 +136,6 @@ p {
 // Buttons
 .btn-stroke-yellow {
   display: inline-block;
-  font-size: 12x;
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -167,6 +171,26 @@ p {
   }
 };
 
+.btn-stroke-blue-heavy {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background: $prim1;
+  border: 1px solid $prim1;
+  font-size: 12x;
+  transition: 300ms;
+  text: {
+    decoration: none;
+  }
+  &:hover {
+    background: $blue;
+    color: white;
+    border-color: $blue;
+  }
+};
+
 .btn-stroke-blue {
   display: inline-block;
   padding: 6px 12px;
@@ -176,7 +200,7 @@ p {
   background: $blue;
   border: 1px solid $blue;
   font-size: 12x;
-  transition: 200ms;
+  transition: 300ms;
   text: {
     decoration: none;
   }
@@ -191,7 +215,7 @@ p {
   display: inline-block;
   padding-top: 8px;
   cursor: pointer;
-  color: $blue;
+  color: $prim1;
   background: transparent;
   border: none;
   font-size: 12px;
@@ -200,7 +224,7 @@ p {
     decoration: none;
   }
   &:hover {
-    color: $prim1;
+    color: $blue;
     transform: translateX(1vw);
   }
   &::after {
@@ -208,16 +232,13 @@ p {
     display: inline-block;
     vertical-align: middle;
     margin-inline-start: .3rem;
-    background-image: url('../icons/chevron-right-svgrepo-com.svg');
+    background-image: url('../icons/chevron-right.svg');
     width: 3rem;
     height: 1.1rem;
     background-size: contain;
     background-repeat: no-repeat;
   }
 };
-
-@media (max-width: 768px) {
-}
 
 /* Global */
 .box-shadow {

@@ -1,4 +1,4 @@
-import './MyHeader.scss'
+import '../styles/MyHeader.scss'
 import {logo} from '../icons'
 import { useEffect, useState } from 'react'
 

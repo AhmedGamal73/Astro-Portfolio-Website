@@ -14,6 +14,8 @@ import program3 from './program3.png';
 import facebook from './facebook.svg';
 import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
+import bk1 from './bk1.png';
+import bk2 from './bk2.png';
 
 export {
   linkedin,
@@ -31,5 +33,7 @@ export {
   mechanic,
   program1,
   program2,
-  program3
+  program3,
+  bk1,
+  bk2,
 }

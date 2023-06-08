@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon";
+import './Card.scss'
+
+export interface props {
+    title: "string",
+    subtitle: "string",
+    feature1: "string",
+    featureSrc1: "string",
+    feature2: "string",
+    featureSrc2: "string",
+    feature3: "string",
+    featureSrc3: "string",
+    btn: "string",
+    btnSrc: "string",
+    img: "string",
+};
+
+const { img, title, subtitle, feature1, feature2, feature3,featureSrc1, featureSrc2, featureSrc3, btn, btnSrc} = Astro.props;
+---
+
+
+<div class="card-container">
+    <div class="top">
+        <img src={img} alt="">
+    </div>
+    <div class="bottom">
+        <div class="title-wrap">
+            <h3>{title}</h3>
+            <p>{subtitle}</p>
+        </div>
+        <div class="feature-wrap">
+            <div class="feature">
+                <Icon name="mdi:chevron-right" />
+                <a href={featureSrc1} class="feature">{feature1}</a>
+            </div>
+            <div class="feature">
+                <Icon name="mdi:chevron-right" />
+                <a href={featureSrc2} class="feature">{feature2}</a>
+            </div>
+            <div class="feature">
+                <Icon name="mdi:chevron-right" />
+                <a href={featureSrc3} class="feature">{feature3}</a>
+            </div>
+        </div>
+        <div class="btn">
+            <a class="btn-stroke-blue-heavy" href={btnSrc}>{btn}</a>
+        </div>
+
+    </div>
+</div>
