@@ -1,0 +1,54 @@
+---
+export interface Props {
+  tag: string,
+  title: string,
+  subtitle: string,
+  titleColor: string,
+  subtitleColor: string,
+}
+
+
+const a = Astro.props
+---
+
+<div class="content-wrap">
+  <h6>{a.tag}</h6>
+  <h2 style={{color: a.titleColor}}>{a.title}</h2>
+  <p style={{color: a.subtitleColor}}>{a.subtitle}</p>
+</div>
+
+
+<style>
+
+ div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+div.content-wrap h6 {
+  color: #DFC063;
+}
+ div.content-wrap h2 {
+  text-align: center;
+}
+
+div.content-wrap p {
+  text-align: center;
+  padding-top: .7rem;
+  font-size: .9;
+}
+
+
+@media (max-width: 768px) {
+   div.content-wrap {
+    width: 80%;
+    text-align: center;
+  }
+  div.content-wrap p {
+    font-size: 3.5rem;
+  }
+}
+</style>

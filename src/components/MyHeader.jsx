@@ -1,6 +1,6 @@
-import '../styles/MyHeader.scss'
-import {logo} from '../icons'
-import { useEffect, useState } from 'react'
+import '../styles/MyHeader.scss';
+import {logo} from '../icons';
+import { useEffect, useState } from 'react';
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen ] = useState(false);
@@ -58,8 +58,8 @@ const MyHeader = (props) => {
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? 'open' : ''}`}>
-          <button className='btn-stroke-yellow' type="button">sign in</button> 
-          <button className='btn-stroke-white' type="button">join our team</button> 
+          <a className='btn-stroke-yellow' type="button">sign in</a> 
+          <a className='btn-stroke-white' type="button">Apply for job</a> 
         </div>
       </div>
     </header>

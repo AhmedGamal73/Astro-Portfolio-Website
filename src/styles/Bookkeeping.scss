@@ -1,7 +1,22 @@
 @import '../styles/colors.scss';
 
+  [astro-icon="teenyicons:arrow-solid"] {
+    color: $blue;
+    position: absolute;
+    font-size: 5rem;
+    top: 2rem;
+    left: 0;
+  }
+
 .book-container {
-  padding-block: 3rem;
+  .line {
+    color: #9F9F9F;
+    background-color: #9F9F9F;
+    height: 1px;
+    width: 80%;
+
+  }
+  padding: 12rem 0 4rem 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -15,6 +30,7 @@
 
     .start-col {
       display: flex;
+      position: relative;
       width: 45%;
     } 
 
@@ -39,8 +55,29 @@
         }
       }
     }
+  }
 
-    
+  @media (max-width: 768px) {
+    .upper-col {
+      flex-direction: column-reverse;
+      
+      .start-col {
+        width: 100%;
+
+        .content2-container {
+          align-items: center;
+
+          .content-wrap {
+            width: 70%;
+            padding-top: 2rem;
+          }
+        }
+      }
+      .end-col {
+        width: 100%;
+      }
+    } 
+
   }
 
   .lower-col {
@@ -53,7 +90,7 @@
       width: 55%;
     } 
 
-    .end-col2 {
+    .end-col1 {
       width: 45%;
 
       .bgc {
@@ -71,8 +108,35 @@
           left: 0;
           margin: auto;
           width: auto;
-          height: 130%;
+          height: 115%;
         }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lower-col {
+      margin-top: 3rem;
+
+      flex-direction: column-reverse;
+      .start-col1 {
+        width: 100%;
+
+        .content2-container {
+          width: 100%;
+          padding: 1.3rem;
+          align-items: center;
+        }
+      }
+      .end-col1 {
+        width: 100%;
+      }
+
+      
+      .btn-wrap {
+        gap: 1rem;
+        justify-content: center;
+        padding: 0;
       }
     }
   }

@@ -7,7 +7,7 @@
   position: relative;
   padding-block: 5rem;
   background-color: $prim1;
-  border-radius: 20px 20px 0 0 ;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,7 @@
 
   [astro-icon="teenyicons:arrow-solid"] {
     position: absolute;
+    color: $prim3;
     font-size: 5rem;
     top: 5rem;
     left: 0;
@@ -28,7 +29,7 @@
 
   }
   .btn-wrap {
-    width: 50%;
+    width: 80%;
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
@@ -39,12 +40,14 @@
     h3 {
       color: white;
       text-align: center;
+      font-family: 'Poppins light';
     }
-    button {
+    a {
+      text-align: center;
       border-radius: 10px;
-      font-size: 1.1vw;
-      padding: 3rem 0;
-      width: 90%;
+      font-size: .9vw;
+      padding: 1rem ;
+      width: 20%;
       padding-block: 10px;
     }
   }

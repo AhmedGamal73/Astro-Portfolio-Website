@@ -1,0 +1,33 @@
+---
+import './TeamCard.scss';
+
+export interface props {
+    img: String,
+    flipImg: String,
+    name: String,
+    jobTitle: String
+    
+}
+
+const p = Astro.props
+---
+
+
+<div class="emp-card">
+    <div class="card-img">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src={p.img} alt="">
+        </div>
+        <div class="flip-card-back">
+          <img src={p.flipImg} alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-body">
+      <h4>{p.name}</h4>
+      <small>{p.jobTitle}</small>
+    </div>
+  </div>

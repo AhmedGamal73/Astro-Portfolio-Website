@@ -1,8 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import Card from './Card/Card.astro';
-import Content1 from './content/Content1.astro'
-import '../styles/TaxSection.scss'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Card from '../Card/Card.astro';
+import Content1 from '../Content/Content1.astro'
+import '../../styles/TaxSection.scss'
 import Icon from 'astro-icon';
 
 const lang = getLangFromUrl(Astro.url);
@@ -16,6 +16,8 @@ const t = useTranslations(lang);
     <Content1 
       tag= "Insitutions"
       title= "Our tax specialists are ready"
+      titleColor="white"
+      subtitleColor="white"
       subtitle ="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
     />
     <div class="card-wrap">
@@ -24,8 +26,11 @@ const t = useTranslations(lang);
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
         img="../../public/company1.png"
         feature1= "A dedicated account manager to handle all paperwork on your behalf" feature1= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc2="#"
         feature3= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc3="#"
         btn="Apply for registration"
         btnSrc="#"
       />
@@ -34,8 +39,11 @@ const t = useTranslations(lang);
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
         img="../../public/company2.png"
         feature1= "A dedicated account manager to handle all paperwork on your behalf" feature1= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc2="#"
         feature3= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc3="#"
         btn="Apply for registration"
         btnSrc="#"
       />
@@ -43,15 +51,18 @@ const t = useTranslations(lang);
         title= "Examination and Appeal"
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
         feature1= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc2="#"
         feature3= "A dedicated account manager to handle all paperwork on your behalf"
+        featureSrc3="#"
         btn="Apply for registration"
         btnSrc="#"
       />
     </div>
     <div class="btn-wrap">
       <h3>Still didn't Know which category ?</h3>
-      <button class="btn-stroke-yellow">Book A Free Consaltant Now</button>
+      <a href="#" class="btn-stroke-yellow">Book A Free Consaltant Now</a>
     </div>
   </div>
 </section>

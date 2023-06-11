@@ -27,14 +27,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding-inline: 5rem;
 
   .header-start {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 15%;
+    padding-inline-start: 3rem;
     img {
       width: 52px;
       max-width: 75px;
@@ -78,10 +77,21 @@ nav {
   gap: 20px;
   align-items:center;
   width: 25%;
-  
+  padding-inline-end: 3rem;
+}
+.header-end a:nth-child(1)::after {
+  content: '';
+  background-image: url('../icons/sign-in.svg');
+  width: 14px;
+  height: 14px;
+  margin-inline-start: 7px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
+
   header {
     background-color: white;
     padding-block: 0;
@@ -155,7 +165,8 @@ nav {
           cursor: pointer;
           display: block;
           text-align: center;
-
+          height: 6vh;
+          display: inline-block;
           a {
             text-decoration: none;
             color: white;
@@ -176,6 +187,7 @@ nav {
     gap: 1.3rem;
     width: 100%;
     padding-block: 1.3rem;
+    padding-inline: 0;
     max-height: 0;
     margin-top: -36px;
     background: $prim2;

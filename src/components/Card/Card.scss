@@ -59,11 +59,6 @@
     .feature-wrap {
       padding: 12px;
       width: 80%;
-      transition: 300ms; 
-      & a:hover {
-        margin-inline-end: -3.3rem;
-      }
-
     }
     .feature {
       display: flex;
@@ -73,8 +68,9 @@
       a {
         text-align: start;
         color: $prim2;
-        transition: 300ms;
+        transition: 300ms; 
       &:hover {
+        margin-inline-end: -3.3rem;
         color: $blue
       }
     }
@@ -87,7 +83,7 @@
     margin-top: 5rem
   }
   a {
-    width: 90%;
+    width: 80%;
     text-align: center;
     padding-block: 10px;
   }

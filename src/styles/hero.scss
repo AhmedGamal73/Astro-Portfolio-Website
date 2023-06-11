@@ -4,6 +4,19 @@
   padding-top: 3rem;
   display: flex;
   background: linear-gradient(7deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);
+  & {
+      opacity: 0;
+      animation: fadeIn 1.3s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% {
+      opacity: 0;
+      } 
+      100% {
+      opacity: 1;
+      }
+
+    }
   .left-col {
     width: 50%;
     display: flex;
@@ -106,6 +119,7 @@
     }
     .content-col {
       height: 40vh;
+      margin-bottom: 0;
       &::after{
         top: 0!important;
         width: 3rem!important;

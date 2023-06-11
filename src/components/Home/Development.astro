@@ -1,0 +1,65 @@
+---
+import Content1 from '../Content/Content1.astro'
+import '../../styles/Development.scss'
+import Icon from 'astro-icon'
+
+export interface props {
+    tag: 'string',
+    title: 'string',
+    img: 'string',
+    imgData: 'string',
+    stepTitle1: 'string',
+    stepSubtitle1: 'string',
+    stepTitle2: 'string',
+    stepSubtitle2: 'string',
+    stepTitle3: 'string',
+    stepSubtitle3: 'string',
+    btn1: 'string',
+    btn2: 'string',
+    btnSrc1: 'string',
+    btnSrc2: 'string',
+}
+
+const {btn1, btn2, btnSrc1, btnSrc2, tag, title, img, imgData, stepTitle1, stepSubtitle1, stepTitle2, stepSubtitle2, stepTitle3, stepSubtitle3 } = Astro.props
+---
+<section class="dev-cont">
+    <div class="first-col">
+        <Content1 
+        tag={tag}  
+        title={title}
+        />
+    </div>
+    <div class="second-col">
+        <div class="process-cont">
+            <div class="right-col">
+                <div class="steps-cont">
+                    <div class="step">
+                        <h3 class="num">1</h3>
+                        <h4>{stepTitle1}</h4>
+                        <p>{stepSubtitle1}</p>
+                        <hr class="line">
+                    </div>
+                    <div class="step">
+                        <h3 class="num">2</h3>
+                        <h4>{stepTitle2}</h4>
+                        <p>{stepSubtitle2}</p>
+                        <hr class="line">
+                    </div>
+                    <div class="step">
+                        <h3 class="num">3</h3>
+                        <h4>{stepTitle3}</h4>
+                        <p>{stepSubtitle3}</p>
+                        <hr class="line">
+                    </div>
+                </div>
+            </div>
+            <div class="left-col">
+                <img src=`../../../public/${img}` alt={imgData}>
+            </div>
+        </div>
+    </div>
+    <div class="third-col">
+        <a class="btn-stroke-yellow" href={btnSrc1}>{btn1}</a>
+        <a class="btn-stroke-blue-heavy" href={btnSrc2}>{btn2}</a>
+    </div>
+</section>

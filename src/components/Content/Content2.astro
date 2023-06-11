@@ -1,0 +1,50 @@
+---
+export interface Props {
+  btn1: string;
+  btn2: string;
+  title: string;
+  span: string;
+  subtitle: string;
+  btn1Src: string;
+  btn2Src: string;
+}
+const p = Astro.props
+---
+
+<div class="content2-container">
+  <div class="content-wrap">
+    <h1>{p.title} <span>{p.span}</span></h1>
+    <p>{p.subtitle}</p>
+  </div>
+  <div class="btn-wrap">
+    <a href={p.btn1Src} class="btn-stroke-yellow">{p.btn1}</a>
+    <a href={p.btn2Src} class="btn-line-blue">{p.btn2}</a>
+  </div>
+</div>
+
+<style>
+  .content2-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: start;
+    justify-content: center;
+    padding-inline-start: 7rem;
+  }
+  .btn-wrap {
+    display: flex;
+    gap: 2.3rem;
+  }
+  span {
+    color: #0080f9;
+    font-family: "Poppins light";
+  }
+
+  @media (max-width: 768px) {
+    .content2-container {
+      width: 100%;
+      padding: 1rem 1rem 3rem 1rem;
+    }
+  }
+</style>

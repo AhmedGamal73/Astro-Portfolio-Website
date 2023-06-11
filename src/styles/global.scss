@@ -3,9 +3,6 @@
 @import './fonts.scss';
 @import './colors.scss';
 
-html {
-  overflow-x: hidden!important;
-}
 
 ::after, ::before {
   box-sizing: border-box;
@@ -39,9 +36,8 @@ h6 {
   color: $prim1;
 }
 p {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   color: $prim1;
-  font-family: "Poppins Light";
 }
 
 @media (max-width: 768px) {
@@ -57,7 +53,7 @@ p {
     text-align: center;
   }
   h4 {
-    font-size: 3.5vw;
+    font-size: 3.9vw;
   }
   h5 {
     font-size: 2.5vw;
@@ -102,11 +98,16 @@ p {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  padding-left: 0;
 }
 
-[lang='en']
-  body {
-  font-family: 'Poppins', sens-serif;
+[lang='en-US']body {
+  h1,h2,h3,h4,h5{
+    font-family: 'Poppins';
+  }
+  h6, p {
+    font-family: "Poppins Light"!important;
+  }
 
   h1, button {
     font-family: 'Poppins';
@@ -141,7 +142,7 @@ p {
   cursor: pointer;
   color: $prim1;
   background: $prim3;
-  border: 1px solid $prim1;
+  border: 1px solid $prim3;
   text-decoration: none;
   transition: 200ms;
   &:hover {

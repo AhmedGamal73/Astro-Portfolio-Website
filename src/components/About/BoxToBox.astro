@@ -1,0 +1,119 @@
+---
+import Icon from 'astro-icon';
+
+export interface props {
+    title: String,
+    subtitle: String,
+    bgc: String,
+    iconColor: String,
+    contentIcon: String,
+    contDirection: String,
+    icon: String
+}
+
+const p = Astro.props
+---
+
+<section style={{flexDirection: p.contDirection}} class="box-cont">
+    <div style={{background: p.bgc}} class="left-col">
+        <Icon name={p.icon} style={{color: p.iconColor}} />
+    </div>
+
+    <div class="right-col">
+        <div class="content-wrap">
+            <div class="icon-wrap">
+                <Icon name="ph:book-fill" />
+            </div>
+            <h3>{p.title}</h3>
+            <p>{p.subtitle}</p>
+        </div>
+    </div>
+</section>
+
+
+<style >
+    [astro-icon] {
+        width: 130px;
+    }
+
+    [astro-icon="ph:book-fill"] {
+        display: block;
+        width: 20px;
+        height: 30px;
+        color: #152040 ;
+    }
+    section.box-cont {
+        width: 100%;
+        max-height: 35vh;
+        display: flex;
+        justify-content: center;
+    }
+    .box-cont div.left-col {
+        width: 50%;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-cont div.right-col {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-cont div.right-col div.content-wrap {
+        width: 70%;
+    }
+
+    .box-cont div.right-col p {
+        width: 80%;
+        font-size: 1.1vw;
+
+    }
+    .box-cont div.right-col div.icon-wrap {
+        width: 30px;
+        height: 30px;
+        background:#DFC063 ;
+        border-radius: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 768px ) {
+
+        [astro-icon] {
+            width: 50px;
+        }
+
+        [astro-icon="ph:book-fill"] {
+            width: 15px;
+            height: 20px;
+        }
+
+        div.left-col {
+            width: 30%!important;
+        }
+        div.right-col {
+            width: 70%!important;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.164)
+        }
+            .box-cont div.right-col div.icon-wrap {
+            width: 25px;
+            height: 25px;
+        }
+        div.content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%!important;
+        }
+        div.content-wrap p {
+            width: 90%!important;
+        }
+    }
+</style>
+

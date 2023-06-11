@@ -1,0 +1,84 @@
+.emp-card {
+    color: #ffffff;
+    background: #DFC063;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    width: 14rem;
+    height: 22rem;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .card-img {
+      perspective: 1000px;
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      &:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      img {
+        width: 100%;
+        height: 17rem;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      margin-top: 17rem;
+
+      h4 {
+        margin: 0;
+      }
+
+      small {
+        font-family: 'Poppins light';
+        opacity: 0.6;
+        margin-bottom: 0;
+        color: #152040;
+      }
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .emp-card {
+        width: 50%;
+    }
+  }

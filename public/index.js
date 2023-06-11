@@ -16,6 +16,8 @@ import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
 import bk1 from './bk1.png';
 import bk2 from './bk2.png';
+import aboutHero from './about-hero.png';
+import singIn from './sign-in.svg'
 
 export {
   linkedin,
@@ -36,4 +38,6 @@ export {
   program3,
   bk1,
   bk2,
+  aboutHero,
+  singIn,
 }
