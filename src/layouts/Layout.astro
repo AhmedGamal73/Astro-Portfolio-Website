@@ -1,5 +1,6 @@
 ---
-import '../styles/global.scss'
+import '../styles/global.scss';
+import '../styles/global.css';
 import {MyHeader} from '../components';
 import { getLangFromUrl, useTranslations } from '../i18n/utils'
 import Footer from '../components/Footer.astro'
@@ -9,17 +10,19 @@ const t = useTranslations(lang)
 
 export interface Props {
 	title: string;
+	lang: string;
 }
 
 const { title } = Astro.props;
 ---
-<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE html
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/x-icon" href="/favicon.svg">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -33,12 +36,12 @@ const { title } = Astro.props;
 
 <style>
 	header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-.hamburger {
-display: none;
-}
+	.hamburger {
+		display: none;
+	}
 </style>

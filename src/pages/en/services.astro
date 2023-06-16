@@ -1,0 +1,61 @@
+---
+import { Layout } from "../../layouts";
+import Content1 from "../../components/Content/Content1.astro";
+import ServiceBox from '../../components/Service/ServiceBox.astro'
+import Icon from 'astro-icon'
+
+// Colors
+const prim1 = "#152040",
+  prim3 = "#DFC063",
+  blue = "#0080F9",
+  sky = "#B7E6FD";
+---
+
+<Layout title="Services">
+    <section>
+        <div class="service-hero">
+            <Icon style="width: 63px; position: absolute; top: 0; rotate: 180deg;" name="ph:arrow-up-thin" />
+            <Content1 
+                title="Solutions to all your facility problems"
+                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+            />
+            <a class="btn-stroke-blue-heavy" href="" >Contact one of our experts</a>
+        </div>
+        <ServiceBox 
+            title="Who We Are ?"
+            subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+            iconColor={prim1}
+            contDirection="row"
+            icon="fluent:people-team-16-filled"
+            img="service1"
+            span="bookkeeping"
+            btn1="Join Us Now"
+            btn2="Book A Appointment"
+        />
+    </section> 
+</Layout>
+
+
+<style>
+    .service-hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40vh;
+        background: var(--prim3);
+        padding-top: 6rem;
+    }
+
+    .service-hero a {
+        border-raduis: 4px;
+        padding: .8rem 3rem;
+    }
+    .service-hero a:hover {
+        background: var(--prim3);
+        border: 1px solid var(--prim1);
+        color: var(--prim1);
+    } 
+</style>

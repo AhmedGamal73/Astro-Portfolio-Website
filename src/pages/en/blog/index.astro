@@ -1,0 +1,124 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Content1 from "../../../components/Content/Content1.astro"
+
+const res = await fetch("http://localhost/blog/wp-json/wp/v2/posts")
+const posts = await res.json();
+---
+<Layout title="post">
+    <section class="archive-cont">
+        <div class="up-row">
+            <Content1
+                title="Solutions for all your taxis"
+                titleColor="var(--prim3)"
+                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+                subtitleColor="white"
+            />
+        </div>
+        <div class="cards-wrap">
+            {
+                posts.map(p => (
+                    <div class="card">
+                        <div class="img-wrap">
+                            <img src='/blog1.jpg' alt="" />
+                        </div>
+                        <div class="content-wrap">
+                            <h5>{p.title.rendered}</h5>
+                            <p set:html={p.excerpt.rendered}/>
+                            <a class="btn-line-blue" href={p.guid.rendered}>See More</a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+</Layout>
+
+<style>
+    :root {
+        --prim1: #152040;
+        --prim3: #DFC063;
+        --bg-light: #d1ecfa;
+        --blue: #158bf9;
+        --prim3-dark: #423F3F;
+        --bg-dark: #181818;
+    }
+    section.archive-cont{
+        padding-bottom: 6rem;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+        background: var(--bg-light);
+    }
+
+    div.up-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 0 3rem 0;
+        background: var(--blue);
+        width: 100%;
+        border-radius: 0 0 50px 50px;
+    }
+
+    div.cards-wrap {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    div.card {
+        width: 355px;
+    }
+
+    div.img-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    div.img-wrap img {
+        width: 100%;
+        max-height: 220px;
+        min-height: 220px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    div.content-wrap {
+        max-width: 350px;
+        min-height: 220px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 1.3rem;
+        border-radius: 0 0 20px 20px;
+        padding-top: 2rem;
+    }
+
+    p {
+        font-size: 1.1vw;
+        padding-top: .5rem;
+        padding-bottom: 1.3rem;
+    }
+
+    }
+
+    @media (max-width: 769px) {
+        .cards-wrap {
+            flex-direction: column;
+        }
+        p {
+            text-align: start;
+        }
+    }
+
+</style>
+

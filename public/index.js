@@ -18,6 +18,7 @@ import bk1 from './bk1.png';
 import bk2 from './bk2.png';
 import aboutHero from './about-hero.png';
 import singIn from './sign-in.svg'
+import favicon from './favicon.svg'
 
 export {
   linkedin,
@@ -40,4 +41,5 @@ export {
   bk2,
   aboutHero,
   singIn,
+  favicon,
 }

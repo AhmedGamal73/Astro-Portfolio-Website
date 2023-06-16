@@ -30,13 +30,15 @@ h4 {
 h5 {
   font-size: 1.1vw;
   color: $prim1;
+  font-family: 'Poppins light';
 }
 h6 {
   font-size: 0.9vw;
   color: $prim1;
+  font-family: 'Poppins Light';
 }
 p {
-  font-size: 1.1vw;
+  font-size: .9vw;
   color: $prim1;
 }
 
@@ -105,12 +107,12 @@ p {
   h1,h2,h3,h4,h5{
     font-family: 'Poppins';
   }
-  h6, p {
+  h6,h5, p {
     font-family: "Poppins Light"!important;
   }
 
-  h1, button {
-    font-family: 'Poppins';
+  h1,h2, h3,h4 button {
+    font-family: 'Poppins'!important;
 }
 }
 

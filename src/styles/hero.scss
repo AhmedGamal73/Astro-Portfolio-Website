@@ -55,6 +55,10 @@
         display: none;
       color: $prim2;
       }
+
+      p {
+        font-size: 1.1vw;
+      }
       h1 {
         color: $prim2;
         span {
@@ -78,11 +82,11 @@
       align-items: start;
       gap: 20px;
 
-      button:nth-child(1) {
+      a:nth-child(1) {
       border: 0;
       font-size: 12px;
     }
-      button:nth-child(2) {
+      a:nth-child(2) {
       color: $prim2;
     }
     }

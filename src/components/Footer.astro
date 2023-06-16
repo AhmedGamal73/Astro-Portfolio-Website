@@ -12,7 +12,7 @@ import Icon from 'astro-icon'
             </div>
             <div class="right-cont">
                 <div class="child-col">
-                    <h4>BookKeeping</h4>
+                    <h5>BookKeeping</h5>
                     <ul>
                         <li><a href="#">Tax1</a></li>
                         <li><a href="#">Tax1</a></li>
@@ -22,7 +22,7 @@ import Icon from 'astro-icon'
                     </ul>
                 </div>
                 <div class="child-col">
-                    <h4>Tax</h4>
+                    <h5>Tax</h5>
                     <ul>
                         <li><a href="#">Tax1</a></li>
                         <li><a href="#">Tax1</a></li>
@@ -32,7 +32,7 @@ import Icon from 'astro-icon'
                     </ul>
                 </div>
                 <div class="child-col">
-                    <h4>Audit</h4>
+                    <h5>Audit</h5>
                     <ul>
                         <li><a href="#">Tax1</a></li>
                         <li><a href="#">Tax1</a></li>
@@ -42,7 +42,7 @@ import Icon from 'astro-icon'
                     </ul>
                 </div>
                 <div class="child-col">
-                    <h4>Career</h4>
+                    <h5>Career</h5>
                     <ul>
                         <li><a href="#">Tax1</a></li>
                         <li><a href="#">Tax1</a></li>
@@ -52,7 +52,7 @@ import Icon from 'astro-icon'
                     </ul>
                 </div>
                 <div class="child-col">
-                    <h4>Courses</h4>
+                    <h5>Courses</h5>
                     <ul>
                         <li><a href="#">Tax1</a></li>
                         <li><a href="#">Tax1</a></li>
@@ -79,15 +79,12 @@ import Icon from 'astro-icon'
 
 
 <style>
-
     div.fot-cont {
         display: flex;
         flex-direction: column;
-        position: relative;
+        z-index: 10;
         width: 100%;
         background:#152040;
-        height: 39vh;
-        border-radius: 20px 20px 0 0;
         justify-content: space-between;
         overflow-x: hidden;
     }
@@ -97,10 +94,9 @@ import Icon from 'astro-icon'
         align-items: center;
         width: 100%;
         gap: 4rem;
-        height: 30vh;
         border-radius: 20px 20px 0 0;
         padding-inline: 3rem;
-        padding-top: 1rem;
+        padding-block: 4rem;
     }
 
     .bio-col {
@@ -117,7 +113,7 @@ import Icon from 'astro-icon'
     .bio-col p {
         width: 100%;
     }
-    h4,p {
+    h5,p {
         color: white
     }
 
@@ -142,6 +138,8 @@ import Icon from 'astro-icon'
         width: 15%;
         flex-direction: column;
         align-items: start;
+        font-family: 'Poppins Light';
+        gap: 1rem;
     }
 
     .child-col h4{

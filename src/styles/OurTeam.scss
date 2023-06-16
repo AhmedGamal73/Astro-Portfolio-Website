@@ -4,7 +4,7 @@ section.team-section {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    padding-top: 6rem;
+    padding-block: 6rem;
 }
 .cards {
     width: 100%;
@@ -19,7 +19,7 @@ section.team-section {
   .d-flex {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
     gap: 30px;
     justify-content: center;
   }

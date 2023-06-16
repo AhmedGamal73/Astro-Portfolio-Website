@@ -13,7 +13,6 @@ hr {
     align-items: center;
     width: 100%;
     min-width: 40vh;
-    background: $sky-linear-up;
 
     .first-col {
         display: flex;
@@ -69,14 +68,14 @@ hr {
                 position: relative;
                 width: 50%;
                 &::before {
-                    width: 70%;
-                    height: 100%;
+                    width: 65%;
+                    height: 90%;
                     background-color: $prim3;
                     content: "";
                     position: absolute;
                     display: block;
-                    right: -5%;
-                    top: 10%;
+                    right: 0%;
+                    top: 15%;
                     border-radius: 10px;
                 }
 
