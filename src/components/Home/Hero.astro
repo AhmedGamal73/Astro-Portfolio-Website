@@ -1,6 +1,7 @@
 ---
 import {getLangFromUrl, useTranslations } from '../../i18n/utils'
 import '../../styles/hero.scss'
+import HeroSlider from '../Slider/HeroSlider.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -24,7 +25,7 @@ const t = useTranslations(lang);
     </div>
   </div>
   <div class="child right-col">
-    <img src="../../../public/hero1.jpg" alt="">
+    <HeroSlider />
   </div>
 </div>
 

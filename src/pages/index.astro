@@ -7,6 +7,9 @@ import Bookkeeping from '../components/Home/Bookkeeping.astro';
 import Development from "../components/Home/Development.astro";
 import LatestBosts from "../components/Home/LatestBosts.astro";
 
+import HeroSlider from '../components/Slider/HeroSlider.astro';
+import {Layout, Base} from '../layouts';
+import '../styles/index.scss'
 ---
 
 <Layout title="Home">
@@ -32,4 +35,9 @@ import LatestBosts from "../components/Home/LatestBosts.astro";
 
   <LatestBosts />
 
+</Layout>
+      <button class="btn-stroke-yellow">Join Us Now</button>
+    </Base>
+    <HeroSlider />
+	</main>
 </Layout>
