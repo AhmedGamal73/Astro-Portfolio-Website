@@ -16,6 +16,12 @@ export const ui = {
     "hero.title": "When You Need Results.",
     "hero.span": "We Care.",
     "hero.subtitle": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "program1.title": "Trade",
+    "program1.subtitle": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "program2.title": "Dinner Mind",
+    "program2.subtitle": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "program3.title": "Tracker ERP",
+    "program3.subtitle": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
 
   ar: {

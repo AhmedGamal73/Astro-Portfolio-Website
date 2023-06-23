@@ -1,10 +1,9 @@
-@import '../styles/colors.scss';
 
 .container {
   width: 100%;
   position: relative;
   padding-block: 5rem;
-  background-color: $prim1;
+  background-color: var(--prim2);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
 
   [astro-icon="teenyicons:arrow-solid"] {
     position: absolute;
-    color: $prim3;
+    color: var(--prim3);
     font-size: 5rem;
     top: 5rem;
     left: 0;

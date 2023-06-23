@@ -33,11 +33,12 @@ const MyHeader = (props) => {
     <header className={isSticky ? 'sticky show' : 'sticky'}>
       <div className='header-container'>
         <div className="header-start">
+          <a src={`/${props.lang}`} >
           <img 
             className='logo' 
             src={logo} 
             alt="company-logo" 
-          />
+          /></a>
           <div 
             className={`burger-icon ${isOpen ? 'open' : ''}`}
             onClick={toggleHandler}

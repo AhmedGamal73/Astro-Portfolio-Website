@@ -1,4 +1,3 @@
-@import './colors.scss';
 
 .hero-container {
   padding-block: 2rem;
@@ -53,16 +52,16 @@
 
       h6 {
         display: none;
-      color: $prim2;
+      color: var(--prim2);
       }
 
       p {
         font-size: 1.1vw;
       }
       h1 {
-        color: $prim2;
+        color: var(--prim2);
         span {
-          color: $blue;
+          color: var(--blue);
       }
       }
       .head {
@@ -87,7 +86,7 @@
       font-size: 12px;
     }
       a:nth-child(2) {
-      color: $prim2;
+      color: var(--prim2);
     }
     }
   }

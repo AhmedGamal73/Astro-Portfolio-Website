@@ -1,9 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import Card from '../Card/Card.astro';
 import Content1 from '../Content/Content1.astro'
 import '../../styles/TaxSection.scss'
 import Icon from 'astro-icon';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,7 +12,6 @@ const t = useTranslations(lang);
 
 <section>
   <div class="container">
-    <Icon name="teenyicons:arrow-solid" />
     <Content1 
       tag= "Insitutions"
       title= "Our tax specialists are ready"
@@ -24,7 +23,7 @@ const t = useTranslations(lang);
       <Card 
         title= "Make a File"
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
-        img="../../public/company1.png"
+        img="/home/company1.png"
         feature1= "A dedicated account manager to handle all paperwork on your behalf" feature1= "A dedicated account manager to handle all paperwork on your behalf"
         featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"
@@ -37,7 +36,7 @@ const t = useTranslations(lang);
       <Card 
         title= "Tax returns"
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
-        img="../../public/company2.png"
+        img="/home/company2.png"
         feature1= "A dedicated account manager to handle all paperwork on your behalf" feature1= "A dedicated account manager to handle all paperwork on your behalf"
         featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"
@@ -50,6 +49,7 @@ const t = useTranslations(lang);
       <Card 
         title= "Examination and Appeal"
         subtitle= "Do your own bookkeeping with our On-Demand support along the way."
+
         feature1= "A dedicated account manager to handle all paperwork on your behalf"
         featureSrc1="#"
         feature2= "A dedicated account manager to handle all paperwork on your behalf"

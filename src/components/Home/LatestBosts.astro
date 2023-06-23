@@ -2,6 +2,14 @@
 import PostCard from "../Card/PostCard.astro";
 import Content1 from "../Content/Content1.astro";
 
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+export interface Props {
+	lang: string;
+}
 ---
 <section class="posts-cont">
         <div class="up-row">
@@ -18,23 +26,23 @@ import Content1 from "../Content/Content1.astro";
             <PostCard 
                 title="Here's A new Blog Post!!"
                 subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="blog1.jpg"
+                img="home/blog1.jpg"
 
             />
             <PostCard 
                 title="Here's A new Blog Post!!"
                 subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="blog2.jpg"
+                img="home/blog2.jpg"
 
             />
             <PostCard 
                 title="Here's A new Blog Post!!"
                 subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="blog3.jpg"
+                img="home/blog3.jpg"
 
             />
         </div>
-        <a class="all-posts btn-stroke-yellow" href="#">See All Posts</a>
+        <a class="all-posts btn-stroke-yellow" href={`/${lang}/blog`}>See All Posts</a>
 </section>
 
 <style>

@@ -14,37 +14,43 @@ export interface props {
     btn: "string",
     btnSrc: "string",
     img: "string",
+    size: "string",
+    featureSort: "string",
+    newTab: "string",
+    bgc?: "string",
+    imgAlt: "string",
 };
 
-const { img, title, subtitle, feature1, feature2, feature3,featureSrc1, featureSrc2, featureSrc3, btn, btnSrc} = Astro.props;
+const p = Astro.props;
+const {bgc = "var(--accent1)"} = Astro.props
 ---
 
 
-<div class="card-container">
-    <div class="top">
-        <img src={img} alt="">
+<div style={{width: p.size}} class="card-container">
+    <div style={{backgroundColor: bgc}} class="top">
+        <img src={p.img} alt={p.imgAlt}>
     </div>
     <div class="bottom">
         <div class="title-wrap">
-            <h3>{title}</h3>
-            <p>{subtitle}</p>
+            <h3>{p.title}</h3>
+            <p>{p.subtitle}</p>
         </div>
-        <div class="feature-wrap">
+        <div style={{flexdirection: p.featuresort, }} class="feature-wrap">
             <div class="feature">
                 <Icon name="mdi:chevron-right" />
-                <a href={featureSrc1} class="feature">{feature1}</a>
+                <a target={p.newTab} href={p.featureSrc1} class="feature">{p.feature1}</a>
             </div>
             <div class="feature">
                 <Icon name="mdi:chevron-right" />
-                <a href={featureSrc2} class="feature">{feature2}</a>
+                <a target={p.newTab} href={p.featureSrc2} class="feature">{p.feature2}</a>
             </div>
             <div class="feature">
                 <Icon name="mdi:chevron-right" />
-                <a href={featureSrc3} class="feature">{feature3}</a>
+                <a target={p.newTab} href={p.featureSrc3} class="feature">{p.feature3}</a>
             </div>
         </div>
         <div class="btn">
-            <a class="btn-stroke-blue-heavy" href={btnSrc}>{btn}</a>
+            <a class="btn-stroke-blue-heavy" href={p.btnSrc}>{p.btn}</a>
         </div>
 
     </div>
