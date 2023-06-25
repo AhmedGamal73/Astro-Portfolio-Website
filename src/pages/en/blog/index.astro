@@ -2,7 +2,8 @@
 import Layout from '../../../layouts/Layout.astro'
 import Content1 from "../../../components/Content/Content1.astro"
 
-const res = await fetch("https://rogina.shop/wp-json/wp/v2/posts");
+const url = "https://rogina.shop/wp-json/wp/v2/posts";
+const res = await fetch(url);
 const posts = await res.json();
 
 function limit (string = '', limit = 0) {  
@@ -73,16 +74,22 @@ function limit (string = '', limit = 0) {
     }
 
     div.cards-wrap {
+        padding-block: 3rem;
         width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 4rem;
         flex-wrap: wrap;
     }
 
     div.card {
         width: 390px;
+        transition: .3s;
+        background-color: transparent;
+    }
+    div.card:hover {
+        box-shadow: var(--box-shadow1);
     }
 
     div.img-wrap {

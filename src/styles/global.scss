@@ -109,12 +109,13 @@ font-size: .9vw!important;
   --accent2: #B7E6FD;
   --blue: #0080F9;
   --bgc: #f3f3f3;
+  --bgc2: #d1cece;
 
   --sky-gradiant: radial-gradient(circle, rgba(234,245,251,1) 13%, rgba(218,243,255,1) 100%);
   --sky-linear-up: linear-gradient(7deg, rgb(255, 255, 255) 15%, rgb(232, 244, 250) 100%);
   --sky-linear-down: linear-gradient(186deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);
 
-  --box-shadow1: box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+  --box-shadow1: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;;
 
   --blue-gradiant: linear-gradient(
 
@@ -167,12 +168,12 @@ font-size: .9vw!important;
   border: 1px solid var(--prim3);
   text-decoration: none;
   transition: 200ms;
-  // &:hover {
+  &:hover {
     background: var(--prim3-heavy);
     color: --prim1;
     border-color: var(--prim1);
   }
-
+}
 .btn-stroke-white {
   display: inline-block;
   padding: 6px 12px;
@@ -266,5 +267,3 @@ font-size: .9vw!important;
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
-
-

@@ -1,0 +1,98 @@
+form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 75%;
+    height: 90%;
+    margin-inline-start: 4rem;
+    .form_steps-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        padding: 4rem 0 2rem 0;
+        border-bottom: solid 3px var(--bgc);
+    }
+
+    .form_step-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .form__step-box {
+        background-color: var(--bgc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .6rem;
+        width: 3rem;
+        height: 3rem;
+        opacity: 1;
+        span {
+            margin: .8rem 1rem;
+            font-size: 1.1rem;
+        }
+        
+    }
+
+    .bottom-container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: start;
+        height: auto;
+        gap: 3rem;
+        height: 100%;
+
+        .btns-container {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+
+            & .prev-btn{
+                padding: 1.5rem 3rem;
+                background: white;
+                border: 1px solid transparent;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                color: var(--prim1);
+                font-family: 'poppins bold';
+            }
+
+            & .next-btn{
+                padding: 1.3rem 3rem;
+                background: var(--blue);
+                border: 1px solid transparent;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                color: white;
+                font-family: poppins bold;
+                transition: 300ms;
+
+                &:hover {
+                    background-color: #0558A6;
+                }
+            }
+
+        }
+
+    }
+}
+.active {
+    transition: background-color 0.4s ease-in-out;
+    background-color: var(--blue)!important;
+    color: white; 
+
+}
+
+
+.steps-counter {
+    color: gray;
+    margin-bottom: -2rem;
+}
+

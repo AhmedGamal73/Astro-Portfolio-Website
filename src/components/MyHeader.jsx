@@ -11,22 +11,25 @@ const MyHeader = (props) => {
       const headerHeight = 70;
       const scrollPosition = window.scrollY
 
+
       if(scrollPosition >= headerHeight) {
         setIsSticky(true)
       }else {
         setIsSticky(false)
       }
+
     }
+
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     };
-  }, []);
+  }, );
+
   const toggleHandler = () => {
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
  return  (
@@ -56,6 +59,7 @@ const MyHeader = (props) => {
             <li><a href={`/${props.lang}/courses`}>Courses</a></li>
             <li><a href={`/${props.lang}/about`}>About</a></li>
             <li><a href={`/${props.lang}/contact`}>Contact</a></li>
+            <li><a href={`/${props.lang}/blog`}>Blog</a></li>
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? 'open' : ''}`}>

@@ -7,7 +7,7 @@
 }
 
 .sticky.show {
-  top: 0
+  top: 0px;
 }
 
 	.hamburger {
@@ -60,6 +60,7 @@ nav {
         font-family: 'Poppins regular';
         color: white;
         transition: 300ms;
+        font-size: 1vw!important;
         &:hover {
           color: var(--prim3);
         }
