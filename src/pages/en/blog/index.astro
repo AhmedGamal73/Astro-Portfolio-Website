@@ -9,9 +9,25 @@ const posts = await res.json();
 function limit (string = '', limit = 0) {  
   return string.substring(0, limit) + '...'
 }
+
+
+var enPosts = [];
+var arPosts = [];
+function isArabic (posts) {
+    posts.map(post => {
+        if (post.slug.includes('%')) {
+            arPosts.push(post);
+        } else {
+            enPosts.push(post);
+        };
+    })
+}
+
+isArabic(posts)
+
 ---
 
-<Layout title="post">
+<Layout title="Blog posts">
     <section class="archive-cont">
         <div class="up-row">
             <Content1
@@ -23,7 +39,7 @@ function limit (string = '', limit = 0) {
         </div>
         <div class="cards-wrap">
             {
-                posts.map(p => (
+                enPosts.map(p => (
                     <div class="card">
                         <div class="img-wrap">
                             <img src={p.better_featured_image.source_url} alt="" />

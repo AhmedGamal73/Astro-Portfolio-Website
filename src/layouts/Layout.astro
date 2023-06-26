@@ -1,15 +1,14 @@
 ---
 import '../styles/global.scss';
 import MyHeader from '../components/MyHeader';
-import { getLangFromUrl, useTranslations } from '../i18n/utils'
 import Footer from '../components/Footer.astro'
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 
 export interface Props {
 	title: string;
-	lang: string;
 }
 
 const { title } = Astro.props;
