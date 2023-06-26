@@ -1,5 +1,5 @@
 ---
-import '../styles/global.scss'
+import '../styles/global.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getLangFromUrl, useTranslations } from '../i18n/utils'
 
@@ -25,7 +25,7 @@ const t = useTranslations(lang)
             
             <p>the page you are looking for not avaible!</p>
             
-            <a href={`/${lang}/`} class="link_404">Go to Home</a>
+            <a class="back-home" href={`/${lang}/`} class="link_404">Go to Home</a>
     </section>
 
 
@@ -36,6 +36,9 @@ const t = useTranslations(lang)
     background:#fff;
 }
 
+.back-home {
+    border-radius: 4px;
+}
 
 .page_404  img{
     width:100%;

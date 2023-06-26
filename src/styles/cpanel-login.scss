@@ -10,12 +10,49 @@
 }
 .main-form{
 	width: 600px;
-    height: 600px;
+    min-height: 600px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-block:.5rem 3rem;
+
+    a {
+        align-self: center;
+        padding-top: 4rem;
+        color: var(--blue);
+        font-family: 'poppins bold';
+        transition: .2s;
+        &:hover {
+            color: var(--prim1)
+        }
+
+    }
+    .sign-up {
+        width: 50%;
+        text-align: center;
+        align-self: center;
+        padding-block:1rem 2rem;
+
+        h5 {
+            color: var(--prim1);
+            font-size: 1.4vw;
+            line-height: 1.1;
+        }
+
+        a {
+            color: var(--blue);
+            font-size: 1.4vw!important;
+            line-height: 1.1!important;
+            &:hover {
+                color: var(--prim1)
+            }
+        }
+    }
 
 
     .login {
@@ -26,38 +63,71 @@
         }
     }
 
-    .signup{
-        height: 460px;
-        background: var(--prim1);
-        border-radius: 70% / 25%;
-        transform: translateY(1rem);
-        transition: .8s ease-in-out;
-        label {
-            padding-top: 1.5rem;
-            color: white;
-            transform: scale(.8);
-        }
+}
 
-        input {
-            background-color: white;
-            &:focus {
-                border: solid 1px white;
-            }
+.title {
+    padding: 0rem;
+    margin-block: 2rem;
+    color: var(--prim2)!important;
+}
+
+.google-container {
+    display: flex;
+    justify-content: center;
+    .google-wrapper {
+        width: 65%;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        background: var(--bgc);
+        border-radius: .4rem;
+        transition: .1s;
+        &:hover {
+            background-color: var(--border-color);
+            
         }
-        
     }
+}
 
+.or-wrapper {
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    .or-divider {
+    text-align: center;
+    font-family: 'poppins light';
+    color: var(--border-color);
+        &:before {
+            border-top: 1px solid #ccc;
+            content: " ";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+        }
+        &:after {
+            border-top: 1px solid #ccc;
+            content: " ";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+        }
+    }
 }
 
 #chk{
     display: none;
 }        
 
-form a {
-    font-family: 'poppins bold';
-    font-size: 1.2vw; 
-    color: var(--prim1);
-    background-color: white;
+
+form  {
+    a {
+        font-family: 'Poppins bold'!important;
+        font-size: 1.2vw; 
+        color: var(--border-color)!important;
+        background-color: white;
+    }
 }
 
 label{
@@ -71,18 +141,22 @@ label{
 input{
 	width: 60%;
 	height: 20px;
-	background: #e0dede;
+    background-color: var(--bgc);
 	justify-content: center;
 	display: flex;
 	margin: 20px auto;
     border: solid 1px #e0dede; 
 	padding: 10px;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 4px;
+    transition: .3s;
     &:focus {
         background-color: white!important;
-        border: solid 1px var(--prim1);
-        border-radius: 8px;
+        border: solid 1px var(--blue);
+        border-radius: 4px;
+    }
+    &:focus::placeholder {
+        color: transparent;
     }
 }
 button{
@@ -99,7 +173,7 @@ button{
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	transition: .2s ease-in;
+	transition: .1s ease-in;
 	cursor: pointer;
     &:hover{
         background-color: #0558A6;

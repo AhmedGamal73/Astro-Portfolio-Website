@@ -1,0 +1,25 @@
+---
+import '../../styles/cpanel-login.scss';
+import Icon from 'astro-icon';
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url)
+---
+
+
+
+<div class="form-container">
+    <div class="main-form">  	
+        <form action="/api/auth/register" method="post">
+            <label class="title" for="chk" aria-hidden="true">Sign up</label>
+            <div class="or-wrapper">
+              <div class="or-divider"> or </div>
+            </div>
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="password" placeholder="Password" required="">
+            <button class="login-btn">Sign up</button>
+        </form>
+    </div>
+  </div>
+    

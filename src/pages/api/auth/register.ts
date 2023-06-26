@@ -9,8 +9,9 @@ export const post: APIRoute = async ({ request, redirect }) => {
   const formData = await request.formData();
   const email = formData.get("email")?.toString();
   const password = formData.get("password")?.toString();
+  const name = formData.get("name")?.toString();
 
-  if (!email || !password) {
+  if (!email || !password || !name) {
     return new Response(
       "Missing form data",
       { status: 400 }
@@ -22,6 +23,7 @@ export const post: APIRoute = async ({ request, redirect }) => {
     await auth.createUser({
       email,
       password,
+      displayName: name,
     });
   } catch (error: any) {
     return new Response(
@@ -29,5 +31,5 @@ export const post: APIRoute = async ({ request, redirect }) => {
       { status: 400 }
     );
   }
-  return redirect("/en/home");
+  return redirect("/en/cpanel-login");
 };
