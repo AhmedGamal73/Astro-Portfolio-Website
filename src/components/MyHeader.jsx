@@ -63,7 +63,7 @@ const MyHeader = (props) => {
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? 'open' : ''}`}>
-          <a  className='btn-stroke-yellow'>sign in</a> 
+          <a href={`/${props.lang}/cpanel-login`}   className='btn-stroke-yellow'>Log in</a> 
           <a href={`/${props.lang}/job-application`} className='btn-stroke-white' type="button">Apply for job</a> 
         </div>
       </div>

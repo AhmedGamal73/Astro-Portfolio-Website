@@ -1,0 +1,97 @@
+---
+import { app } from "../../firebase/server";
+import { getAuth } from "firebase-admin/auth";
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/global.scss'
+import "bootstrap/dist/css/bootstrap.min.css";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const auth = getAuth(app);
+
+/* Check current session */
+const sessionCookie = Astro.cookies.get("session").value;
+
+if (!sessionCookie) {
+  return Astro.redirect("/signin");
+}
+const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+const user = await auth.getUser(decodedCookie.uid);
+
+if (!user) {
+  return Astro.redirect("/signin");
+}
+
+---
+
+
+<Layout title="dashboard">
+    <section class="page_404">
+        <div class="container">
+            <div class="row">	
+            <div class="center-me col-sm-12 ">
+            <div class="col-sm-10 col-sm-offset-1  text-center">
+            <div class="four_zero_four_bg">
+            
+            
+            </div>
+            
+            <div class="contant_box_404">
+            <h1>Welcome {user.displayName}</h1>
+            <p>We are happy to see you here</p>
+            <form action="/api/auth/signout">
+              <button type="submit">Sign out</button>
+            </form>
+            
+            <a href={`/${lang}/`} class="link_404">Go to Home</a>
+    </section>
+</Layout>
+
+
+<style>
+
+.page_404{
+    padding:40px 0;
+    background:#fff;
+}
+
+
+.page_404  img{
+    width:100%;
+}
+
+.center-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four_zero_four_bg{
+    background-image: url('/404.gif');
+    height: 400px;
+    background-position: center;
+ }
+ 
+ 
+.four_zero_four_bg h1{
+    font-size:80px;
+}
+ 
+.four_zero_four_bg h3{
+    font-size:80px;
+}
+			 
+.link_404{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: var(--prim1);
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.contant_box_404{
+     margin-top:-50px;
+}
+</style>

@@ -86,6 +86,21 @@ font-size: .9vw!important;
   margin: 0;
   padding: 0;
   background: var(--prim4);
+
+  label {
+    font-family: "poppins regular";
+    color: var(--prim1);
+  }
+
+  input, select {
+    font-family: "poppins light";
+    font-size: 1.1vw;
+    padding: 1rem;
+    &:active {
+      background-color: white;
+    }
+  }
+
   a {
     text-decoration: none;
     font-size: .9vw;

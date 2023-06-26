@@ -4,17 +4,11 @@ div.field-wrapper {
     width: 47%;
 
     label {
-        font-family: "poppins regular";
-        color: var(--prim1);
         padding-bottom: .3rem;
     }
 
     input, select {
-        font-family: "poppins light";
-        padding: 1rem;
         border-radius: 10px;
-        font-size: 1.1vw;
-        color: var(--prim1);
         border: solid 1px var(--bgc2);
         &:active {
             border-color: var(--blue);
