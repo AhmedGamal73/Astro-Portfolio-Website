@@ -26,13 +26,26 @@
 
   }
   .btn-wrap {
-    width: 80%;
+    width: 85%;
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 5rem;
+
+    .btns-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 2rem;
+
+      .all-services::after {
+        background-image: url(../icons/chevron-right-white.svg);
+      }
+
+    }
 
     h3 {
       color: white;

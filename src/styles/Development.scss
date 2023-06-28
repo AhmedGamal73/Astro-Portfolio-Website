@@ -68,13 +68,13 @@ hr {
                 position: relative;
                 width: 50%;
                 &::before {
-                    width: 65%;
-                    height: 90%;
+                    width: 63%;
+                    height: 98%;
                     background-color: var(--prim3);
                     content: "";
                     position: absolute;
                     display: block;
-                    right: 0%;
+                    right: 1%;
                     top: 15%;
                     border-radius: 10px;
                 }

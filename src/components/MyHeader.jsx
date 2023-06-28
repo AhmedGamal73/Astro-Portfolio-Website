@@ -2,6 +2,8 @@ import '../styles/MyHeader.scss';
 import {logo} from '../icons';
 import { useEffect, useState } from 'react';
 
+
+
 const MyHeader = (props) => {
   const [isOpen, setIsOpen ] = useState(false);
   const [isSticky, setIsSticky ] = useState(false);
@@ -50,7 +52,6 @@ const MyHeader = (props) => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
             </svg>
           </div>
-          {/* <img src="" alt=""> */}
         </div>
         <nav className={`header-mid ${isOpen ? 'open' : ''}`}>
           <ul>

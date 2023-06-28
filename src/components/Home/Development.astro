@@ -20,13 +20,13 @@ export interface props {
     btnSrc2: 'string',
 }
 
-const {btn1, btn2, btnSrc1, btnSrc2, tag, title, img, imgData, stepTitle1, stepSubtitle1, stepTitle2, stepSubtitle2, stepTitle3, stepSubtitle3 } = Astro.props
+const p = Astro.props
 ---
 <section class="dev-cont">
     <div class="first-col">
         <Content1 
-        tag={tag}  
-        title={title}
+            tag={p.tag}  
+            title={p.title}
         />
     </div>
     <div class="second-col">
@@ -35,30 +35,30 @@ const {btn1, btn2, btnSrc1, btnSrc2, tag, title, img, imgData, stepTitle1, stepS
                 <div class="steps-cont">
                     <div class="step">
                         <h3 class="num">1</h3>
-                        <h4>{stepTitle1}</h4>
-                        <p>{stepSubtitle1}</p>
+                        <h4>{p.stepTitle1}</h4>
+                        <p>{p.stepSubtitle1}</p>
                         <hr class="line">
                     </div>
                     <div class="step">
                         <h3 class="num">2</h3>
-                        <h4>{stepTitle2}</h4>
-                        <p>{stepSubtitle2}</p>
+                        <h4>{p.stepTitle2}</h4>
+                        <p>{p.stepSubtitle2}</p>
                         <hr class="line">
                     </div>
                     <div class="step">
                         <h3 class="num">3</h3>
-                        <h4>{stepTitle3}</h4>
-                        <p>{stepSubtitle3}</p>
+                        <h4>{p.stepTitle3}</h4>
+                        <p>{p.stepSubtitle3}</p>
                     </div>
                 </div>
             </div>
             <div class="left-col">
-                <img src=`/home/${img}` alt={imgData}>
+                <img src=`/home/${p.img}` alt={p.imgData}>
             </div>
         </div>
     </div>
     <div class="third-col">
-        <a class="btn-stroke-yellow" href={btnSrc1}>{btn1}</a>
-        <a class="btn-stroke-blue-heavy" href={btnSrc2}>{btn2}</a>
+        <a class="btn-stroke-yellow" href={p.btnSrc1}>{p.btn1}</a>
+        <a class="btn-stroke-blue-heavy" href={p.btnSrc2}>{p.btn2}</a>
     </div>
 </section>

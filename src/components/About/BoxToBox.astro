@@ -16,13 +16,13 @@ const p = Astro.props
 
 <section style={{flexDirection: p.contDirection}} class="box-cont">
     <div style={{background: p.bgc}} class="left-col">
-        <Icon name={p.icon} style=`width: 33px; ${{color: p.iconColor}}` />
+        <Icon name={p.icon} style=`width: 33px; color: ${p.iconColor}` />
     </div>
 
     <div class="right-col">
         <div class="content-wrap">
             <div class="icon-wrap">
-                <Icon name="ph:book-fill" />
+                <Icon style="color: var(--prim1);" name="book-fill" />
             </div>
             <h3>{p.title}</h3>
             <p>{p.subtitle}</p>

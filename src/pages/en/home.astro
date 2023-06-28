@@ -6,6 +6,9 @@ import TaxSection from '../../components/Home/TaxSection.astro';
 import Bookkeeping from '../../components/Home/Bookkeeping.astro';
 import Development from "../../components/Home/Development.astro";
 import LatestBosts from "../../components/Home/LatestBosts.astro";
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url)
 
 ---
 
@@ -24,10 +27,10 @@ import LatestBosts from "../../components/Home/LatestBosts.astro";
     stepTitle3="Fast turnaround time."
     stepSubtitle3="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
     img="mechanic.jpg"
-    btn1="Contact one of our experts"
+    btn1="See All Of Our Services"
     btn2="Know More About Us"
-    btnSrc1="#"
-    btnSrc2="#"
+    btnSrc1={`/${lang}/services`}
+    btnSrc2={`/${lang}/about`}
   />
 
   <LatestBosts />

@@ -1,6 +1,9 @@
 ---
 import Layout from '../../../layouts/Layout.astro'
 import Content1 from "../../../components/Content/Content1.astro"
+import { getLangFromUrl } from '../../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
 
 const url = "https://rogina.shop/wp-json/wp/v2/posts";
 const res = await fetch(url);
@@ -25,6 +28,7 @@ function isArabic (posts) {
 
 isArabic(posts)
 
+export const prerender = true;
 ---
 
 <Layout title="Blog posts">
@@ -48,7 +52,7 @@ isArabic(posts)
                             <div class="content-wrapper">
                                 <h4>{p.title.rendered}</h4>
                                 <p set:html={limit(p.excerpt.rendered, 100)}/>
-                                <a class="btn-line-blue" href={p.guid.rendered}>See More</a>
+                                <a class="btn-line-blue" href={`/${lang}/blog/posts/${p.slug}`}>See More</a>
                             </div>
                         </div>
                     </div>
@@ -68,7 +72,7 @@ isArabic(posts)
         flex-direction: column;
         justify-content: center;
         align-items: center;   
-        background: var(--bg-light);
+        background: var(--bgc);
     }
 
     div.up-row {

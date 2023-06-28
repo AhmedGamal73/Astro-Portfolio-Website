@@ -15,8 +15,10 @@ if (sessionCookie) {
   const decodedCookie = await auth.verifySessionCookie(sessionCookie);
   if (decodedCookie) {
     return Astro.redirect(`/${lang}/auth`);
-  }
+  };
 }
+
+export const prerender = true;
 ---
 
 <div class="form-container">
