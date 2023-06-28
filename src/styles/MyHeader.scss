@@ -220,3 +220,27 @@ nav {
   }
 }
 
+nav.header-mid {
+  li {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 1.5rem;
+  }
+  
+  li::after {
+    background-color: var(--prim3);
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease 0s;
+    position: absolute;
+  }
+  
+  li:hover::after {
+    width: 100%;
+    margin-top: 35px;
+  }
+}

@@ -82,36 +82,12 @@ font-size: .9vw!important;
   }
 }
 
+
 :root {
   margin: 0;
   padding: 0;
   background: var(--prim4);
 
-  label {
-    font-family: "poppins regular";
-    color: var(--prim1);
-  }
-
-  input, select {
-    font-family: "poppins light";
-    font-size: 1.1vw;
-    padding: 1rem;
-    &:active {
-      background-color: white;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    font-size: .9vw;
-    font-family: "Poppins Light";
-  }
-
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
   // Colors 
   --prim1: rgb(21,32,64);
   --prim2: #1c2c5b; 
@@ -131,6 +107,7 @@ font-size: .9vw!important;
   --sky-linear-down: linear-gradient(186deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);
 
   --box-shadow1: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;;
+  --boxShadow2: 0px 0px 100px 0px rgba(66, 71, 91, 0.3)
 
   --blue-gradiant: linear-gradient(
 
@@ -146,13 +123,61 @@ font-size: .9vw!important;
     #da62c4 30%,
     white 60%
   );
+
+// Form
+label {
+  font-family: "poppins regular";
+  color: var(--prim1);
 }
+
+input, select, textarea {
+  font-family: "poppins light";
+  font-size: 1.1vw;
+  padding: 1rem;
+  border-radius: 10px;
+  border: solid 1px var(--bgc2);
+  transition: .3s;
+  &:active {
+      border-color: (--blue);
+  }
+  &:focus {
+    background-color: white;
+    border: solid 1px var(--blue);
+    border-radius: 4px;
+  }
+  &:focus::placeholder {
+      color: transparent;
+  }
+  &::placeholder {
+    color: var(--prim1)
+  }
+  input:hover, textarea:hover, button:hover {
+    opacity: 0.5;
+  }
+}
+// Form
+  }
+
+  a {
+    font-size: .9vw;
+    font-family: "Poppins Light";
+    cursor: pointer;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
 * {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   padding-left: 0;
+  a {
+    text-decoration: none;
+  }
 }
 
 
@@ -181,7 +206,6 @@ font-size: .9vw!important;
   color: var(--prim1);
   background: var(--prim3);
   border: 1px solid var(--prim3);
-  text-decoration: none;
   transition: 200ms;
   &:hover {
     background: var(--prim3-heavy);
@@ -215,7 +239,7 @@ font-size: .9vw!important;
   border-radius: 10px;
   cursor: pointer;
   color: white;
-  background:var(--prim1);
+  background:var(--prim2);
   border: 1px solid var(--prim1);
   font-size: 12x;
   transition: 300ms;

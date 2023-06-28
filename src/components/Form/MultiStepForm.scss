@@ -96,3 +96,30 @@ form {
     margin-bottom: -2rem;
 }
 
+
+div.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+
+    label {
+        padding-bottom: .3rem;
+    }
+
+}
+
+.form-data-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.step-title {
+    font-family: "Poppins bold";
+    text-align: start;
+    margin-top: -2rem;
+    margin: 0;
+    margin-bottom: .5rem;
+}

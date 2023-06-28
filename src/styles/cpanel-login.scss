@@ -11,7 +11,8 @@
 .main-form{
 	width: 600px;
     min-height: 600px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bgc);
+    box-shadow: var(--box-shadow1);
     border-radius: 8px;
     overflow: hidden;
     position: relative;
@@ -33,21 +34,21 @@
 
     }
     .sign-up {
-        width: 50%;
+        width: 60%;
         text-align: center;
         align-self: center;
         padding-block:1rem 2rem;
 
         h5 {
             color: var(--prim1);
-            font-size: 1.4vw;
-            line-height: 1.1;
+            display: inline;
+            padding-inline-end: .2rem;
         }
 
         a {
             color: var(--blue);
-            font-size: 1.4vw!important;
             line-height: 1.1!important;
+            padding-bottom: 1rem;
             &:hover {
                 color: var(--prim1)
             }
@@ -67,8 +68,8 @@
 
 .title {
     padding: 0rem;
-    margin-block: 2rem;
-    color: var(--prim2)!important;
+    margin-block: 6rem 2rem;
+    color: var(--blue)!important;
 }
 
 .google-container {
@@ -76,9 +77,11 @@
     justify-content: center;
     .google-wrapper {
         width: 65%;
-        margin-bottom: 3rem;
+        margin-top: 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: start;
+        padding-inline-start: 1.5rem;
+        gap: 1.5rem;
         align-items: center;
         height: 70px;
         background: var(--bgc);
@@ -95,6 +98,7 @@
     text-align: center;
     width: 65%;
     margin: auto;
+    padding-top: 2rem;
     .or-divider {
     text-align: center;
     font-family: 'poppins light';
@@ -116,9 +120,6 @@
     }
 }
 
-#chk{
-    display: none;
-}        
 
 
 form  {
@@ -141,7 +142,6 @@ label{
 input{
 	width: 60%;
 	height: 20px;
-    background-color: var(--bgc);
 	justify-content: center;
 	display: flex;
 	margin: 20px auto;
@@ -150,14 +150,6 @@ input{
 	outline: none;
 	border-radius: 4px;
     transition: .3s;
-    &:focus {
-        background-color: white!important;
-        border: solid 1px var(--blue);
-        border-radius: 4px;
-    }
-    &:focus::placeholder {
-        color: transparent;
-    }
 }
 button{
 	width: 65%;
@@ -180,12 +172,3 @@ button{
     }
 }
 
-#chk:checked ~ .signup{
-	transform: translateY(-18rem);
-}
-#chk:checked ~ .login label{
-	transform: scale(1);	
-}
-#chk:checked ~ .signup label{
-	transform: scale(.8);
-}

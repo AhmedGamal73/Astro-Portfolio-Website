@@ -36,18 +36,13 @@ const p = Astro.props
         width: 130px;
     }
 
-    [astro-icon="ph:book-fill"] {
-        display: block;
-        width: 20px;
-        height: 30px;
-        color: #152040 ;
-    }
     section.box-cont {
         width: 100%;
         max-height: 35vh;
         display: flex;
         justify-content: center;
     }
+
     .box-cont div.left-col {
         width: 50%;
         height: 35vh;
@@ -62,6 +57,7 @@ const p = Astro.props
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-block: 3rem;
     }
     .box-cont div.right-col div.content-wrap {
         width: 70%;
@@ -80,6 +76,14 @@ const p = Astro.props
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    [astro-icon="book-fill"] {
+        display: block;
+        width: 20px;
+        height: 30px;
+        color: #152040 ;
     }
 
     @media (max-width: 768px ) {
@@ -98,7 +102,7 @@ const p = Astro.props
         }
         div.right-col {
             width: 70%!important;
-            border-bottom: 1px solid rgba(151, 151, 151, 0.164)
+            border-bottom: 1px solid rgba(151, 151, 151, 0.164);
         }
             .box-cont div.right-col div.icon-wrap {
             width: 25px;

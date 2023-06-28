@@ -24,22 +24,23 @@ export const prerender = true;
 <div class="form-container">
   <div class="main-form">  	
       <form action="/api/auth/signin" method="post">
-          <label class="title" for="chk" aria-hidden="true">Login</label>
-          <div class="google-container">
-            <div  id="google" class="google-wrapper">
-              <Icon name="google" width="33px" />
-            </div>
-          </div>
-          <div class="or-wrapper">
-            <div class="or-divider"> or </div>
-          </div>
+          <label class="title" for="chk" aria-hidden="true">Wlcome Back</label>
           <input type="email" name="email" placeholder="Email" required="">
           <input type="password" name="password" placeholder="Password" required="">
           <button class="login-btn">Login</button>
       </form>
+      <div class="or-wrapper">
+        <div class="or-divider"> or </div>
+      </div>
+      <div class="google-container">
+        <div id="google" class="google-wrapper">
+          <Icon name="google" width="33px" />
+          <h5>Continue with google</h5>
+        </div>
+      </div>
       <a>Forget password?</a>
       <div class="sign-up">
-        <h5>Not a member yet? <a href={`/${lang}/cpanel-signup`}>Sign up</a> and get started now!</h5>
+        <h5>Don't have an account?</h5><a href={`/${lang}/cpanel-signup`}>Sign up</a>
       </div>
   </div>
 </div>

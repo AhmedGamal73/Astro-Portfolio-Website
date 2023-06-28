@@ -1,24 +1,35 @@
 ---
-import load from 'astro-icon/lib/utils';
-import Content1 from '../../components/Content/Content1.astro';
 import MultiStepForm from '../../components/Form/MultiStepForm';
-import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.scss'
+
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url)
+
 ---
 
-
-<Layout title='job application'>
-    <section class="job-container">
-        <div class="con-col">
-            <div class="left-col">
-                <img src="/job1.jpg" alt="">
-            </div>
-            <div class="right-col">
-                <MultiStepForm  client:load/>
-            </div>
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+</head>
+<body>
     
+</body>
+</html>
+<section class="job-container">
+    <div class="con-col">
+        <div class="left-col">
+            <img src="/job1.jpg" alt="">
         </div>
-    </section>
-</Layout>
+        <div class="right-col">
+            <MultiStepForm  client:load/>
+        </div>
+
+    </div>
+</section>
 
 
 <style>
