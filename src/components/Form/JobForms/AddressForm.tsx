@@ -1,17 +1,16 @@
-import { FormWrapper } from "./FormWrapper"
-import './globalForm.scss';
+import { FormWrapper } from "../FormWrapper";
 
 type AddressData = {
-  street: string
-  city: string
-  state: string
-  zip: string
-  title: string
-}
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
+  title: string;
+};
 
 type AddressFormProps = AddressData & {
-  updateFields: (fields: Partial<AddressData>) => void
-}
+  updateFields: (fields: Partial<AddressData>) => void;
+};
 
 export function AddressForm({
   street,
@@ -19,7 +18,7 @@ export function AddressForm({
   state,
   zip,
   updateFields,
-  title
+  title,
 }: AddressFormProps) {
   return (
     <FormWrapper title="Verify Your Details">
@@ -30,16 +29,16 @@ export function AddressForm({
           required
           type="text"
           value={street}
-          onChange={e => updateFields({ street: e.target.value })}
+          onChange={(e) => updateFields({ street: e.target.value })}
         />
       </div>
       <div className="field-wrapper">
-      <label>City</label>
+        <label>City</label>
         <input
           required
           type="text"
           value={city}
-          onChange={e => updateFields({ city: e.target.value })}
+          onChange={(e) => updateFields({ city: e.target.value })}
         />
       </div>
       <div className="field-wrapper">
@@ -48,7 +47,7 @@ export function AddressForm({
           required
           type="text"
           value={state}
-          onChange={e => updateFields({ state: e.target.value })}
+          onChange={(e) => updateFields({ state: e.target.value })}
         />
       </div>
       <div className="field-wrapper">
@@ -57,9 +56,9 @@ export function AddressForm({
           required
           type="text"
           value={zip}
-          onChange={e => updateFields({ zip: e.target.value })}
+          onChange={(e) => updateFields({ zip: e.target.value })}
         />
       </div>
     </FormWrapper>
-  )
+  );
 }

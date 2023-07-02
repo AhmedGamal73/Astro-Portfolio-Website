@@ -1,0 +1,31 @@
+.btns-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 3rem;
+
+    button {
+        padding: 6rem 6rem 9rem 6rem;
+        background: var(--prim3);
+        border-radius: 10px; 
+        border: 1px solid var(--prim3);
+        cursor: pointer;
+
+        &:hover, &:active{
+            background: #eec342;
+        }
+
+        svg {
+            width: 33px;
+            height: 33px; 
+        }
+    }
+}
+
+div.container {
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    flex-direction: column;
+}

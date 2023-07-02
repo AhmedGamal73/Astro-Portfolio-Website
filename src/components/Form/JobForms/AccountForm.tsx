@@ -1,21 +1,20 @@
-import { FormWrapper } from "./FormWrapper"
-import './globalForm.scss';
+import { FormWrapper } from "../FormWrapper";
 
 type AccountData = {
-  email: string
-  password: string
-  title: string
-}
+  email: string;
+  password: string;
+  title: string;
+};
 
 type AccountFormProps = AccountData & {
-  updateFields: (fields: Partial<AccountData>) => void
-}
+  updateFields: (fields: Partial<AccountData>) => void;
+};
 
 export function AccountForm({
   email,
   password,
   updateFields,
-  title
+  title,
 }: AccountFormProps) {
   return (
     <FormWrapper title="Verify Your Details">
@@ -26,7 +25,7 @@ export function AccountForm({
           required
           type="email"
           value={email}
-          onChange={e => updateFields({ email: e.target.value })}
+          onChange={(e) => updateFields({ email: e.target.value })}
         />
       </div>
       <div className="field-wrapper">
@@ -35,9 +34,9 @@ export function AccountForm({
           required
           type="password"
           value={password}
-          onChange={e => updateFields({ password: e.target.value })}
+          onChange={(e) => updateFields({ password: e.target.value })}
         />
       </div>
     </FormWrapper>
-  )
+  );
 }
