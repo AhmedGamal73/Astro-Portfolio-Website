@@ -1,4 +1,4 @@
-import styles from './form.module.scss';
+import '../../../styles/ContactForm.scss';
 
 const ConsaltantForm = () => {
   return (

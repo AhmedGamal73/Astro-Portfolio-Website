@@ -1,11 +1,10 @@
 import '../../../styles/ContactForm.scss'
-import styles from './Form.module.scss'
 
 const ContactForm = () => {
 
   return (
     <>
-      <div className={styles.flex}>
+      <div >
         <form id="contact-form" method="post">
           <input
             type="text"
