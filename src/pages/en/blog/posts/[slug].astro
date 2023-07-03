@@ -13,14 +13,26 @@ export async function getStaticPaths () {
     const res = await fetch(url);
     const posts = await res.json();
 
-    return posts.map((post) => ({
+    var enPosts = [];
+    var arPosts = [];
+    function isArabic (posts) {
+    posts.map(post => {
+        if (post.slug.includes('%')) {
+            arPosts.push(post);
+        } else {
+            enPosts.push(post);
+        };
+    })
+}
+
+
+    return enPosts.map((post) => ({
         params: {slug: post.slug },
         props: { post: post }
     }));
 }
 
 
-export const prerender = true;
 ---
 
 <Layout title={post.title.rendered}>

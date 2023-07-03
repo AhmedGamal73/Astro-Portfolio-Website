@@ -1,14 +1,13 @@
-[astro-icon="teenyicons:arrow-solid"] {
+[astro-icon="arrow-solid"] {
   width: 35px;
   height: 35px;
   rotate: 180deg;
-  color: var(--blue);
 }
 
-[astro-icon="mdi:chevron-right"] {
+[astro-icon="chevron-right"] {
   width: 35px;
   height: 35px;
-  color: var(--prim3);
+  color: var(--prim3)!important;
 }
 
 .card-container {

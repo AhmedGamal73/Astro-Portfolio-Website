@@ -12,7 +12,7 @@
         border: 1px solid var(--prim3);
         cursor: pointer;
 
-        &:hover, &:active{
+        &:hover {
             background: #eec342;
         }
 
@@ -28,4 +28,5 @@ div.container {
     justify-self: start;
     align-items: center;
     flex-direction: column;
+    gap: 3rem;
 }

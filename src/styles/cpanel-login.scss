@@ -87,6 +87,7 @@
         background: var(--bgc);
         border-radius: .4rem;
         transition: .1s;
+        cursor: pointer;
         &:hover {
             background-color: var(--border-color);
             
