@@ -1,11 +1,11 @@
 ---
-import { Layout } from "../../layouts";
-import Content1 from "../../components/Content/Content1.astro";
+import { Layout } from "../../../layouts";
+import Content1 from "../../../components/Content/Content1.astro";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Icon from 'astro-icon'
-import Card from '../../components/Card/Card.astro'
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import Content2 from "../../components/Content/Content2.astro";
+import Card from '../../../components/Card/Card.astro'
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Content2 from "../../../components/Content/Content2.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
