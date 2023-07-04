@@ -4,32 +4,47 @@ import Icon from 'astro-icon';
 <section>
     <div class="process-cont">
         <div class="top-col">
-            <h6>Process</h6>
+            <h6>Our Process</h6>
             <h3>The mechanism of action that leads to the success of the system</h3>
         </div>
         <div class="bot-col">
             <div class="content-cont">
-                <Icon name="ph:book-fill" />
+                <span>1</span>
+                <div class="icon-wrapper">
+                    <Icon name="book-light" />
+                </div>
                     <h5>Getting to know the company</h5>
                     <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
             </div>
             <div class="content-cont">
-                <Icon name="ph:book-fill" />
+                <span>2</span>
+                <div class="icon-wrapper">
+                    <Icon name="audit-outlined" />
+                </div>
+                    <h5>Caluculating and analyse teh data</h5>
+                    <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
+            </div>
+            <div class="content-cont">
+                <span>3</span>
+                <div class="icon-wrapper">
+                    <Icon name="money-thin" />
+                </div>
+                    <h5>Caluculate all your taxis</h5>
+                    <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
+            </div>
+            <div class="content-cont">
+                <span>4</span>
+                <div class="icon-wrapper">
+                    <Icon name="work-outline" />
+                </div>
                     <h5>Getting to know the company</h5>
                     <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
             </div>
             <div class="content-cont">
-                <Icon name="ph:book-fill" />
-                    <h5>Getting to know the company</h5>
-                    <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
-            </div>
-            <div class="content-cont">
-                <Icon name="ph:book-fill" />
-                    <h5>Getting to know the company</h5>
-                    <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
-            </div>
-            <div class="content-cont">
-                <Icon name="ph:book-fill" />
+                <span>5</span>
+                <div class="icon-wrapper">
+                    <Icon name="course" />
+                </div>
                     <h5>Getting to know the company</h5>
                     <p>Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."</p>
             </div>
@@ -42,12 +57,27 @@ import Icon from 'astro-icon';
 <style>
     .top-col h3 {
         color:  white;
+        font-family: 'poppins regular';
+        padding-top: .5rem;
     }
 
-    [astro-icon="ph:book-fill"] {
+    .content-cont span {
+        color: var(--prim3);
+        padding-bottom: .3rem;
+        font-family: 'poppins light';
+    }
+
+    div.content-cont .icon-wrapper {
+        padding: .4rem .6rem;
+        border: 1px solid var(--prim3);
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    [astro-icon] {
+        padding-top: .3rem;
         color: #DFC063;
         width: 23px;
-        padding-bottom: .5rem;
     }
 
     .process-cont {
@@ -90,4 +120,32 @@ import Icon from 'astro-icon';
         text-align: center;
     }
 
+
+    @media (max-width: 768px) {
+        .process-cont {
+            padding-inline-start: 0;
+
+        }
+        .dev-cont .second-col .process-cont .left-col img {
+            width: 190%;
+        }
+
+        .dev-cont {
+            gap: 0!important;
+        }
+        .bot-col {
+            width: 95%;
+            gap: 1.5rem;
+        }
+
+        .content-cont {
+            width: 45%;
+        }
+
+        .top-col h3 {
+            font-family: 'poppins light';
+        }
+
+
+    }
 </style>

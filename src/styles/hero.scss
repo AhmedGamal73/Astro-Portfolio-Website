@@ -116,9 +116,9 @@
     .content-col {
       height: 40vh;
       margin-bottom: 0;
+      padding-inline-start: 0!important;
       &::after{
-        top: 0!important;
-        width: 3rem!important;
+        display: none!important;
       }
     }
     .right-col {

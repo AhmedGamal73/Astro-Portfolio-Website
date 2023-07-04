@@ -90,8 +90,33 @@
   .card-container {
     width: 100%!important;
 
+    [astro-icon=chevron-right] {
+      width: 30px;
+      weight: 27px;
+    }
+
+    .bottom {
+      
+      padding-bottom: 0;
+      min-height: 375px;
+
+      .feature-wrap {
+        padding-inline-start: 1.5rem;
+
+        .feature svg {
+        }
+      }
+
+      .title-wrap {
+
+        h3, p {
+          text-align: start;
+        }
+      }
+    }
     .top img {
-      max-width: 36vh;
+      width: 68vw;
+      min-height: 21vh!important;
     }
   } 
 }

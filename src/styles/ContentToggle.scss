@@ -30,3 +30,23 @@ div.container {
     flex-direction: column;
     gap: 3rem;
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        padding-block: 3rem;
+        width: 100%;
+        gap: 0rem!important; 
+    }
+    .btns-cont {
+        padding-top: 2rem;
+        button {
+            padding: 3rem 5rem 6rem 3rem;
+        } 
+    }
+
+    .forms {
+        width: 80%;
+    }
+
+}

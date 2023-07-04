@@ -27,8 +27,8 @@ const { title } = Astro.props;
 	<body>
 		<div class="loader"></div>
 		<MyHeader lang={lang} client:load/>
-		<article >
-		<slot id="content" />
+		<article  >
+		<slot  />
 		</article>
 		<div class="preloader"></div>
 		<Footer />

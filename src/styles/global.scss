@@ -45,10 +45,14 @@ font-size: 1.1vw;
 a {
 font-size: .9vw!important;
 }
+
+
+// Phone
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
     text-align: center;
+    line-height: 1.2!important;
   }
   h2 {
     font-size: 5.3vw;
@@ -69,17 +73,35 @@ font-size: .9vw!important;
 
   p {
     font-size: 3vw!important;
-    text-align: center;
   }
 
   a {
     font-size: 3vw!important;
   }
 
+
+  /* Forms */
+
+  input, textarea {
+    width: 85%!important;
+    font-size: 2.5vw!important;
+  }
+  textarea {
+    padding-block: 3rem;
+  }
+  /* Forms */
+
+
   /* buttons */
   .btn-stroke-yellow {
     font-size: 3vw!important;
+    padding: 8px 30px!important;
   }
+
+  .btn-line-blue {
+    text-align: center;
+  }
+  /* buttons */
 }
 
 
@@ -296,7 +318,7 @@ input, select, textarea {
     vertical-align: middle;
     margin-inline-start: .3rem;
     background-image: url('../icons/chevron-right.svg');
-    width: 3rem;
+    width: 1rem;
     height: 1.1rem;
     background-size: contain;
     background-repeat: no-repeat;

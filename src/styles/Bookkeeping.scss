@@ -57,6 +57,10 @@
   }
 
   @media (max-width: 768px) {
+
+  [astro-icon="arrow-solid"] {
+    display: none!important;
+  }
     .upper-col {
       flex-direction: column-reverse;
       
@@ -131,12 +135,6 @@
         width: 100%;
       }
 
-      
-      .btn-wrap {
-        gap: 1rem;
-        justify-content: center;
-        padding: 0;
-      }
     }
   }
 

@@ -14,14 +14,11 @@ export async function getStaticPaths () {
     const posts = await res.json();
 
     var enPosts = [];
-    var arPosts = [];
-    function isArabic (posts) {
+    function isEn (posts) {
     posts.map(post => {
-        if (post.slug.includes('%')) {
-            arPosts.push(post);
-        } else {
+        if (!post.slug.includes('%')) {
             enPosts.push(post);
-        };
+        }
     })
 }
 
@@ -49,6 +46,10 @@ export async function getStaticPaths () {
 
         <article class="article">
             <h1>{post.title.rendered}</h1>
+            <div class="article-map-wrapper">
+                <h4>In this article</h4>
+                <div id="article-map"></div>
+            </div>
             <div class="article-img">
                 <img src={post.better_featured_image.source_url} alt="" />
             </div>
@@ -62,6 +63,7 @@ export async function getStaticPaths () {
     document.addEventListener("DOMContentLoaded", function() {
       const h2Elements = document.querySelectorAll("h2"); // Get all <h2> elements
       const sidebarNavigation = document.getElementById("sidebar-navigation"); // Sidebar navigation container
+      const articleMap = document.getElementById("article-map"); // site map for mobile 
 
      // Add smooth scroll and margin top to anchor tags
         const scrollLinks = document.querySelectorAll('.sidebar-link')
@@ -94,8 +96,18 @@ export async function getStaticPaths () {
     
         const listItemElement = document.createElement("li");
         listItemElement.appendChild(linkElement);
-    
-        sidebarNavigation.appendChild(listItemElement);
+
+
+        function appendContent () {
+            if (window.innerWidth < 768) {
+                articleMap.appendChild(listItemElement);
+            } else {
+                sidebarNavigation.appendChild(listItemElement);
+            }
+        };
+
+        window.addEventListener('load', appendContent);
+        window.addEventListener('resize', appendContent);
       });
     });
   </script>

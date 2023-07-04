@@ -42,9 +42,29 @@ const p = Astro.props
   }
 
   @media (max-width: 768px) {
+
+    .content-wrap {
+      width: 100%;
+
+    }
+
+    .content-wrap h1 {
+      padding-bottom: 1rem;
+    }
+
     .content2-container {
       width: 100%;
-      padding: 1rem 1rem 3rem 1rem;
+      padding: 0;
+      align-items: center;
+    }
+
+    .btn-wrap {
+      flex-direction: column;
+      padding: 0;
+      gap: 0;
+
+      
+    
     }
   }
 </style>

@@ -24,14 +24,12 @@
   }
   
   form {
-    width: 31.25rem;
+    width: 31.25;
     position: relative;
     margin-top: 2rem;
     align-items: center;
   }
-  
-  
-  
+
   input, textarea {
     width: 100%;
     display: block;
@@ -80,8 +78,8 @@
     }
   
   @media (max-width: 950px) {
-    .logo {
-      width: 8rem;
+    form {
+      width: 100%;
     }
     h1 {
       font-size: 1.75rem;
@@ -99,4 +97,5 @@
     button {
       width: 7rem;
     }
+
   }

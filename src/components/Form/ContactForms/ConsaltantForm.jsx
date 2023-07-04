@@ -1,5 +1,12 @@
 import '../../../styles/ContactForm.scss';
 
+
+
+var styling = {
+  input: {
+    fontSize: "3vw"
+  },
+}
 const ConsaltantForm = () => {
   return (
     <div>

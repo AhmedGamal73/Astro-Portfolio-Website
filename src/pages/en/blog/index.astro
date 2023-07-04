@@ -99,7 +99,7 @@ export const prerender = true;
     div.card {
         width: 390px;
         transition: .3s;
-        background-color: transparent;
+        background-color: var(--bgc);
     }
     div.card:hover {
         box-shadow: var(--box-shadow1);
@@ -121,13 +121,13 @@ export const prerender = true;
     div.content-wrap {
         width: 100%;
         min-height: 260px;
-        background: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border-radius: 0 0 20px 20px;
         padding-block: 2rem;
+        background: white;
     }
     div.content-wrap .content-wrapper {
         width: 80%
@@ -140,9 +140,21 @@ export const prerender = true;
     }
 
 
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
+        div.content-wrap {
+            padding-bottom: 0;
+            width: 100%;
+            min-height: 200px;
+            padding-top: 0;
+        }
+        p {
+            text-align: start;
+        } 
         .cards-wrap {
             flex-direction: column;
+        }
+        div.card {
+            width: 300px!important;
         }
         p {
             text-align: start;
