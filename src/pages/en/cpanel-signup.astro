@@ -2,15 +2,12 @@
 import '../../styles/cpanel-login.scss';
 ---
 
-
-
 <div class="form-container">
     <div class="main-form">  	
         <form action="/api/auth/register" method="post">
             <label class="title" for="chk" aria-hidden="true">Sign up</label>
             <input type="text" name="name" id="name" placeholder="Name" />
             <input 
-                class=`${emailError} ? 'error' : ''`
                 type="email" 
                 name="email" 
                 placeholder="Email" 
