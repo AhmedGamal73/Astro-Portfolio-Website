@@ -99,9 +99,6 @@ const MyHeader = (props) => {
               </div>
             </li>
             <li>
-              <a href={`/${props.lang}/career`}>Jobs</a>
-            </li>
-            <li>
               <a href={`/${props.lang}/about`}>About</a>
             </li>
             <li>
@@ -109,6 +106,9 @@ const MyHeader = (props) => {
             </li>
             <li>
               <a href={`/${props.lang}/blog`}>Blog</a>
+            </li>
+            <li>
+              <a href={`/${props.lang}/career`}>Jobs</a>
             </li>
             <li>
               <a href={`/${props.lang}/faq`}>FAQs</a>
