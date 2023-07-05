@@ -8,8 +8,8 @@
     width: 80%;
 
     .form-btn {
-        width: 35%;
-        height: 13vh;
+        width: 17rem;
+        height: 13rem;    
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,10 +53,14 @@ div.container {
         gap: 0rem!important; 
     }
     .btns-cont {
+        width: 93%;
         padding-top: 2rem;
-        button {
-            padding: 3rem 5rem 6rem 3rem;
-        } 
+
+        .form-btn {
+            width: 9rem;
+            height: 8rem;    
+            font-size: 3.3vw;
+        }
     }
 
     .forms {

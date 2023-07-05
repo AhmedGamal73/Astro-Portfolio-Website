@@ -56,16 +56,24 @@ nav {
     padding: 0;
 
     li {
+      color: white;
       a {
         font-family: 'Poppins regular';
         color: white;
         transition: 300ms;
         font-size: 1vw!important;
-        &:hover {
+        &:hover, &:active {
           color: var(--prim3);
         }
 
       }
+
+      
+    }
+    .service-item::after {
+      content: '';
+      background-image: url('../icons/dropdown.svg');
+
     }
 
   }
@@ -103,10 +111,7 @@ nav {
   margin-bottom: 0px;
   rotate: 90deg;
 }
-.header-end a:nth-child(2):hover::after {
-  content: '';
-  background-image: url('../icons/arrow-tl-black.svg');
-}
+
 
 @media (max-width: 768px) {
 
@@ -248,4 +253,11 @@ nav.header-mid {
     width: 100%;
     margin-top: 35px;
   }
+}
+
+
+.navbar-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

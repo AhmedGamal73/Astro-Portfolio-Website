@@ -1,13 +1,21 @@
-import '../styles/MyHeader.scss';
-import {logo} from '../icons';
+import '../../styles/MyHeader.scss';
+import {logo} from '../../icons';
 import { useEffect, useState } from 'react';
+import { DropDown }  from './DropDown';
 
 
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen ] = useState(false);
   const [isSticky, setIsSticky ] = useState(false);
+  const [openServices, setOpenServices ] = useState(false);
 
+
+  let icon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path fill="white" d="m7 10l5 5l5-5z"/></g></svg>
+
+  if (openServices) {
+    icon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="m7 10l5 5l5-5z"/></svg>
+  }
   useEffect(() => {
     const handleScroll = () => {
       const headerHeight = 70;
@@ -56,11 +64,21 @@ const MyHeader = (props) => {
         <nav className={`header-mid ${isOpen ? 'open' : ''}`}>
           <ul>
             <li><a href={`/${props.lang}/home`}>Home</a></li>
-            <li><a href={`/${props.lang}/services`}>Services</a></li>
+            <li
+              className='service-item' 
+              onClick={() => setOpenServices((prev) => !prev)} style={{position: 'relative'}}>
+              <div className='navbar-services'>
+                <span>Services</span>
+                {icon}
+              </div>
+
+            </li>
             <li><a href={`/${props.lang}/courses`}>Courses</a></li>
             <li><a href={`/${props.lang}/about`}>About</a></li>
             <li><a href={`/${props.lang}/contact`}>Contact</a></li>
             <li><a href={`/${props.lang}/blog`}>Blog</a></li>
+            <li><a href={`/${props.lang}/faq`}>FAQs</a></li>
+            {openServices && <DropDown /> }
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? 'open' : ''}`}>
