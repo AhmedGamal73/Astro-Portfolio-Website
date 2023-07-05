@@ -2,255 +2,264 @@
 import { Layout } from "../../../layouts";
 import Content1 from "../../../components/Content/Content1.astro";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Icon from 'astro-icon'
-import Card from '../../../components/Card/Card.astro'
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Icon from "astro-icon";
+import Card from "../../../components/Card/Card.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import Content2 from "../../../components/Content/Content2.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-
 ---
 
 <Layout title="Services">
-    <section>
-        <div class="service-hero">
-            <Icon style="width: 63px; position: absolute; top: 0; rotate: 180deg;" name="arrow-up-thin" />
-            <Content1 
-                title="Solutions to all your facility problems"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-            />
-            <a class="btn-stroke-blue-heavy" href="" >Contact one of our experts</a>
-        </div>
-        <div class="content-103">
-            <div class="container">
-                <div class="content row">
-                    <Content1 
-                        tag="services"
-                        title="Our Services" 
-                    />
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="book-light"/>
-                                </div>
-                                <!-- service-icon -->
-                                <h3 class="service-title">BookKeeping</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="audit-outlined"/>
-                                </div>
-                                <!-- .s-icon -->
-                                <h3 class="service-title">Audit</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="money-thin"/>
-                                </div>
-                                <!-- .s-icon -->
-                                <h3 class="service-title">Taxis</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="work-outline"/>
-                                </div>
-                                <!-- .s-icon -->
-                                <h3 class="service-title">Jobs</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="course"/>
-                                </div>
-                                <!-- .s-icon -->
-                                <h3 class="service-title">Courses</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-post">
-                            <div class="service-content">
-                                <div class="service-icon">
-                                    <Icon name="programming-broken"/>
-                                </div>
-                                <!-- .s-icon -->
-                                <h3 class="service-title">Accounting Programs</h3>
-                                <p class="service-description">Seitan brunch meh, food truck Wes Anderson quinoa XOXO readymade gastropub gluten-free heirloom wolf skateboard.</p>
-                            </div>
-                            <!-- service-content -->
-                            <div class="service-hover"></div>
-                        </div>
-                    </div>
+  <section>
+    <div class="service-hero">
+      <Icon
+        style="width: 63px; position: absolute; top: 0; rotate: 180deg;"
+        name="arrow-up-thin"
+      />
+      <Content1
+        title="Solutions to all your facility problems"
+        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+      />
+      <a class="btn-stroke-blue-heavy" href="">Contact one of our experts</a>
+    </div>
+    <div class="content-103">
+      <div class="container">
+        <div class="content row">
+          <Content1 tag="services" title="Our Services" />
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="book-light" />
                 </div>
+                <!-- service-icon -->
+                <h3 class="service-title">BookKeeping</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
             </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="audit-outlined" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">Audit</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="money-thin" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">Taxis</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="work-outline" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">Jobs</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="course" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">Courses</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="programming-broken" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">Accounting Programs</h3>
+                <p class="service-description">
+                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
+                  readymade gastropub gluten-free heirloom wolf skateboard.
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </div>
         </div>
-    </section> 
-    <section class="courses-container">
-        <Content1 
-            tag="Our Programms" 
-            title="We Have Programms to Help Your Bussines"
-            titleColor="white"
-        />
-        <div class="card-container">
-            <Card 
-                size="40%"
-                img="/service/program1.png"
-                title={t("program1.title")}
-                subtitle={t("program1.subtitle")}
-                feature1="Growth of sales"
-                feature2="Manage your employees"
-                feature3="customers and suppliers"
-                btn="See All Features"
-            />
-            <Card 
-                img="/service/program2.png"
-                size="40%"
-                title={t("program2.title")}
-                subtitle={t("program2.subtitle")}
-                feature1="Growth of sales"
-                feature2="Manage your employees"
-                feature3="customers and suppliers"
-                btn="See All Features"
-                bgc="var(--accent2)"
-            />
-            <Card 
-                size="60%"
-                featureSort="row"
-                img="/service/program3.png"
-                title={t("program3.title")}
-                subtitle={t("program3.subtitle")}
-                feature1="Growth of sales"
-                feature2="Manage your employees"
-                feature3="customers and suppliers"
-                btn="See All Features"
-                newTab="_blanck"
-                bgc="var(--accent1)"
-            />
-        </div>
-    </section>
-    <section class="consaltant-container">
-        <div class="right">
-            <Content2 
-               title="Our Expertese here to help you with understanding your financial sitiuation and More"  
-               subtitle="If You Have An Enterprise Company, where to go from here where to go from here where to go from here"
-               btn1="Ask Consaltant Know"
-            />
-        </div>
-        <div class="left">
-            <img 
-                src="/public/service/consulting.png" 
-            />
-        </div>
-
-    </section>
+      </div>
+    </div>
+  </section>
+  <section class="courses-container">
+    <Content1
+      tag="Our Programms"
+      title="We Have Programms to Help Your Bussines"
+      titleColor="white"
+    />
+    <div class="card-container">
+      <Card
+        size="40%"
+        img="/service/program1.png"
+        title={t("program1.title")}
+        subtitle={t("program1.subtitle")}
+        feature1="Growth of sales"
+        feature2="Manage your employees"
+        feature3="customers and suppliers"
+        btn="See All Features"
+      />
+      <Card
+        img="/service/program2.png"
+        size="40%"
+        title={t("program2.title")}
+        subtitle={t("program2.subtitle")}
+        feature1="Growth of sales"
+        feature2="Manage your employees"
+        feature3="customers and suppliers"
+        btn="See All Features"
+        bgc="var(--accent2)"
+      />
+      <Card
+        size="60%"
+        featureSort="row"
+        img="/service/program3.png"
+        title={t("program3.title")}
+        subtitle={t("program3.subtitle")}
+        feature1="Growth of sales"
+        feature2="Manage your employees"
+        feature3="customers and suppliers"
+        btn="See All Features"
+        newTab="_blanck"
+        bgc="var(--accent1)"
+      />
+    </div>
+  </section>
+  <section class="consaltant-container">
+    <div class="right">
+      <Content2
+        title="Our Expertese here to help you with understanding your financial sitiuation and More"
+        subtitle="If You Have An Enterprise Company, where to go from here where to go from here where to go from here"
+        btn1="Ask Consaltant Know"
+      />
+    </div>
+    <div class="left">
+      <img src="/service/consulting.png" />
+    </div>
+  </section>
 </Layout>
 
-
 <style>
+  /* Consultant Section */
+  section.consaltant-container {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.consaltant-container .right {
+    padding: 2rem 2rem 0 2rem;
+  }
+  section.consaltant-container .left img {
+    margin-bottom: 2rem;
+  }
 
-    /* Consultant Section */
-    section.consaltant-container {
-        padding: 6rem 3rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    section.consaltant-container .right {
-        padding: 2rem 2rem 0 2rem
-    }
-    section.consaltant-container .left img {
-        margin-bottom: 2rem
-    }
+  section.courses-container {
+    background-color: var(--prim1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+    border-radius: 1.5rem;
+  }
+  div.card-container {
+    display: flex;
+    width: 80%;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+  }
 
+  .service-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    background: var(--prim3);
+    padding-block: 6rem;
+    box-shadow: var(--boxShadow2);
+  }
 
+  .service-hero a {
+    border-raduis: 4px;
+    padding: 0.8rem 3rem;
+  }
+  .service-hero a:hover {
+    background: var(--prim3);
+    border: 1px solid var(--prim1);
+    color: var(--prim1);
+  }
 
-    section.courses-container {
-        background-color: var(--prim1);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-block: 3rem;
-        border-radius: 1.5rem;
-    }
-    div.card-container {
-        display: flex;
-        width: 80%;
-        gap: 6rem;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-inline: 2rem;
-    }
-    
-    .service-hero {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 40vh;
-        background: var(--prim3);
-        padding-block: 6rem;
-        box-shadow: var(--boxShadow2);
-    }
-
-    .service-hero a {
-        border-raduis: 4px;
-        padding: .8rem 3rem;
-    }
-    .service-hero a:hover {
-        background: var(--prim3);
-        border: 1px solid var(--prim1);
-        color: var(--prim1);
-    } 
-
-    .content-103{
+  .content-103 {
     background: var(--bgc);
-    padding-block:50px;
-    }
+    padding-block: 50px;
+  }
 
-    .content-103 .sercies-title{
-        text-align:center;
-        padding: 50px 0;
-    }
+  .content-103 .sercies-title {
+    text-align: center;
+    padding: 50px 0;
+  }
 
-    .service-post {
+  .service-post {
     background: #fff;
     padding: 30px;
     text-align: center;
@@ -262,55 +271,54 @@ const t = useTranslations(lang);
     -webkit-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
     box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    }
-    .content-103 .service-content {
-        position: relative;
-        z-index: 13;
-    }
-    .content-103 .service-icon {
-        margin: 10px 0 20px 0;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        text-align: center;
-        border: 2px solid var(--prim3);
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 50px;
-        -moz-transition: color, 250ms;
-        -o-transition: color, 250ms;
-        -webkit-transition: color, 250ms;
-        transition: color, 250ms;
-    }
-    .content-103 .service-icon [astro-icon] {
-        padding-bottom: 5px;
-        width: 33px;
-        color: var(--prim3);
-    }
-    .content-103 .service-title {
-        font-size: 16px;
-        font-weight: normal;
-        margin-bottom: 15px;
-        -moz-transition: color, 250ms;
-        -o-transition: color, 250ms;
-        -webkit-transition: color, 250ms;
-        transition: color, 250ms;
-    }
-    .content-103 .service-post:hover .service-title {
-        color: #fff;
-    }
-    .content-103 .service-description {
-        -moz-transition: color, 250ms;
-        -o-transition: color, 250ms;
-        -webkit-transition: color, 250ms;
-        transition: color, 250ms;
-    }
-    .content-103 .service-post:hover .service-description {
+  }
+  .content-103 .service-content {
+    position: relative;
+    z-index: 13;
+  }
+  .content-103 .service-icon {
+    margin: 10px 0 20px 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    border: 2px solid var(--prim3);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-icon [astro-icon] {
+    padding-bottom: 5px;
+    width: 33px;
+    color: var(--prim3);
+  }
+  .content-103 .service-title {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-post:hover .service-title {
     color: #fff;
-    }
+  }
+  .content-103 .service-description {
+    -moz-transition: color, 250ms;
+    -o-transition: color, 250ms;
+    -webkit-transition: color, 250ms;
+    transition: color, 250ms;
+  }
+  .content-103 .service-post:hover .service-description {
+    color: #fff;
+  }
 
-
-    .content-103 .service-hover {
+  .content-103 .service-hover {
     position: absolute;
     top: 0;
     left: 0;
@@ -323,30 +331,28 @@ const t = useTranslations(lang);
     -webkit-transition: width, 250ms;
     transition: width, 250ms;
     border-radius: 8px;
-    }
-    /*hover-background-color effect*/
-    .content-103 .service-post:hover .service-hover {
+  }
+  /*hover-background-color effect*/
+  .content-103 .service-post:hover .service-hover {
     height: 100%;
-    }
-   
-   @media (max-width: 768px) {
+  }
 
+  @media (max-width: 768px) {
     .content-wrap {
-        width: 80%!important
+      width: 80% !important;
     }
     .service-hero {
-        height: 55vh;
+      height: 55vh;
     }
 
     .consaltant-container {
-        flex-direction: column-reverse;
+      flex-direction: column-reverse;
     }
     .consaltant-container div.right {
-        padding: 0;
+      padding: 0;
     }
     img {
-        width: 105%
+      width: 105%;
     }
-
-   }
+  }
 </style>

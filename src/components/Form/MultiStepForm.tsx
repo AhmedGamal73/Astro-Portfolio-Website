@@ -21,41 +21,47 @@ const MultiStepForm = () => {
   const stepTitle = ["Information", "CV", "Questions"];
 
   return (
-    <>
-      <form onSubmit={submitForm}>
-        <div className="form_steps-container">
-          {steps.map((step, index) => (
-            <div className="form_step-wrapper">
-              <div
-                className={`form__step-box ${
-                  currentStepIndex == index ? "active" : ""
-                }`}
-              >
-                <span className="step-num">{index + 1}</span>
-              </div>
-              <h6>{stepTitle[index]}</h6>
-            </div>
-          ))}
-        </div>
+    <div className="job-app-cont">
 
-        <span className="steps-counter">
-          step {currentStepIndex + 1} / {steps.length}
-        </span>
-        <div className="bottom-container">
-          {step}
-          <div className="btns-container">
-            {!isFirstStep && (
-              <button className="prev-btn" type="button" onClick={prev}>
-                Back
-              </button>
-            )}
-            <button className="next-btn" type="submit">
-              {isLastStep ? "Finish" : "Next Step"}
-            </button>
+      <form onSubmit={submitForm}>
+        <div className="left-col">
+          <div className="steps-cont">
+          <div className="form_steps-container">
+            {steps.map((step, index) => (
+              <div className="form_step-wrapper">
+                <div
+                  className={`form__step-box ${
+                    currentStepIndex == index ? "active" : ""
+                  }`}
+                >
+                  <span className="step-num">{index + 1}</span>
+                </div>
+                <h6>{stepTitle[index]}</h6>
+              </div>
+            ))}
+          </div>
           </div>
         </div>
+        <div className="right-col">
+          <span className="steps-counter">
+              step {currentStepIndex + 1} / {steps.length}
+            </span>
+            <div className="bottom-container">
+              {step}
+              <div className="btns-container">
+                {!isFirstStep && (
+                  <button className="prev-btn" type="button" onClick={prev}>
+                    Back
+                  </button>
+                )}
+                <button className="next-btn" type="submit">
+                  {isLastStep ? "Finish" : "Next Step"}
+                </button>
+              </div>
+            </div>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 
