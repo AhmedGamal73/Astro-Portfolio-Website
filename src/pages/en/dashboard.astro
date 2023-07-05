@@ -15,7 +15,7 @@ const auth = getAuth(app);
 const sessionCookie = Astro.cookies.get("session").value;
 
 if (!sessionCookie) {
-  return Astro.redirect("/signin");
+  return Astro.redirect(`/en/cpanel-login`);
 }
 const decodedCookie = await auth.verifySessionCookie(sessionCookie);
 const user = await auth.getUser(decodedCookie.uid);

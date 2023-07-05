@@ -1,5 +1,6 @@
 import type { ServiceAccount } from "firebase-admin";
 import { initializeApp, cert } from "firebase-admin/app";
+export const prerender = true;
 
 
 
@@ -7,7 +8,7 @@ const serviceAccount = {
   type: "service_account",
   project_id: import.meta.env.FIREBASE_PROJECT_ID,
   private_key_id: import.meta.env.FIREBASE_PRIVATE_KEY_ID,
-  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMikSM0/2RGNL3\nM1d2OEEcImtTi/jcHyKWv9twpVVffHH5+nJRW+z93dckPbw3qEM5snGvPqGNG+B+\nve/jJ/21DoDTJ4BKm8aDUrgmssuCkNi7531D1FK+yvPfQHLvX2GC+KwtaDPTH7Hd\nod2IicAcztDgYofEfwQLtw2+9wcV13y3/j2gbn6oTpMHXwNG33YLErzug2CyDwvh\nEQEPnob56tXMkl8Kucf+oHt6ndtWbhCReO3gD+mhtowtnE0NY+S/VqVjRmzWGc5B\ntSCPzAvXwDIM59sXR09hh8yrpeRpd9jcS9GFYbwrbepBqCg/StCZclMqMD/Vtwx5\np24YssmjAgMBAAECggEAOe9UGVuWb/nLD6/gLyEh+Bkbs09rTtYW0wJG4rJB60jx\nc6/nn3ndN88VODOwU0d6uyX7I3snATQLM3sTLpFOQHF6NdTzdq6G3P2aIYP1NudW\nLGsWRRcn1NjhmLPFml223gUXp8jjHQLWO4O0nw79dmtyKIxgDl03xSW1ZAjOXfXo\nvZw0tV36Sgjkl3uYNpOmU7z7oc8iZYcUmvMLQLpP3RL0g55/O/KYeLjT/RiHOdyd\nnvJn4bh+axT4UvZwxPAFvgAhXQW6WbsfW+w7DL5gPHYisLxi2VOOj+JmOLkl0vyb\nkl4ichJDj21b39W//C996WC6iyZqdirwJ/kQ5ESc2QKBgQDoO+N84lRS3XijpvnJ\nTNGZx+5DQJ2S0JRRk80aKRQI0TiIJiRSEy4KoscF3AAA5mirsPrMHPSZ4ywE0Pl6\nQk2fNWmbTSboLS6r33403QT7wxYt7Nu52hY8oTL/h2HviTt1/3+5yA0/ekLKSRr4\nM34goxo7eQcTLOEjDsXyc0Re3QKBgQDheNnAiqceWJbuAY2RqCNjp93jdUoTKDFD\nDT0yYZNMCaDO8ggDlUK5mnEtRhJzX3ztO7uWHS75sfHYKdx8m+I6suZ/XKX85Wmb\n8xfkQGr0LxwiLWHRegD8avPWE5LKmuOwelWeLxhPDGx9Tgvb/dm0YI123VHc5hpZ\n909pc5ICfwKBgQCHQBnE6atid0mDRgPDkNGhVicVU9RxZLh8qi+RRMs+N1tNL6mH\ng1QVLafraa022PmsxG3L4jEyTnOcenhRE7xRNLJEmDJIlcfQoWDHONFmLsAEDyYI\nn1LEDL2+xAHtl2bh2eNxN2k/xtyPIvRqCNMz/smQSXQtXr3fxQLTqP3woQKBgQCF\n8pu6bSS3PH39y2JlQ/QyQgnqFUX6d4g8g2L1yU4OgDHOf68PId9QEFZoRRa0/+dh\nsHjSx2ee433/o27fgGQ35wxUYaAiy8+f3B03dqWTh2E5VKimH8ryKj/N0DcGslnN\n//9ZSDUy0PiqwHD/MqHhLPMdyIHXr8O76tZ8mTIG1QKBgDVhtOUbdNooOrfr8qmk\nk2tSH15KI2i2eYB7fmn6E04RWBTntH+3PDPE4VlR2aZ1Ud/JdZxB3BF3EmYPxy/v\nUePaSuO3MsVg0K1SRYxIyE47QYdr5jVuSPUyUJOF0oQ372soPlcHpE66OvmsKilM\n9Hw6858Y6dOHGdHcc/Psr25/\n-----END PRIVATE KEY-----\n",
+  private_key: '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCoraJTbbF6VeJ1\nALFcekecT/vXn61ZVKm3BuUXUIUZSX1b8JdUJllk3jK3JRTG6vGs/uCxNeEEzML3\ncYFM7Sm8SSXhUXfrQT+uXhk9D/Om+Vg5ruvLdvIdLK2WXL7eKo9SPZkoM+eHXo0C\n0CJ8JK9eDLmejnUexsycdW8plNaEnAS3Ev3DjpPtejGTQDiiDdhPwIZ06gNMH2PL\nPnJXAk539lPC6t5Uc0i4x9G/JZD8ijJulUhc7DiriZcG8IQy/pxiVUdoojcqOVVF\nairhKoeD9ifmOyBfuKLJTi4r8aJM77ALNuZW12URqCaUKhdJCLESXtMnx37mhv6i\nHBKoS95TAgMBAAECggEAFJQmby49TlMHD0Y33TPv46Kgc4SAFhttny5AqdEBg/3C\nxQI7vCD3nAY9wrlL6R7FwFjSGdycaMUAbkbTQwrWIin8bJpPWoy507CYPKpjC/Z0\nrIjqLIcE78lBHkyPXrRritmIA28dqpa+9l5lLqcdHAjKZo0zvb78PIRZPQXzC/d4\nKRLE3OMRRCU8Vg6v1tIxImI7J6a++wq8jzgPt+DXonJLRK4BT0XJKoDPMt2Qhcmw\ntc9jUxhqNN5AW5/o5RYzCzjV7NETicCUhUk0hTzUs0jz+Y1Py73NKlBGwv/K3vVn\njyf55UMEB+O1q4QRVaAheh1xmmaL2eIlBi8AZnBpKQKBgQDRdP4KVa/wfq3AnmNS\nmXrA5k4JuO/ownc3zegWSiKpoXTvuwCY4BxJGUz6zEUXGzbENmWdXtLf80UtV5uu\nIUWunrhMvDAJ+Sgp8NNiR8lO+J3Sbv9bMGozmkWc/izjipsNTJCe5tPbaSRSX8iS\nMxwBI4CmyBT7B0GGcSSZ1htAuQKBgQDOKO8XdeBcy1ShY+7AffvOyuoSwijcmw0/\n27LUYDsF2/d/kTcx5ghhWUPfz+eepD6mopxlk/vQ+GqqyA6GJwLm9npIcMOu2qWM\nSQX00V42kk3W8kkYOMfVZcUmmRdW+w7FmCmpziZMx2/Io45NRaYFLFQ3fTJ3kEBE\n//6LlePZawKBgQCwAEubKYdOYVPlH/I7rQXN43e9ia3l+soslROo7yCTQz08V/lX\nfDGoZt8detmvYcmyNDdMdiphzkvZnt0NA55G7c3VhOgk6T0LiPZGhiWs+xG6ilR+\nLn9+3uoR0i6sAILrOOPo8fMhUgcYRK4H03R7rHZlLokaqm0v6BCmR5fc2QKBgHuI\n7dRKDzqroLfg8QUpuQUudFrvO5sN0j+sv5khXNzi9YjclI1zARyMZ+6qX2mhk+U4\nVa1Mor2SziAuJv3eTI/nrFjSMYAKht7sNwR/nQvoWXpuzrwT8jL+e8foPqMhZ7Wh\nu32ECVFCxMoer7u/+37oFEL345DfwJNYLsin9dOnAoGAbSG8i3IhZt5IX08g7JZ0\nOvszkjTEyrRpSxirigL6SA5tXPFzQUZov7G4RHgB6fQrQo+VD2S1AqE9rRhnWO3p\nu6JgqtRQqL/Utp1zTtMNX8yKzBpijKxxfzD9zqSmr0ybGtRiJqusuKzvYTwbbZQW\nWWRe8sjnhxIGwUn1oyQwaJQ=\n-----END PRIVATE KEY-----\n',
   client_email: import.meta.env.FIREBASE_CLIENT_EMAIL,
   client_id: import.meta.env.FIREBASE_CLIENT_ID,
   auth_uri: import.meta.env.FIREBASE_AUTH_URI,
@@ -18,5 +19,5 @@ const serviceAccount = {
 
 export const app = initializeApp({
   credential: cert(serviceAccount as ServiceAccount),
-});
+}, "app1");
 

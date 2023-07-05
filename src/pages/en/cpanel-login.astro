@@ -14,7 +14,7 @@ const sessionCookie = Astro.cookies.get("session").value;
 if (sessionCookie) {
   const decodedCookie = await auth.verifySessionCookie(sessionCookie);
   if (decodedCookie) {
-    return Astro.redirect(`/${lang}/auth`);
+    return Astro.redirect(`/en/dashboard`);
   };
 }
 
@@ -40,7 +40,7 @@ export const prerender = true;
       </div>
       <a>Forget password?</a>
       <div class="sign-up">
-        <h5>Don't have an account?</h5><a href={`/${lang}/cpanel-signup`}>Sign up</a>
+        <h5>Don't have an account?</h5><a href={`/en/cpanel-signup`}>Sign up</a>
       </div>
   </div>
 </div>
@@ -54,9 +54,9 @@ export const prerender = true;
     GoogleAuthProvider,
     signInWithPopup,
   } from "firebase/auth";
-  import { app } from "../../firebase/client";
+  import { app2 } from "../../firebase/client";
 
-  const auth = getAuth(app);
+  const auth = getAuth(app2);
   // This will prevent the browser from storing session data
   auth.setPersistence(inMemoryPersistence);
 
@@ -68,6 +68,7 @@ export const prerender = true;
     const password = formData.get("password")?.toString();
 
     if (!email || !password) {
+      alert("Wrong Input")
       return;
     }
     const userCredential = await signInWithEmailAndPassword(

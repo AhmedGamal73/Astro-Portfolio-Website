@@ -1,8 +1,9 @@
 import { initializeApp } from "firebase/app";
-import "firebase/auth";
+export const prerender = true;
 
 
-const firebaseConfig = {
+
+export const firebaseConfig = {
   apiKey: "AIzaSyAZo-myW3EdzR3IjE4s2b-Jkw0PYBxrvlE",
   authDomain: "bp-authantication.firebaseapp.com",
   projectId: "bp-authantication",
@@ -13,4 +14,5 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export let app = initializeApp(firebaseConfig);
+export const app2 = initializeApp(firebaseConfig);
+
