@@ -1,0 +1,81 @@
+.job-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border: 3px solid var(--prim1);
+    border-radius: 4px;
+    width: 80%;
+    transition: .3s;
+    gap: 1.5rem;
+
+    &:hover {
+        background-color: var(--bgc);
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3::after {
+            content: '';
+            background-image: url('../icons/arrow-br.svg');
+            display: inline-block;
+            rotate: 40deg;
+            width: 2vw;
+            height: 3vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 33px;
+            height: 30px;
+            margin-bottom: -0.5rem;
+            &:hover {
+                margin-bottom: 50px!important
+            }
+
+        }
+
+    }
+
+    .last {
+        width: 100%;
+
+        .job-statue {
+            width: 60%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 1.5rem;
+
+            .statue {
+                padding: .5rem 1rem;
+                border: 1px solid var(--prim1);
+                border-radius: 50px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                transition: .3s;
+
+                &:hover {
+                    background: var(--prim2);
+
+                    color: white;
+                    svg {
+                        color: white;
+                    }
+                }
+                
+
+                svg {
+                    width: 23px;
+                    height: 23px;
+                    padding-inline-end: .4rem;
+                }
+            }
+        }
+    }
+}
+
+
+
