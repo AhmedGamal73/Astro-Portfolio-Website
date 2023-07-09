@@ -6,11 +6,19 @@ type FormWrapperProps = {
   children: ReactNode;
 };
 
-export function FormWrapper({ title, children }: FormWrapperProps) {
+const STYLE_P = {
+  color: "grey",
+  fontFamily: "poppins light"
+}
+
+export function FormWrapper({ title,subtitle, children }: FormWrapperProps) {
   return (
     <>
-      <h3 className="step-title">{title}</h3>
-      <div className="form-data-wrapper">{children}</div>
+      <div>
+        <h4 className="step-title">{title}</h4>
+        <p style={STYLE_P} className="step-title">{subtitle}</p>
+      </div>
+      <form className="form-data-wrapper">{children}</form>
     </>
   );
 }

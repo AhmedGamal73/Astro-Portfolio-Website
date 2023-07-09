@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-export const prerender = true;
+import { getStorage } from 'firebase/storage'
+
 
 
 
@@ -14,5 +15,7 @@ export const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app2 = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app)
+
 

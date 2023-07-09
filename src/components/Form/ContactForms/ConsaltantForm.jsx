@@ -1,48 +1,30 @@
-import '../../../styles/ContactForm.scss';
-
-
+import "../../../styles/ContactForm.scss";
 
 var styling = {
   input: {
-    fontSize: "3vw"
+    fontSize: "3vw",
   },
-}
+};
 const ConsaltantForm = () => {
   return (
     <div>
-      <form className='contact-form'>
-        <input
-          autoFocus
-          placeholder='Your Email'
-          required
-          type="email"
-        />
-        <input
-          required
-          placeholder='Your Phone Number'
-          type="tel"
-        />
-        <textarea
-            placeholder="Your issue"
-            id="consalt"
-            name="consalt"
-            required
-          ></textarea>
-          <div className="btn-cont">
-            <button
-              className="btn-stroke-blue-heavy"
-              type="submit"
-              id="submit"
-              name="submit"
-            >
-              Send
-            </button>
-          </div>
-        </form>
-        <div id="error"></div>
-      <div id="success-msg"></div>
-      </div>
-  );
-}
+      <form className="contact-form">
+        <input autoFocus placeholder="First name" required type="text" />
+        <input placeholder="Last name" required type="text" />
 
-export default ConsaltantForm
+        <input placeholder="Email" required type="email" />
+        <input required placeholder="Phone Number" type="tel" />
+        <textarea
+          placeholder="Your issue"
+          id="consalt"
+          name="consalt"
+          required
+        ></textarea>
+      </form>
+      <div id="error"></div>
+      <div id="success-msg"></div>
+    </div>
+  );
+};
+
+export default ConsaltantForm;

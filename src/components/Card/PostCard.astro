@@ -1,70 +1,70 @@
 ---
-export interface props {
+export interface props {}
 
-}
-
-const p = Astro.props
+const p = Astro.props;
 ---
+
 <div class="card">
-    <div class="img-wrap">
-        <img src=`/${p.img}` alt="">
-    </div>
-    <div class="content-wrap">
-        <h4>{p.title}</h4>
-        <p>{p.subtitle}</p> 
-        <a class="btn-line-blue" href="#">See More</a>
-    </div>
+  <div class="img-wrap">
+    <img src=`/${p.img}` alt="" />
+  </div>
+  <div class="content-wrap">
+    <h4>{p.title}</h4>
+    <p>{p.subtitle}</p>
+    <a class="btn-line-blue" href="#">See More</a>
+  </div>
 </div>
 
 <style>
+  div.card {
+    width: 350px;
+    transition: 400ms;
+    border-radius: 0 0 20px 20px;
+  }
+  div.card:hover {
+    width: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
 
-    div.card {
-        width: 350px;
-        transition: 400ms;
-        border-radius: 0 0 20px 20px;
-    }
-    div.card:hover {
-        width: 350px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  div.img-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  div.img-wrap img {
+    width: 100%;
+    max-height: 220px;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  div.content-wrap {
+    max-width: 350px;
+    min-height: 250px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.3rem;
+    border-radius: 0 0 20px 20px;
+    padding-top: 2rem;
+  }
+  p {
+    padding-top: 0.5rem;
+    padding-bottom: 1.3rem;
+    text-align: start;
+    font-size: 0.9vw;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 286px !important;
     }
 
-    div.img-wrap {
-        width: 100%;
-        display: flex;
-        justify-content: end;
-    }
-    div.img-wrap img {
-        width: 100%;
-        max-height: 220px;
-        min-height: 220px;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
-    }
-    
-    div.content-wrap {
-        max-width: 350px;
-        min-height: 250px;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        padding: 1.3rem;
-        border-radius: 0 0 20px 20px;
-        padding-top: 2rem;
-    }
     p {
-        padding-top: .5rem;
-        padding-bottom: 1.3rem;
+      text-align: start;
     }
-
-    @media (max-width: 768px) {
-        .card  {
-            width: 286px!important;
-        }
-
-        p {
-            text-align: start;
-        }
-    }
-    
+  }
 </style>

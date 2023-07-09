@@ -1,7 +1,7 @@
 ---
-import Layout from '../../../layouts/Layout.astro'
-import Content1 from "../../../components/Content/Content1.astro"
-import { getLangFromUrl } from '../../../i18n/utils';
+import Layout from "../../../layouts/Layout.astro";
+import Content1 from "../../../components/Content/Content1.astro";
+import { getLangFromUrl } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -9,157 +9,156 @@ const url = "https://rogina.shop/wp-json/wp/v2/posts";
 const res = await fetch(url);
 const posts = await res.json();
 
-function limit (string = '', limit = 0) {  
-  return string.substring(0, limit) + '...'
+function limit(string = "", limit = 0) {
+  return string.substring(0, limit) + "...";
 }
-
 
 var enPosts = [];
 var arPosts = [];
-function isArabic (posts) {
-    posts.map(post => {
-        if (post.slug.includes('%')) {
-            arPosts.push(post);
-        } else {
-            enPosts.push(post);
-        };
-    })
+function isArabic(posts) {
+  posts.map((post) => {
+    if (post.slug.includes("%")) {
+      arPosts.push(post);
+    } else {
+      enPosts.push(post);
+    }
+  });
 }
 
-isArabic(posts)
+isArabic(posts);
 
 export const prerender = true;
 ---
 
 <Layout title="Blog posts">
-    <section class="archive-cont">
-        <div class="up-row">
-            <Content1
-                title="Solutions for all your taxis"
-                titleColor="var(--prim3)"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                subtitleColor="white"
-            />
-        </div>
-        <div class="cards-wrap">
-            {
-                enPosts.map(p => (
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img src={p.better_featured_image.source_url} alt="" />
-                        </div>
-                        <div class="content-wrap">
-                            <div class="content-wrapper">
-                                <h4>{p.title.rendered}</h4>
-                                <p set:html={limit(p.excerpt.rendered, 100)}/>
-                                <a class="btn-line-blue" href={`/${lang}/blog/posts/${p.slug}`}>See More</a>
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </section>
+  <section class="archive-cont">
+    <div class="up-row">
+      <Content1
+        title="Solutions for all your taxis"
+        titleColor="var(--prim3)"
+        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+        subtitleColor="white"
+      />
+    </div>
+    <div class="cards-wrap">
+      {
+        enPosts.map((p) => (
+          <div class="card">
+            <div class="img-wrap">
+              <img src={p.better_featured_image.source_url} alt="" />
+            </div>
+            <div class="content-wrap">
+              <div class="content-wrapper">
+                <h4>{p.title.rendered}</h4>
+                <p set:html={limit(p.excerpt.rendered, 100)} />
+                <a class="btn-line-blue" href={`/${lang}/blog/posts/${p.slug}`}>
+                  See More
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </Layout>
 
 <style>
-    section.archive-cont{
-        padding-bottom: 6rem;
-        margin: 0;
-        width: 100%;
-        display: flex;
-        gap: 3rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;   
-        background: var(--bgc);
-    }
+  section.archive-cont {
+    padding-bottom: 6rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgc);
+  }
 
-    div.up-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10rem 0 3rem 0;
-        background: var(--prim2);
-        width: 100%;
-        border-radius: 0 0 50px 50px;
-        box-shadow: var(--boxShadow2);
-    }
+  div.up-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0 3rem 0;
+    background: var(--prim2);
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    box-shadow: var(--boxShadow2);
+  }
 
-    div.cards-wrap {
-        padding-block: 3rem;
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        flex-wrap: wrap;
-    }
+  div.cards-wrap {
+    padding-block: 3rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
 
-    div.card {
-        width: 390px;
-        transition: .3s;
-        background-color: var(--bgc);
-    }
-    div.card:hover {
-        box-shadow: var(--box-shadow1);
-    }
+  div.card {
+    width: 390px;
+    transition: 0.3s;
+    background-color: var(--bgc);
+    border-radius: 2rem;
+  }
+  div.card:hover {
+    box-shadow: var(--box-shadow1);
+  }
 
-    div.img-wrap {
-        width: 100%;
-        display: flex;
-        justify-content: end;
-    }
-    div.img-wrap img {
-        width: 100%;
-        max-height: 220px;
-        min-height: 220px;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
-    }
-    
+  div.img-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  div.img-wrap img {
+    width: 100%;
+    max-height: 220px;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  div.content-wrap {
+    width: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+    padding-block: 2rem;
+    background: white;
+  }
+  div.content-wrap .content-wrapper {
+    width: 80%;
+  }
+
+  p {
+    font-size: 0.9vw;
+    padding-top: 0.5rem;
+    padding-bottom: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
     div.content-wrap {
-        width: 100%;
-        min-height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 0 20px 20px;
-        padding-block: 2rem;
-        background: white;
+      padding-bottom: 0;
+      width: 100%;
+      min-height: 200px;
+      padding-top: 0;
     }
-    div.content-wrap .content-wrapper {
-        width: 80%
-    }
-
     p {
-        font-size: .9vw;
-        padding-top: .5rem;
-        padding-bottom: 1.3rem;
+      text-align: start;
     }
-
-
-    @media (max-width: 768px) {
-        div.content-wrap {
-            padding-bottom: 0;
-            width: 100%;
-            min-height: 200px;
-            padding-top: 0;
-        }
-        p {
-            text-align: start;
-        } 
-        .cards-wrap {
-            flex-direction: column;
-        }
-        div.card {
-            width: 300px!important;
-        }
-        p {
-            text-align: start;
-        }
+    .cards-wrap {
+      flex-direction: column;
     }
-
+    div.card {
+      width: 300px !important;
+    }
+    p {
+      text-align: start;
+    }
+  }
 </style>
-

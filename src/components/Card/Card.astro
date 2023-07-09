@@ -1,57 +1,61 @@
 ---
 import { Icon } from "astro-icon";
-import './Card.scss'
+import "./Card.scss";
 
 export interface props {
-    title: "string",
-    subtitle: "string",
-    feature1: "string",
-    featureSrc1: "string",
-    feature2: "string",
-    featureSrc2: "string",
-    feature3: "string",
-    featureSrc3: "string",
-    btn: "string",
-    btnSrc: "string",
-    img: "string",
-    size: "string",
-    featureSort: "string",
-    newTab: "string",
-    bgc?: "string",
-    imgAlt: "string",
-};
+  title: "string";
+  subtitle: "string";
+  feature1: "string";
+  featureSrc1: "string";
+  feature2: "string";
+  featureSrc2: "string";
+  feature3: "string";
+  featureSrc3: "string";
+  btn: "string";
+  btnSrc: "string";
+  img: "string";
+  size: "string";
+  featureSort: "string";
+  newTab: "string";
+  bgc?: "string";
+  imgAlt: "string";
+}
 
 const p = Astro.props;
-const {bgc = "var(--accent1)"} = Astro.props
+const { bgc = "var(--accent1)" } = Astro.props;
 ---
 
-
-<div style={{width: p.size}} class="card-container">
-    <div style={{backgroundColor: bgc}} class="top">
-        <img src={p.img} alt={p.imgAlt}>
+<div style={{ width: p.size }} class="card-container">
+  <div style={{ backgroundColor: bgc }} class="top">
+    <img src={p.img} alt={p.imgAlt} />
+  </div>
+  <div class="bottom">
+    <div class="title-wrap">
+      <h3>{p.title}</h3>
+      <p>{p.subtitle}</p>
     </div>
-    <div class="bottom">
-        <div class="title-wrap">
-            <h3>{p.title}</h3>
-            <p>{p.subtitle}</p>
-        </div>
-        <div style={{flexdirection: p.featuresort, }} class="feature-wrap">
-            <div class="feature">
-                <Icon name="chevron-right" />
-                <a target={p.newTab} href={p.featureSrc1} class="feature">{p.feature1}</a>
-            </div>
-            <div class="feature">
-                <Icon name="chevron-right" />
-                <a target={p.newTab} href={p.featureSrc2} class="feature">{p.feature2}</a>
-            </div>
-            <div class="feature">
-                <Icon name="chevron-right" />
-                <a target={p.newTab} href={p.featureSrc3} class="feature">{p.feature3}</a>
-            </div>
-        </div>
-        <div class="btn">
-            <a class="btn-stroke-blue-heavy" href={p.btnSrc}>{p.btn}</a>
-        </div>
-
+    <div style={{ flexdirection: p.featuresort }} class="feature-wrap">
+      <div class="feature">
+        <Icon name="chevron-right" />
+        <a target={p.newTab} href={p.featureSrc1} class="feature"
+          >{p.feature1}</a
+        >
+      </div>
+      <div class="feature">
+        <Icon name="chevron-right" />
+        <a target={p.newTab} href={p.featureSrc2} class="feature"
+          >{p.feature2}</a
+        >
+      </div>
+      <div class="feature">
+        <Icon name="chevron-right" />
+        <a target={p.newTab} href={p.featureSrc3} class="feature"
+          >{p.feature3}</a
+        >
+      </div>
     </div>
+    <div class="btn">
+      <a class="btn-stroke-blue-heavy" href={p.btnSrc}>{p.btn}</a>
+    </div>
+  </div>
 </div>

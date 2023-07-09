@@ -1,12 +1,11 @@
 ---
 import { app } from "../../firebase/server";
 import { getAuth } from "firebase-admin/auth";
-import '../../styles/cpanel-login.scss';
-import Icon from 'astro-icon'
+import "../../styles/cpanel-login.scss";
+import Icon from "astro-icon";
 import { getLangFromUrl } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
-
 
 /* Check if the user is authenticated */
 const auth = getAuth(app);
@@ -15,36 +14,42 @@ if (sessionCookie) {
   const decodedCookie = await auth.verifySessionCookie(sessionCookie);
   if (decodedCookie) {
     return Astro.redirect(`/en/dashboard`);
-  };
+  }
 }
 
 export const prerender = true;
 ---
 
 <div class="form-container">
-  <div class="main-form">  	
-      <form action="/api/auth/signin" method="post">
-          <label id="mo" class="title" for="chk" aria-hidden="true">Wlcome Back</label>
-          <input type="email" name="email" placeholder="Email" required="">
-          <input type="password" name="password" placeholder="Password" required="">
-          <button class="login-btn">Login</button>
-      </form>
-      <div class="or-wrapper">
-        <div class="or-divider"> or </div>
+  <div class="main-form">
+    <form action="/api/auth/signin" method="post">
+      <label id="mo" class="title" for="chk" aria-hidden="true"
+        >Wlcome Back</label
+      >
+      <input type="email" name="email" placeholder="Email" required="" />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required=""
+      />
+      <button class="login-btn">Login</button>
+    </form>
+    <div class="or-wrapper">
+      <div class="or-divider">or</div>
+    </div>
+    <div class="google-container">
+      <div id="google" class="google-wrapper">
+        <Icon name="google" width="33px" />
+        <h5>Continue with google</h5>
       </div>
-      <div class="google-container">
-        <div id="google" class="google-wrapper">
-          <Icon name="google" width="33px" />
-          <h5>Continue with google</h5>
-        </div>
-      </div>
-      <a>Forget password?</a>
-      <div class="sign-up">
-        <h5>Don't have an account?</h5><a href={`/en/cpanel-signup`}>Sign up</a>
-      </div>
+    </div>
+    <a>Forget password?</a>
+    <div class="sign-up">
+      <h5>Don't have an account?</h5><a href={`/en/cpanel-signup`}>Sign up</a>
+    </div>
   </div>
 </div>
-  
 
 <script>
   import {
@@ -54,9 +59,9 @@ export const prerender = true;
     GoogleAuthProvider,
     signInWithPopup,
   } from "firebase/auth";
-  import { app2 } from "../../firebase/client";
+  import { app } from "../../firebase/client";
 
-  const auth = getAuth(app2);
+  const auth = getAuth(app);
   // This will prevent the browser from storing session data
   auth.setPersistence(inMemoryPersistence);
 
@@ -68,7 +73,7 @@ export const prerender = true;
     const password = formData.get("password")?.toString();
 
     if (!email || !password) {
-      alert("Wrong Input")
+      alert("Wrong Input");
       return;
     }
     const userCredential = await signInWithEmailAndPassword(
@@ -89,7 +94,6 @@ export const prerender = true;
     }
   });
 
-
   const googleSignin = document.querySelector("#google") as HTMLButtonElement;
   googleSignin.addEventListener("click", async () => {
     const provider = new GoogleAuthProvider();
@@ -104,5 +108,5 @@ export const prerender = true;
     if (res.redirected) {
       window.location.assign(res.url);
     }
-  }); 
+  });
 </script>

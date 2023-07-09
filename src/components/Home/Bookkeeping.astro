@@ -1,20 +1,17 @@
 ---
-import '../../styles/Bookkeeping.scss'
-import Content2 from '../Content/Content2.astro';
-import Icon from 'astro-icon'
-import {bk1, bk2} from '/public/home'
-
+import "../../styles/Bookkeeping.scss";
+import Content2 from "../Content/Content2.astro";
+import Icon from "astro-icon";
 ---
 
-<section >
+<section>
   <div class="book-container">
     <div class="upper-col">
-
       <div class="start-col">
         <Icon name="arrow-solid" />
-        <Content2 
+        <Content2
           title="Don't bother with tax"
-          span= "calculations"
+          span="calculations"
           subtitle="We can help explain what it means and even solve the problem for you."
           btn1="Book Appointment"
           btn2="Know More About Us"
@@ -25,33 +22,28 @@ import {bk1, bk2} from '/public/home'
 
       <div class="end-col">
         <div class="bgc">
-          <img src={bk1} alt=""> 
+          <img src="/home/bk1.png" alt="" />
         </div>
       </div>
-
     </div>
 
-
     <div class="lower-col">
-
       <div class="start-col1">
-        <Content2 
+        <Content2
           title="Don't bother with calculations"
-          span= "Tax"
+          span="Tax"
           subtitle="We can help explain what it means and even solve the problem for you."
           btn1="Book Appointment"
           btn2="Know More About Us"
           btn1Src="#"
           btn2Src="#"
         />
-
       </div>
       <div class="end-col1">
         <div class="bgc">
-          <img src={bk2} alt=""> 
+          <img src="/home/bk2.png" alt="" />
         </div>
       </div>
     </div>
-  </div >
-   
-</section> 
+  </div>
+</section>

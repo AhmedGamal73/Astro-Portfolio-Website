@@ -1,0 +1,39 @@
+.container {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+
+.btn_stroke_blue_heavy {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background:var(--prim2);
+    border: 1px solid var(--prim1);
+    font-size: 12x;
+    transition: 300ms;
+};
+.btn-stroke-blue-heavy:hover {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+
+.upload {
+    gap: 1rem;
+}
+
+.file_upload {
+    width: 150%;
+    border: 0px!important;
+    border-radius: 0px!important;
+    padding: 0px!important;
+}

@@ -182,177 +182,179 @@ const t = useTranslations(lang);
       <Content2
         title="Our Expertese here to help you with understanding your financial sitiuation and More"
         subtitle="If You Have An Enterprise Company, where to go from here where to go from here where to go from here"
-        btn1="Ask Consaltant Know"
-      />
-    </div>
-    <div class="left">
-      <img src="/service/consulting.png" />
+        <btn1
+      >
+        ="Ask Consaltant Know" />
+      </Content2>
+      <div class="left">
+        <img src="/service/consulting.png" />
+      </div>
     </div>
   </section>
-</Layout>
 
-<style>
-  /* Consultant Section */
-  section.consaltant-container {
-    padding: 6rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  section.consaltant-container .right {
-    padding: 2rem 2rem 0 2rem;
-  }
-  section.consaltant-container .left img {
-    margin-bottom: 2rem;
-  }
-
-  section.courses-container {
-    background-color: var(--prim1);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-block: 3rem;
-    border-radius: 1.5rem;
-  }
-  div.card-container {
-    display: flex;
-    width: 80%;
-    gap: 6rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-inline: 2rem;
-  }
-
-  .service-hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40vh;
-    background: var(--prim3);
-    padding-block: 6rem;
-    box-shadow: var(--boxShadow2);
-  }
-
-  .service-hero a {
-    border-raduis: 4px;
-    padding: 0.8rem 3rem;
-  }
-  .service-hero a:hover {
-    background: var(--prim3);
-    border: 1px solid var(--prim1);
-    color: var(--prim1);
-  }
-
-  .content-103 {
-    background: var(--bgc);
-    padding-block: 50px;
-  }
-
-  .content-103 .sercies-title {
-    text-align: center;
-    padding: 50px 0;
-  }
-
-  .service-post {
-    background: #fff;
-    padding: 30px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    z-index: 12;
-    margin-bottom: 30px;
-    -moz-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
-    -webkit-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
-    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-  }
-  .content-103 .service-content {
-    position: relative;
-    z-index: 13;
-  }
-  .content-103 .service-icon {
-    margin: 10px 0 20px 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    text-align: center;
-    border: 2px solid var(--prim3);
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 50px;
-    -moz-transition: color, 250ms;
-    -o-transition: color, 250ms;
-    -webkit-transition: color, 250ms;
-    transition: color, 250ms;
-  }
-  .content-103 .service-icon [astro-icon] {
-    padding-bottom: 5px;
-    width: 33px;
-    color: var(--prim3);
-  }
-  .content-103 .service-title {
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 15px;
-    -moz-transition: color, 250ms;
-    -o-transition: color, 250ms;
-    -webkit-transition: color, 250ms;
-    transition: color, 250ms;
-  }
-  .content-103 .service-post:hover .service-title {
-    color: #fff;
-  }
-  .content-103 .service-description {
-    -moz-transition: color, 250ms;
-    -o-transition: color, 250ms;
-    -webkit-transition: color, 250ms;
-    transition: color, 250ms;
-  }
-  .content-103 .service-post:hover .service-description {
-    color: #fff;
-  }
-
-  .content-103 .service-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    width: 100%;
-    height: 0px;
-    background: #152040;
-    -moz-transition: width, 250ms;
-    -o-transition: width, 250ms;
-    -webkit-transition: width, 250ms;
-    transition: width, 250ms;
-    border-radius: 8px;
-  }
-  /*hover-background-color effect*/
-  .content-103 .service-post:hover .service-hover {
-    height: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .content-wrap {
-      width: 80% !important;
+  <style>
+    /* Consultant Section */
+    section.consaltant-container {
+      padding: 6rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+    section.consaltant-container .right {
+      padding: 2rem 2rem 0 2rem;
+    }
+    section.consaltant-container .left img {
+      margin-bottom: 2rem;
+    }
+
+    section.courses-container {
+      background-color: var(--prim1);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-block: 3rem;
+      border-radius: 1.5rem;
+    }
+    div.card-container {
+      display: flex;
+      width: 80%;
+      gap: 6rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-inline: 2rem;
+    }
+
     .service-hero {
-      height: 55vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 40vh;
+      background: var(--prim3);
+      padding-block: 6rem;
+      box-shadow: var(--boxShadow2);
     }
 
-    .consaltant-container {
-      flex-direction: column-reverse;
+    .service-hero a {
+      border-raduis: 4px;
+      padding: 0.8rem 3rem;
     }
-    .consaltant-container div.right {
-      padding: 0;
+    .service-hero a:hover {
+      background: var(--prim3);
+      border: 1px solid var(--prim1);
+      color: var(--prim1);
     }
-    img {
-      width: 105%;
+
+    .content-103 {
+      background: var(--bgc);
+      padding-block: 50px;
     }
-  }
-</style>
+
+    .content-103 .sercies-title {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .service-post {
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 12;
+      margin-bottom: 30px;
+      -moz-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+      -webkit-box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
+    .content-103 .service-content {
+      position: relative;
+      z-index: 13;
+    }
+    .content-103 .service-icon {
+      margin: 10px 0 20px 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      text-align: center;
+      border: 2px solid var(--prim3);
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 50px;
+      -moz-transition: color, 250ms;
+      -o-transition: color, 250ms;
+      -webkit-transition: color, 250ms;
+      transition: color, 250ms;
+    }
+    .content-103 .service-icon [astro-icon] {
+      padding-bottom: 5px;
+      width: 33px;
+      color: var(--prim3);
+    }
+    .content-103 .service-title {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 15px;
+      -moz-transition: color, 250ms;
+      -o-transition: color, 250ms;
+      -webkit-transition: color, 250ms;
+      transition: color, 250ms;
+    }
+    .content-103 .service-post:hover .service-title {
+      color: #fff;
+    }
+    .content-103 .service-description {
+      -moz-transition: color, 250ms;
+      -o-transition: color, 250ms;
+      -webkit-transition: color, 250ms;
+      transition: color, 250ms;
+    }
+    .content-103 .service-post:hover .service-description {
+      color: #fff;
+    }
+
+    .content-103 .service-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      width: 100%;
+      height: 0px;
+      background: #152040;
+      -moz-transition: width, 250ms;
+      -o-transition: width, 250ms;
+      -webkit-transition: width, 250ms;
+      transition: width, 250ms;
+      border-radius: 8px;
+    }
+    /*hover-background-color effect*/
+    .content-103 .service-post:hover .service-hover {
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrap {
+        width: 80% !important;
+      }
+      .service-hero {
+        height: 55vh;
+      }
+
+      .consaltant-container {
+        flex-direction: column-reverse;
+      }
+      .consaltant-container div.right {
+        padding: 0;
+      }
+      img {
+        width: 105%;
+      }
+    }
+  </style>
+</Layout>
