@@ -5,7 +5,11 @@ export const Job = () => {
     <div className="job-cont">
       <div className="first">
         <h2>Product Designer</h2>
-        <h3>Apply</h3>
+        <h3>
+          <a target="_blank" href="/en/job-application">
+            Apply
+          </a>
+        </h3>
       </div>
       <div className="job-desc">
         <p>We,re looking for a mid-level product designer to join our team.</p>

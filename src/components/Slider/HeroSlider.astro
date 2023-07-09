@@ -1,159 +1,151 @@
-
 <div class="img-slider">
-    <div class="slide active">
-        <img src="/hero-slider-bg/hero1.jpg" alt="">
-        <div class="info">
-            <h4></h4>
-            <p></p>
-        </div>
+  <div class="slide active">
+    <img src="/hero-slider-bg/hero1.jpg" alt="" />
+    <div class="info">
+      <h4></h4>
+      <p></p>
     </div>
-    <div class="slide">
-        <img src="/hero-slider-bg/hero2.jpg" alt="">
-        <div class="info">
-            <h4></h4>
-            <p></p>
-        </div>
+  </div>
+  <div class="slide">
+    <img src="/hero-slider-bg/hero2.jpg" alt="" />
+    <div class="info">
+      <h4></h4>
+      <p></p>
     </div>
-    <div class="slide">
-        <img src="/hero-slider-bg/3.jpg" alt="">
-        <div class="info">
-            <h4></h4>
-            <p> </p>
-        </div>
+  </div>
+  <div class="slide">
+    <img src="/hero-slider-bg/3.jpg" alt="" />
+    <div class="info">
+      <h4></h4>
+      <p></p>
     </div>
-    <div class="slide">
-        <img src="/hero-slider-bg/4.jpg" alt="">
-        <div class="info">
-            <h4></h4>
-            <p></p>
-        </div>
+  </div>
+  <div class="slide">
+    <img src="/hero-slider-bg/4.jpg" alt="" />
+    <div class="info">
+      <h4></h4>
+      <p></p>
     </div>
-    <div class="navigation">
-        <div class="slide-btn active"></div>
-        <div class="slide-btn"></div>
-        <div class="slide-btn"></div>
-        <div class="slide-btn"></div>
-    </div>
+  </div>
+  <div class="navigation">
+    <div class="slide-btn active"></div>
+    <div class="slide-btn"></div>
+    <div class="slide-btn"></div>
+    <div class="slide-btn"></div>
+  </div>
 </div>
 
-
 <style>
-    .img-slider {
-        position: relative;
-        width: 100%;
-        height: 85%;
-    }
-    .img-slider .slide {
-        width: 100%; 
-        z-index: 1;
-        position: absolute;
-        height: 100%;
-        clip-path: circle(0% at 0 20%);
-    }
-    .img-slider .slide.active {
-        clip-path: circle(150% at 0 50%);
-        transition: 1s;
-        transition-property: clip-path;
+  .img-slider {
+    position: relative;
+    width: 100%;
+    height: 85%;
+  }
+  .img-slider .slide {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    clip-path: circle(0% at 0 20%);
+  }
+  .img-slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 1s;
+    transition-property: clip-path;
+  }
+  .img-slider .slide img {
+    z-index: 1;
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    }
-    .img-slider .slide img {
-        z-index: 1;
-        border-radius:20px 0 0 20px;
-        width: 100%;
-        object-fit: contain;
-        object-position: center center;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .img-slider .slide .info {
-        position: absolute;
-        top: 0;
-        margin: 1rem;
-    }
-    .slide .info h4 {
-        color: white;
-    }
-    .slide .info p {
-        color: white;
-    }
-    .img-slider .navigation {
-        display: flex;
-        gap: 10px;
-        z-index: 2;
-        position: absolute;
-        bottom: 30px;
-        right: 50%;
-        transform: translateX(70%)
-    }
-    .img-slider .navigation .slide-btn {
-        background: #EDF8FBC9; 
-        width: 12px;
-        height: 12px;
-        margin: 10px;
-        border-radius: 4px;
-        cursor: pointer
-    }
-    .img-slider .navigation .slide-btn.active {
-        background: #DFC063; 
-    }
-
-
+  .img-slider .slide .info {
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+  }
+  .slide .info h4 {
+    color: white;
+  }
+  .slide .info p {
+    color: white;
+  }
+  .img-slider .navigation {
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(70%);
+  }
+  .img-slider .navigation .slide-btn {
+    background: #edf8fbc9;
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .img-slider .navigation .slide-btn.active {
+    background: #dfc063;
+  }
 </style>
 
-
 <script>
+  const slides = document.querySelectorAll(".slide");
+  const btns = document.querySelectorAll(".slide-btn");
+  let currentSlide = 1;
 
-const slides = document.querySelectorAll('.slide');
-const btns = document.querySelectorAll('.slide-btn');
-let currentSlide = 1;
-    
-    let manualNav = function(manual) {
-        slides.forEach((slide) => {
-            slide.classList.remove('active');
+  let manualNav = function (manual) {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
 
-            btns.forEach((btn) => {
-                btn.classList.remove('active');
-            })
-        })
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+    });
 
-        slides[manual].classList.add('active')
-        btns[manual].classList.add('active')
-    }
+    slides[manual].classList.add("active");
+    btns[manual].classList.add("active");
+  };
 
-    btns.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-            manualNav(i)
-        })
-    })
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      manualNav(i);
+    });
+  });
 
+  // Automate The slider
+  var sliderLoop = function () {
+    let active = document.getElementsByClassName("active");
+    let i = 1;
 
-    // Automate The slider 
-    var sliderLoop= function () {
-        let active = document.getElementsByClassName('active');
-        let i = 1;
+    var repeat = () => {
+      setTimeout(function () {
+        [...active].forEach((activeSlide) => {
+          activeSlide.classList.remove("active");
+        });
 
-        var repeat = () => {
-            setTimeout( function() {
-                [...active].forEach(activeSlide => {
-                    activeSlide.classList.remove('active')
-                }) 
+        slides[i].classList.add("active");
+        btns[i].classList.add("active");
+        i++;
 
-                slides[i].classList.add('active');
-                btns[i].classList.add('active');
-                i++;
+        if (btns.length == i) {
+          i = 0;
+        }
 
-                if(btns.length == i){
-                    i=0;
-                }
-
-                if(i>= slides.length){
-                    return;
-                }
-                repeat()
-            },4000 );
-        };
+        if (i >= slides.length) {
+          return;
+        }
         repeat();
-    } 
-    sliderLoop()
+      }, 4000);
+    };
+    repeat();
+  };
+  sliderLoop();
 </script>

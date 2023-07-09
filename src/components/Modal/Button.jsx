@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
 
 const BTN_STYLE = {
-  width: "50%",
   fontSize: "1vw",
   textAlign: "start",
 };
 
 export default function Button({ className, children }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
+  }, [isOpen]);
 
   return (
     <>

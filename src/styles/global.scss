@@ -84,7 +84,13 @@ font-size: .9vw!important;
 
 
   /* Forms */
-
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
   input, textarea {
     width: 85%!important;
     font-size: 2.5vw!important;
@@ -227,7 +233,7 @@ input, select, textarea {
 // Buttons
 .btn-stroke-yellow {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   color: var(--prim1);

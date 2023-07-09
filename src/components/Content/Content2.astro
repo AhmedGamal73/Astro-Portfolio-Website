@@ -8,7 +8,7 @@ export interface Props {
   btn1Src: string;
   btn2Src: string;
 }
-const p = Astro.props
+const p = Astro.props;
 ---
 
 <div class="content2-container">
@@ -32,6 +32,10 @@ const p = Astro.props
     justify-content: center;
     padding-inline-start: 7rem;
   }
+  p {
+    text-align: start;
+    padding-top: 0.5rem;
+  }
   .btn-wrap {
     display: flex;
     gap: 2.3rem;
@@ -42,10 +46,8 @@ const p = Astro.props
   }
 
   @media (max-width: 768px) {
-
     .content-wrap {
       width: 100%;
-
     }
 
     .content-wrap h1 {
@@ -62,9 +64,6 @@ const p = Astro.props
       flex-direction: column;
       padding: 0;
       gap: 0;
-
-      
-    
     }
   }
 </style>
