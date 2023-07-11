@@ -348,6 +348,12 @@ const t = useTranslations(lang);
   .content-103 .service-post:hover .service-hover {
     height: 100%;
   }
+  .btn-cont {
+    display: flex;
+    justify-content: start;
+
+    font-size: 1vw;
+  }
 
   @media (max-width: 768px) {
     .content-wrap {
@@ -371,6 +377,10 @@ const t = useTranslations(lang);
     .right p {
       text-align: center !important;
       padding-bottom: 1.5rem;
+    }
+
+    .btn-cont {
+      justify-content: center;
     }
   }
 </style>
