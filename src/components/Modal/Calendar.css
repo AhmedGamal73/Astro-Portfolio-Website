@@ -36,6 +36,13 @@
       padding-left: 1rem;
       text-align: left;
     }
+
+    .react-calendar button {
+      font-size: 2.5vw!important
+    }
+    .react-calendar__month-view__weekdays__weekday {
+      font-size: 3.2vw!important;
+    }
   }
   
   .react-calendar button {

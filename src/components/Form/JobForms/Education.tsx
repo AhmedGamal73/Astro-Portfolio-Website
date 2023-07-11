@@ -1,131 +1,107 @@
-import { FormWrapper } from "../FormWrapper";
-import { useState } from 'react'
-import '../../../styles/EducationForm.css';
+import React, { useState } from "react";
 
-
-type EducationData = {
+type CertificateData = {
   certificate: string;
-  setNumber: number;
   major: string;
-  university: string;
-  country: string;
-  year: string;
-  grade: string;
 };
 
-type EducationDataProps = EducationData & {
-  updateFields: (fields: Partial<EducationData>) => void;
+type EducationDataProps = CertificateData & {
+  updateEducationFields: (fields: Partial<CertificateData>) => void;
 };
 
+function Certificate({
+  certificate,
+  major,
+  updateEducationFields,
+}: EducationDataProps) {
+  const handleCertificateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    updateEducationFields({ certificate: e.target.value });
+  };
 
-
-function Fieldset ({
-   setNumber,
-   certificate,
-   grade,
-   major,
-   university,
-   country,
-   year,
-   updateFields
-  }: EducationDataProps) {
+  const handleMajorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    updateEducationFields({ major: e.target.value });
+  };
   return (
     <fieldset>
-      <legend>Certificate/Degree {setNumber + 1}</legend>
-      <input 
+      <legend>Certificate/Degree</legend>
+      <input
         autoFocus
-        type="text" 
-        placeholder="Certificate" 
+        type="text"
+        placeholder="Certificate"
         value={certificate}
-        onChange={(e) => updateFields({ certificate: e.target.value })}
+        onChange={handleCertificateChange}
         required
       />
-      <input 
-        type="text" 
-        placeholder="Grade" 
-        value={grade}
-        onChange={(e) => updateFields({ grade: e.target.value })}
-        required
-      />
-      <input 
-        type="text" 
-        placeholder="Major" 
+      <input
+        type="text"
+        placeholder="Major"
         value={major}
-        onChange={(e) => updateFields({ major: e.target.value })}
-        required
-      />
-      <input 
-        type="text" 
-        placeholder="University / School" 
-        value={university}
-        onChange={(e) => updateFields({ university: e.target.value })}
-        required
-      />
-      <input 
-        type="text" 
-        placeholder="Country" 
-        value={country}
-        onChange={(e) => updateFields({ country: e.target.value })}
-        required
-      />
-      <input 
-        type="number" 
-        placeholder="Year Passed" 
-        value={year}
-        onChange={(e) => updateFields({ year: e.target.value })}
+        onChange={handleMajorChange}
         required
       />
     </fieldset>
-  );  
-};
+  );
+}
 
+export function Education({
+  updateEducationFields,
+  major,
+  certificate,
+}: EducationDataProps) {
+  const [inputList, setInputList] = useState<JSX.Element[]>();
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
-export function Education() {
-    const [inputList, setInputList] = useState([<Fieldset setNumber={0}/>]);
-    const [currentStepIndex, setCurrentStepIndex] = useState(1);
-  
-    const onAddBtnClick = () => {
-      setCurrentStepIndex((curent) => curent + 1);
-      setInputList(
-        inputList.concat(
-          <Fieldset setNumber={currentStepIndex} key={inputList.length} />
-        )
-      );
+  const onAddBtnClick = () => {
+    setCurrentStepIndex((current) => current + 1);
+    const newCertificate = {
+      certificate: "",
+      major: "",
+      id: currentStepIndex + 1,
     };
-    const onRemoveBtnClick = () => {
-      setInputList(inputList.slice(0, inputList.length - 1));
-      setCurrentStepIndex((curent) => curent - 1);
-    };
-  
-    const STYLE_BTN = {
-      fontSize: "1rem",
-      padding: "1rem"
-    };
-  
-    return (
-      <FormWrapper title="Education" subtitle="Give Information About Your Education">
-      <div style={{display: "flex", width: "100%", flexWrap: "wrap"}} className="form-cont">
+    console.log(inputList);
+
+    setInputList((prev) =>
+      prev.concat(
+        <Certificate
+          {...newCertificate}
+          updateEducationFields={updateEducationFields}
+          key={prev.length}
+        />
+      )
+    );
+    console.log(newCertificate, certificate, major);
+  };
+
+  const onRemoveBtnClick = () => {
+    setCurrentStepIndex((current) => current - 1);
+    setInputList((prev) => prev.slice(0, prev.length - 1));
+  };
+
+  const STYLE_BTN = {
+    fontSize: "1rem",
+    padding: "1rem",
+  };
+
+  return (
+    <div>
+      <div
+        style={{ display: "flex", width: "100%", flexWrap: "wrap" }}
+        className="form-cont"
+      >
         {inputList}
       </div>
       <div className="form-cont">
         <button style={STYLE_BTN} onClick={onAddBtnClick}>
-            Add +
+          Add +
         </button>
-        {currentStepIndex > 1 ?
-          (
-            <button style={STYLE_BTN} onClick={onRemoveBtnClick}>
-              Remove
-            </button>
-          )
-          : ""}
+        {currentStepIndex > 1 ? (
+          <button style={STYLE_BTN} onClick={onRemoveBtnClick}>
+            Remove
+          </button>
+        ) : (
+          ""
+        )}
       </div>
-      </FormWrapper>
-  
-    );
-  };
-
-
-
-
-
-
+    </div>
+  );
+}

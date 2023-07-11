@@ -1,24 +1,57 @@
 import { useMultistepForm } from "./useMultistepForm";
 import "../../styles/MultiStepForm.scss";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { Information } from "./JobForms/Information";
-import { CVForm } from  "./JobForms/CVForm";
+import { CVForm } from "./JobForms/CVForm";
 import { Education } from "./JobForms/Education";
 
+type FormData = {
+  firstName: string;
+  phoneNum: string;
+  age: string;
+  gender: string;
+  socialStatus: string;
+  jobCode: string;
+  jobTitle: string;
+  advertiser: string;
+};
+
+const INITIAL_DATA: FormData = {
+  firstName: "",
+  phoneNum: "",
+  age: "",
+  gender: "",
+  socialStatus: "",
+  jobCode: "",
+  jobTitle: "",
+  advertiser: "",
+};
+
 const MultiStepForm = () => {
+  const [data, setData] = useState(INITIAL_DATA);
+  const [educationData, setEducationData] = useState({});
+  const [arr, setArr] = useState([]);
+
+  function updateFields(fields: Partial<FormData>) {
+    setData((prev) => {
+      return { ...prev, ...fields };
+    });
+  }
+
   const { step, steps, isFirstStep, isLastStep, currentStepIndex, next, prev } =
     useMultistepForm([
-      <Information key={1} />,
-      <Education key={3} />,
-      <CVForm key={2} />
+      <Information {...data} updateFields={updateFields} />,
+      <Education {...data} updateFields={updateFields} />,
+      <CVForm {...data} updateFields={updateFields} />,
     ]);
 
   function submitForm(e: FormEvent) {
     e.preventDefault();
     next();
+    console.log(data, educationData);
   }
 
-  const stepTitle = ["Information", "Education", "CV" ];
+  const stepTitle = ["Information", "Education", "CV"];
 
   return (
     <div className="job-app-cont">
@@ -33,7 +66,9 @@ const MultiStepForm = () => {
                       currentStepIndex >= index ? "active" : ""
                     }`}
                   >
-                    <span className="step-num">{currentStepIndex > index ? '✔' :  index + 1}</span>
+                    <span className="step-num">
+                      {currentStepIndex > index ? "✔" : index + 1}
+                    </span>
                   </div>
                   <h6>{stepTitle[index]}</h6>
                 </div>
@@ -44,7 +79,7 @@ const MultiStepForm = () => {
         <div className="right-col">
           <div className="form-content-container">
             <span className="steps-counter">
-                step {currentStepIndex + 1} / {steps.length}
+              step {currentStepIndex + 1} / {steps.length}
             </span>
             {step}
           </div>

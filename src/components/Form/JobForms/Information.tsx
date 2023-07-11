@@ -1,20 +1,15 @@
 import { FormWrapper } from "../FormWrapper";
-import { z } from 'zod';
-
-
-
+import { z } from "zod";
 
 type UserInformationData = {
   firstName: string;
-  lastName: string;
   age: string;
   gender: string;
-  socialStatus: string; 
+  socialStatus: string;
   jobCode: string;
   jobTitle: string;
   advertiser: string;
-  zip: string;
-  phoneNum: number;
+  phoneNum: string;
 };
 
 type UserFormProps = UserInformationData & {
@@ -32,7 +27,6 @@ export function Information({
   advertiser,
   updateFields,
 }: UserFormProps) {
-
   return (
     <FormWrapper title="Information" subtitle="Let's get to know you">
       <div className="field-wrapper">
@@ -117,7 +111,7 @@ export function Information({
           <option value="fmale">References</option>
           <option value="fmale">IT</option>
           <option value="fmale">Tax Accountant</option>
-          <option value="fmale">Secretarial</option>          
+          <option value="fmale">Secretarial</option>
         </select>
       </div>
       <div className="field-wrapper">
@@ -134,10 +128,9 @@ export function Information({
           <option value="fmale">LinkedIn</option>
           <option value="fmale">Wazzaf</option>
           <option value="fmale">Forasna</option>
-          <option value="fmale">Other</option>          
+          <option value="fmale">Other</option>
         </select>
       </div>
-      
     </FormWrapper>
   );
 }

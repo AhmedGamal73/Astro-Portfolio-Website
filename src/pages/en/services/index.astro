@@ -187,9 +187,11 @@ const t = useTranslations(lang);
         If You Have An Enterprise Company, where to go from here where to go
         from here where to go from here
       </p>
-      <Button className="btn-stroke-yellow" client:load>
-        Free Consaltant Know
-      </Button>
+      <div class="btn-cont">
+        <Button className="btn-stroke-yellow" client:load>
+          Free Consaltant Know
+        </Button>
+      </div>
     </div>
     <div class="left">
       <img src="/service/consulting.png" />
@@ -365,6 +367,10 @@ const t = useTranslations(lang);
     }
     img {
       width: 105%;
+    }
+    .right p {
+      text-align: center !important;
+      padding-bottom: 1.5rem;
     }
   }
 </style>

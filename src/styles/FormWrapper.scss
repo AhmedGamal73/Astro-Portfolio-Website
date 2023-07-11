@@ -1,0 +1,13 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .step-subtitle {
+        color: "grey";
+        font-family: "poppins light"
+    }
+}

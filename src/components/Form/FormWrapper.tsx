@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import "../../styles/FormWrapper.scss";
 
 type FormWrapperProps = {
   title: string;
@@ -6,19 +7,14 @@ type FormWrapperProps = {
   children: ReactNode;
 };
 
-const STYLE_P = {
-  color: "grey",
-  fontFamily: "poppins light"
-}
-
-export function FormWrapper({ title,subtitle, children }: FormWrapperProps) {
+export function FormWrapper({ title, subtitle, children }: FormWrapperProps) {
   return (
     <>
-      <div>
+      <div className="container">
         <h4 className="step-title">{title}</h4>
-        <p style={STYLE_P} className="step-title">{subtitle}</p>
+        <p className="step-subtitle">{subtitle}</p>
       </div>
-      <form className="form-data-wrapper">{children}</form>
+      <div className="form-data-wrapper">{children}</div>
     </>
   );
 }

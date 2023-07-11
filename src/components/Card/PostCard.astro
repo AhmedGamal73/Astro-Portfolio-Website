@@ -42,7 +42,7 @@ const p = Astro.props;
 
   div.content-wrap {
     max-width: 350px;
-    min-height: 250px;
+    min-height: 208px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,12 @@ const p = Astro.props;
 
     p {
       text-align: start;
+    }
+    div.content-wrap a {
+      text-align: start;
+    }
+    div.content-wrap {
+      min-height: 150px;
     }
   }
 </style>

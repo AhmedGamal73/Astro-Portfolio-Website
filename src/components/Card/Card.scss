@@ -90,6 +90,7 @@
 @media (max-width: 768px) {
   .card-container {
     width: 100%!important;
+    padding-top: 0;
 
     [astro-icon=chevron-right] {
       width: 30px;

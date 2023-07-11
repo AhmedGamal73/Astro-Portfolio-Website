@@ -4,6 +4,7 @@
   align-items: center;
   height: 30vh;
   width: 100%;
+  background-color: white;
 }
 
 .slider-container {
@@ -40,10 +41,19 @@
   padding-top: 25px;
   gap: 70px;
   padding-inline-start: 50px;
+  
 
   .slide {
+    display: flex;
+    height: 98px;
+    width: 90px;
     /* flex: 0 0 200px; */
     height: 100px;
+    img {
+      object-fit: cover;
+      width: 100%;
+
+    }
   }
 
 }

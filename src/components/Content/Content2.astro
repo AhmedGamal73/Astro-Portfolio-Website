@@ -43,6 +43,7 @@ const p = Astro.props;
   span {
     color: #0080f9;
     font-family: "Poppins light";
+    font-size: 2.2vw !important ;
   }
 
   @media (max-width: 768px) {
@@ -50,8 +51,8 @@ const p = Astro.props;
       width: 100%;
     }
 
-    .content-wrap h1 {
-      padding-bottom: 1rem;
+    .content-wrap p {
+      text-align: center;
     }
 
     .content2-container {
@@ -64,6 +65,9 @@ const p = Astro.props;
       flex-direction: column;
       padding: 0;
       gap: 0;
+    }
+    span {
+      font-size: 5vw !important;
     }
   }
 </style>

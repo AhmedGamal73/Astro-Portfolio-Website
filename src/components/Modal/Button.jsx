@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
-
-const BTN_STYLE = {
-  fontSize: "1vw",
-  textAlign: "start",
-};
+import "../../styles/Button.scss";
 
 export default function Button({ className, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +11,7 @@ export default function Button({ className, children }) {
 
   return (
     <>
-      <button
-        style={BTN_STYLE}
-        className={className}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className={className} onClick={() => setIsOpen(!isOpen)}>
         {children}
       </button>
 
