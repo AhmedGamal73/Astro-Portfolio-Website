@@ -5,7 +5,6 @@ type UserInformationData = {
   firstName: string;
   age: string;
   gender: string;
-  socialStatus: string;
   jobCode: string;
   jobTitle: string;
   advertiser: string;
@@ -21,7 +20,6 @@ export function Information({
   phoneNum,
   age,
   gender,
-  socialStatus,
   jobCode,
   jobTitle,
   advertiser,
@@ -74,23 +72,8 @@ export function Information({
         </select>
       </div>
       <div className="field-wrapper">
-        <label>Social status</label>
-        <select
-          required
-          defaultValue="select"
-          id="socialStatus"
-          value={socialStatus}
-          onChange={(e) => updateFields({ socialStatus: e.target.value })}
-        >
-          <option value="">Select an Option</option>
-          <option value="male">Singel</option>
-          <option value="fmale">Married</option>
-        </select>
-      </div>
-      <div className="field-wrapper">
         <label>Job Code</label>
         <input
-          autoFocus
           required
           type="text"
           value={jobCode}

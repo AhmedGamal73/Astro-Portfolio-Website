@@ -17,7 +17,7 @@ body {
     font-family: "Poppins Light";
   }
   div {
-    font-family: 'poppins regular';
+    font-family: 'poppins regar';
   }
   span {
     font-size: .9vw;
@@ -113,7 +113,11 @@ font-size: .9vw!important;
 
   .btn-line-blue {
     text-align: center;
+    width: 10rem!important ;
+    font-size: 3.5vw!important;
+
   }
+
   button {
     width: 9rem;
     height: 3rem;
@@ -249,7 +253,7 @@ input, select, textarea {
 // Buttons
 .btn-stroke-yellow {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1.3rem;
   border-radius: 4px;
   cursor: pointer;
   color: var(--prim1);
@@ -346,12 +350,12 @@ input, select, textarea {
 
 .btn-line-blue {
   display: inline-block;
-  padding-top: 8px;
   cursor: pointer;
   color: var(--prim1);
   background: transparent;
   border: none;
-  font-size: 12px;  
+  font-size: 1vw;
+  width: 30rem;
   transition: 500ms;
 
   text: {

@@ -81,10 +81,7 @@
             .steps-counter {
                 color: gray;
                 padding-top: 2rem;
-                
-                .container {
-                    align-items: start!important;
-                }
+
             }
     
     
@@ -214,8 +211,9 @@ button:focus {
     }
 
     .job-app-cont {
-        margin-top: 5rem!important;
-        width: 100%;
+        width: 95%;
+        box-shadow: none;
+
     }
     .form-data-wrapper {
         justify-content: center;
@@ -231,9 +229,19 @@ button:focus {
     }
     .btns-container {
         padding-inline-end: 0!important;
-
+        justify-content: center!important;
         .next-btn {
             font-size: 3vw!important;
         }
+
+        .prev-btn {
+            padding: 0.5rem 3rem!important;
+            font-size: 4vw!important;
+        }
+    }
+
+    form {
+        justify-content: center;
+        align-items: center;
     }
 }

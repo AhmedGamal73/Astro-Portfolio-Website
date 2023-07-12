@@ -52,6 +52,11 @@ export const Modal = ({ isOpen, onClose }) => {
 
   if (!onClose) return null;
 
+  function next() {
+    currentStep < content.length - 1
+      ? () => setCurrentStep(currentStep + 1)
+      : onClose;
+  }
   return (
     <div className="overlay">
       <div
@@ -78,14 +83,7 @@ export const Modal = ({ isOpen, onClose }) => {
         </div>
         <div className="modal-content">{content[currentStep]}</div>
         {currentStep <= content.length && (
-          <button
-            onClick={
-              currentStep < content.length - 1
-                ? () => setCurrentStep(currentStep + 1)
-                : onClose
-            }
-            className="btn-stroke-blue-heavy next-btn"
-          >
+          <button onClick={next} className="btn-stroke-blue-heavy next-btn">
             {currentStep == content.length - 1 ? "Submit" : "Next"}
           </button>
         )}

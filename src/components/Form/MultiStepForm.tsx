@@ -4,16 +4,22 @@ import { FormEvent, useState } from "react";
 import { Information } from "./JobForms/Information";
 import { CVForm } from "./JobForms/CVForm";
 import { Education } from "./JobForms/Education";
+import { DetailedInformation } from "./JobForms/DetailedInformation";
+import { Language } from "./JobForms/Languages";
+import { EmploymentHistory } from "./JobForms/EmploymentHistory";
 
 type FormData = {
   firstName: string;
   phoneNum: string;
   age: string;
   gender: string;
-  socialStatus: string;
   jobCode: string;
   jobTitle: string;
   advertiser: string;
+  socialStatus: string;
+  nationality: string;
+  religion: string;
+  nationalId: string;
 };
 
 const INITIAL_DATA: FormData = {
@@ -21,16 +27,17 @@ const INITIAL_DATA: FormData = {
   phoneNum: "",
   age: "",
   gender: "",
-  socialStatus: "",
   jobCode: "",
   jobTitle: "",
   advertiser: "",
+  socialStatus: "",
+  nationality: "",
+  religion: "",
+  nationalId: "",
 };
 
 const MultiStepForm = () => {
   const [data, setData] = useState(INITIAL_DATA);
-  const [educationData, setEducationData] = useState({});
-  const [arr, setArr] = useState([]);
 
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => {
@@ -41,17 +48,26 @@ const MultiStepForm = () => {
   const { step, steps, isFirstStep, isLastStep, currentStepIndex, next, prev } =
     useMultistepForm([
       <Information {...data} updateFields={updateFields} />,
-      <Education {...data} updateFields={updateFields} />,
+      <DetailedInformation {...data} updateFields={updateFields} />,
+      <Language />,
+      <Education />,
+      <EmploymentHistory />,
       <CVForm {...data} updateFields={updateFields} />,
     ]);
 
   function submitForm(e: FormEvent) {
     e.preventDefault();
     next();
-    console.log(data, educationData);
   }
 
-  const stepTitle = ["Information", "Education", "CV"];
+  const stepTitle = [
+    "Information",
+    "Detailed Information",
+    "Language",
+    "Education",
+    "Job History",
+    "CV",
+  ];
 
   return (
     <div className="job-app-cont">

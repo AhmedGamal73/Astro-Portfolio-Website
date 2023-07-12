@@ -2,6 +2,7 @@ import "../../styles/MyHeader.scss";
 import { logo } from "../../icons";
 import { useEffect, useState } from "react";
 import { DropDown } from "./DropDown";
+import MediaQuery from "react-responsive";
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,6 @@ const MyHeader = (props) => {
         setIsSticky(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -88,16 +88,24 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/home`}>Home</a>
             </li>
-            <li
-              className="service-item"
-              onClick={() => setOpenServices((prev) => !prev)}
-              style={{ position: "relative" }}
-            >
-              <div className="navbar-services">
-                <span>Services</span>
-                {icon}
-              </div>
-            </li>
+            <MediaQuery maxWidth={768}>
+              <li>
+                <a href={`/${props.lang}/services`}>Services</a>
+              </li>
+            </MediaQuery>
+            <MediaQuery minWidth={768}>
+              <li
+                className="service-item"
+                onClick={() => setOpenServices((prev) => !prev)}
+                style={{ position: "relative" }}
+              >
+                <div className="navbar-services">
+                  <span>Services</span>
+                  {icon}
+                </div>
+              </li>
+            </MediaQuery>
+
             <li>
               <a href={`/${props.lang}/about`}>About</a>
             </li>

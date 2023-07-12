@@ -3,11 +3,18 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
 
     .step-subtitle {
         color: "grey";
         font-family: "poppins light"
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center;
     }
 }
