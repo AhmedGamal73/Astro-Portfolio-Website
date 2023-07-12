@@ -2,7 +2,6 @@ import { useMultistepForm } from "./useMultistepForm";
 import "../../styles/MultiStepForm.scss";
 import { FormEvent, useState } from "react";
 import { Information } from "./JobForms/Information";
-import { CVForm } from "./JobForms/CVForm";
 import { Education } from "./JobForms/Education";
 import { DetailedInformation } from "./JobForms/DetailedInformation";
 import { Language } from "./JobForms/Languages";
@@ -52,7 +51,6 @@ const MultiStepForm = () => {
       <Language />,
       <Education />,
       <EmploymentHistory />,
-      <CVForm {...data} updateFields={updateFields} />,
     ]);
 
   function submitForm(e: FormEvent) {
@@ -66,7 +64,6 @@ const MultiStepForm = () => {
     "Language",
     "Education",
     "Job History",
-    "CV",
   ];
 
   return (

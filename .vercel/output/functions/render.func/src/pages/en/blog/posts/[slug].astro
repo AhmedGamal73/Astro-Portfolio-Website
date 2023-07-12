@@ -1,0 +1,114 @@
+---
+import { Layout } from "../../../../layouts";
+import '../../../../styles/article.scss'
+
+const { slug } = Astro.params;
+
+let url = `https://rogina.shop/wp-json/wp/v2/posts?slug=${slug}`
+let res = await fetch(url)
+let [post] = await res.json();
+
+export async function getStaticPaths () {
+    const url = "https://rogina.shop/wp-json/wp/v2/posts";
+    const res = await fetch(url);
+    const posts = await res.json();
+
+    var enPosts = [];
+    function isEn (posts) {
+    posts.map(post => {
+        if (!post.slug.includes('%')) {
+            enPosts.push(post);
+        }
+    })
+}
+
+
+    return enPosts.map((post) => ({
+        params: {slug: post.slug },
+        props: { post: post }
+    }));
+}
+
+
+---
+
+<Layout title={post.title.rendered}>
+    <div class="blog-post-container">
+        
+
+        <aside class="sidebar">
+            <div class="sticky-sidebar">
+                <div id="sidebar-navigation">
+                    <h5>In This Article</h5>
+                </div>
+            </div>
+        </aside>
+
+        <article class="article">
+            <h1>{post.title.rendered}</h1>
+            <div class="article-map-wrapper">
+                <h4>In this article</h4>
+                <div id="article-map"></div>
+            </div>
+            <div class="article-img">
+                <img src={post.better_featured_image.source_url} alt="" />
+            </div>
+            <Fragment set:html={post.content.rendered}/>
+        </article>
+    </div>
+</Layout>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const h2Elements = document.querySelectorAll("h2"); // Get all <h2> elements
+      const sidebarNavigation = document.getElementById("sidebar-navigation"); // Sidebar navigation container
+      const articleMap = document.getElementById("article-map"); // site map for mobile 
+
+     // Add smooth scroll and margin top to anchor tags
+        const scrollLinks = document.querySelectorAll('.sidebar-link')
+
+        scrollLinks.forEach(function(link) {
+            link.addEventListener("click", function(e) {
+                e.preventDefault;
+
+                const target = document.querySelector(this.getAttribute("href"));
+                const marginTop = 20;
+
+                if(target) {
+                    const offsetTop = target.offsetTop - marginTop
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: "smooth"
+                    })
+                }
+            })
+        })
+    
+      // Generate the sidebar navigation links
+      h2Elements.forEach(function(h2Element) {
+        const sectionId = h2Element.id;
+        const sectionTitle = h2Element.innerText;
+    
+        const linkElement = document.createElement("a");
+        linkElement.href = `#${sectionId}`;
+        linkElement.innerText = `${sectionTitle}`;
+    
+        const listItemElement = document.createElement("li");
+        listItemElement.appendChild(linkElement);
+
+
+        function appendContent () {
+            if (window.innerWidth < 768) {
+                articleMap.appendChild(listItemElement);
+            } else {
+                sidebarNavigation.appendChild(listItemElement);
+            }
+        };
+
+        window.addEventListener('load', appendContent);
+        window.addEventListener('resize', appendContent);
+      });
+    });
+  </script>
+

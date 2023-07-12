@@ -7,13 +7,10 @@ import styles from "../../../styles/global.module.css";
 
 type CVData = {
   cv: string;
+  img: string;
 };
 
-type CVFormProps = CVData & {
-  updateFields: (fields: Partial<CVData>) => void;
-};
-
-export function CVForm({ cv, updateFields }: CVFormProps) {
+export function CVForm({ cv }: CVData) {
   const [CVUpload, setCVUpload] = useState(null);
 
   const uploadCV = () => {
@@ -32,6 +29,7 @@ export function CVForm({ cv, updateFields }: CVFormProps) {
           autoFocus
           required
           type="file"
+          value={img}
           onChange={(e) => {
             setCVUpload(e.target.files[0]);
           }}

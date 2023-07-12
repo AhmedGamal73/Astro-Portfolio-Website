@@ -2,12 +2,15 @@ import "../../styles/MyHeader.scss";
 import { logo } from "../../icons";
 import { useEffect, useState } from "react";
 import { DropDown } from "./DropDown";
-import MediaQuery from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [openServices, setOpenServices] = useState(false);
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1224px)",
+  });
 
   let icon = (
     <svg
@@ -46,7 +49,7 @@ const MyHeader = (props) => {
       }
     };
     window.addEventListener("scroll", handleScroll);
-
+    console.log(isDesktopOrLaptop);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -88,12 +91,11 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/home`}>Home</a>
             </li>
-            <MediaQuery maxWidth={768}>
+            {!isDesktopOrLaptop ? (
               <li>
                 <a href={`/${props.lang}/services`}>Services</a>
               </li>
-            </MediaQuery>
-            <MediaQuery minWidth={768}>
+            ) : (
               <li
                 className="service-item"
                 onClick={() => setOpenServices((prev) => !prev)}
@@ -104,7 +106,7 @@ const MyHeader = (props) => {
                   {icon}
                 </div>
               </li>
-            </MediaQuery>
+            )}
 
             <li>
               <a href={`/${props.lang}/about`}>About</a>
