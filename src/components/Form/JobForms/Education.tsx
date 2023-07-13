@@ -85,7 +85,10 @@ export function Education() {
   }, [certificates]);
 
   return (
-    <FormWrapper title="Education" subtitle="Tell Us About Education Journy">
+    <FormWrapper
+      title="Education"
+      subtitle="Tell Us About Your Education Journy"
+    >
       <div className="inputs-wrapper">
         <input
           autoFocus
@@ -141,32 +144,30 @@ export function Education() {
       </div>
 
       <div className="certificates">
-        {certificates.length > 0 && (
-          <table className="rwd-table">
-            <tbody>
+        <table className="rwd-table">
+          <tbody>
+            <tr>
+              <th>nu</th>
+              <th>Certificate</th>
+              <th>Degree</th>
+              <th>Major</th>
+              <th>University</th>
+              <th>Country</th>
+              <th>Year</th>
+            </tr>
+            {certificates.map((certificate, i) => (
               <tr>
-                <th>nu</th>
-                <th>Certificate</th>
-                <th>Degree</th>
-                <th>Major</th>
-                <th>University</th>
-                <th>Country</th>
-                <th>Year</th>
+                <td data-th="nu">{i + 1}</td>
+                <td data-th="Certificate">{certificate.title}</td>
+                <td data-th="Degree">{certificate.degree}</td>
+                <td data-th="Major">{certificate.major}</td>
+                <td data-th="University">{certificate.university}</td>
+                <td data-th="Country">{certificate.country}</td>
+                <td data-th="Year">{certificate.year}</td>
               </tr>
-              {certificates.map((certificate, i) => (
-                <tr>
-                  <td data-th="nu">{i + 1}</td>
-                  <td data-th="Certificate">{certificate.title}</td>
-                  <td data-th="Degree">{certificate.degree}</td>
-                  <td data-th="Major">{certificate.major}</td>
-                  <td data-th="University">{certificate.university}</td>
-                  <td data-th="Country">{certificate.country}</td>
-                  <td data-th="Year">{certificate.year}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+            ))}
+          </tbody>
+        </table>
       </div>
     </FormWrapper>
   );

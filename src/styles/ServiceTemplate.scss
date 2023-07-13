@@ -1,0 +1,243 @@
+  section.box-cont {
+    width: 100%;
+    padding-block: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.container {
+
+    .faq-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 8rem;
+        
+
+        .faq-cont {
+            width: 80%;
+            padding: 4rem;
+        }
+    }
+    
+    .hero-section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 8rem 4rem 8rem 4rem;
+        background: var(--bgc);
+
+        .hero-cont {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+
+            div.left-col {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+    
+                img {
+                    border-radius: 0.6rem;
+                    width: 80%;
+                }
+    
+            }
+            div.right-col {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                gap: 5rem;
+                
+                .btns {
+                        display: flex;
+                    gap: 1rem;
+                }
+              .content-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                width: 80%;
+    
+                h2 {
+                    text-align: start;
+                }
+    
+                p {
+                    text-align: start;
+                }
+                span {
+                    font-family: "poppins regular";
+                    color: var(--prim2);
+                    background-color: var(--bgc2);
+                    padding: 0.3rem;
+                    border-radius: 0.2rem;
+                    margin-bottom: 0.5rem;
+                }
+              }
+            }
+        }
+
+        
+    }
+
+    .feature-section {
+        padding-block: 5rem;
+        background: var(--prim2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        h3 {
+            color: white;
+            width: 50%;
+            text-align: center;
+        }
+
+        .card-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+
+            h3 {
+                color: var(--prim1);
+                text-align: start;
+            }
+
+            a {
+                border-radius: 12px;        
+            }
+        }
+
+        .cont-bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            h3 {
+                color: white;
+            }
+        }
+    }
+
+    .how-it-work-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 6rem;
+        
+        .how-it-work-cont {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .process-cont {
+                width: 100;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .latest-posts-section {
+        width: 80%;
+        object-fit: contain;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--sky-gradiant);
+    }
+
+    
+      
+}
+
+
+@media (max-width: 768px) {
+    .container {
+
+        .hero-section {
+            padding: 2rem 0;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .hero-cont {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+
+            .left-col {
+                width: 100%!important;
+                justify-content: center!important;
+
+                img {
+                    width: 100% !important;
+                }
+            }
+
+            .right-col {
+                width: 100%!important;
+                gap: 3rem!important;
+
+                .content-wrap {
+                    width: 90%;
+                }
+
+
+            }
+        }
+
+        .feature-section {
+            h3 {
+                width: 90%;
+            }
+
+            .card-wrap {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .cont-bottom {
+                button {
+                    width: 70%!important;
+                }
+            }
+        }
+
+        .faq-section {
+        
+            .faq-cont {
+                width: 90%;
+                padding: 0 2rem;
+            }
+        }
+
+        .process-cont {
+            flex-direction: column;
+        }
+    }
+}
+ 

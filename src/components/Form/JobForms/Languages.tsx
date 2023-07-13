@@ -68,7 +68,6 @@ export function Language() {
     <FormWrapper title="Education" subtitle="Tell Us About Education Journy">
       <div className="inputs-wrapper">
         <input
-          autoFocus
           id="lang-input"
           placeholder="Language Title"
           value={title}

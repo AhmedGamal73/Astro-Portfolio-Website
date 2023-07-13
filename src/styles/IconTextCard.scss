@@ -1,0 +1,19 @@
+.card-cont {
+    min-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+
+    h4, p {
+        text-align: center;
+    }
+
+    [astro-icon] {
+        width: 2.5rem;
+        height: 2.5rem;
+        color: var(--prim3)
+    }
+}

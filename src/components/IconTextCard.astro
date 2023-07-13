@@ -1,0 +1,18 @@
+---
+import "../styles/IconTextCard.scss";
+import Icon from "astro-icon";
+
+export interface props {
+  icon: "string";
+  title: "string";
+  subtitle: "string";
+}
+
+const p = Astro.props;
+---
+
+<div class="card-cont">
+  <Icon name={p.icon} />
+  <h4>{p.title}</h4>
+  <p>{p.subtitle}</p>
+</div>

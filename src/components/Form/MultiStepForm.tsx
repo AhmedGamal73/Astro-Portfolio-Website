@@ -3,7 +3,6 @@ import "../../styles/MultiStepForm.scss";
 import { FormEvent, useState } from "react";
 import { Information } from "./JobForms/Information";
 import { Education } from "./JobForms/Education";
-import { DetailedInformation } from "./JobForms/DetailedInformation";
 import { Language } from "./JobForms/Languages";
 import { EmploymentHistory } from "./JobForms/EmploymentHistory";
 
@@ -47,7 +46,6 @@ const MultiStepForm = () => {
   const { step, steps, isFirstStep, isLastStep, currentStepIndex, next, prev } =
     useMultistepForm([
       <Information {...data} updateFields={updateFields} />,
-      <DetailedInformation {...data} updateFields={updateFields} />,
       <Language />,
       <Education />,
       <EmploymentHistory />,
@@ -58,32 +56,27 @@ const MultiStepForm = () => {
     next();
   }
 
-  const stepTitle = [
-    "Information",
-    "Detailed Information",
-    "Language",
-    "Education",
-    "Job History",
-  ];
+  const stepTitle = ["Information", "Language", "Education", "Job History"];
 
   return (
     <div className="job-app-cont">
       <form onSubmit={submitForm}>
         <div className="left-col">
+          <h2 className="steps-title">BP Career</h2>
           <div className="steps-cont">
             <div className="form_steps-container">
-              {steps.map((step, index) => (
+              {steps.map((step, i) => (
                 <div className="form_step-wrapper">
                   <div
                     className={`form__step-box ${
-                      currentStepIndex >= index ? "active" : ""
+                      currentStepIndex >= i ? "active" : ""
                     }`}
                   >
                     <span className="step-num">
-                      {currentStepIndex > index ? "✔" : index + 1}
+                      {currentStepIndex > i ? "✔" : i + 1}
                     </span>
                   </div>
-                  <h6>{stepTitle[index]}</h6>
+                  <h6>{stepTitle[i]}</h6>
                 </div>
               ))}
             </div>

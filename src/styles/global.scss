@@ -1,13 +1,15 @@
 @charset "UTF-8";
 @import './font.scss';
 
-::after, ::before {
+::after, ::before, html {
   box-sizing: border-box;
 }
 
 /* /* Global Headings size */ 
 
+
 body {
+
   h1,h2,h3,h4{
     color: var(--prim1);
     line-height: 1.1;
@@ -32,7 +34,7 @@ h2 {
 font-size: 2.3vw;
 }
 h3 {
-font-size: 1.5vw;
+font-size: 1.8vw;
 }
 h4 {
 font-size: 1.3vw;
@@ -52,79 +54,6 @@ a {
 font-size: .9vw!important;
 }
 
-
-// Phone
-@media (max-width: 768px) {
-  h1 {
-    font-size: 6vw!important;
-    text-align: center;
-    line-height: 1.2!important;
-  }
-  h2 {
-    font-size: 5.7vw!important;
-  }
-  h3 {
-    font-size: 6vw;
-    text-align: center;
-  }
-  h4 {
-    font-size: 3.9vw;
-  }
-  h5 {
-    font-size: 4vw;
-  }
-  h6 {
-    font-size: 3vw;
-  }
-
-  p {
-    font-size: 3vw!important;
-  }
-
-  a {
-    font-size: 3vw!important;
-  }
-
-  /* Forms */
-  
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-      outline: none;
-  }
-  textarea {
-    padding-block: 3rem;
-  }
-  input, textarea, select {
-    font-size: 3vw!important;
-  }
-  label {
-    font-size: 3vw!important;
-  }
-  /* Forms */
-
-
-  /* buttons */
-  .btn-stroke-yellow {
-    font-size: 3vw!important;
-    padding: 8px 30px!important;
-  }
-
-  .btn-line-blue {
-    text-align: center;
-    width: 10rem!important ;
-    font-size: 3.5vw!important;
-
-  }
-
-  button {
-    width: 9rem;
-    height: 3rem;
-    font-size: 4vw;
-}
-  /* buttons */
-}
 
 input:focus,
   select:focus,
@@ -174,6 +103,8 @@ input:focus,
     white 60%
   );
 
+
+
 // Form
 label {
   font-family: "poppins regular";
@@ -208,6 +139,8 @@ input, select, textarea {
   }
 }
 // Form
+
+
   }
 
   a {
@@ -235,6 +168,9 @@ input, select, textarea {
 
 
 // Global Classis
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
 .bg-sky-gradiant {
   background: linear-gradient(
   211deg, rgba(21,32,64,1) 0%, 
@@ -311,7 +247,7 @@ input, select, textarea {
 .btn-stroke-blue-heavy {
   display: inline-block;
   padding: 6px 12px;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
   color: white;
   background:var(--prim2);
@@ -378,7 +314,90 @@ input, select, textarea {
   }
 };
 
-/* Global */
-.box-shadow {
-  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
+
+
+
+////////////////////// Phone //////////////////
+@media (max-width: 768px) {
+  /* Global */
+  h1 {
+      font-size: 6vw!important;
+      text-align: center;
+      line-height: 1.2!important;
+    }
+    h2 {
+      font-size: 7.7vw!important;
+    }
+    h3 {
+      font-size: 6vw;
+      text-align: center;
+    }
+    h4 {
+      font-size: 3.9vw;
+    }
+    h5 {
+      font-size: 4vw;
+    }
+    h6 {
+      font-size: 3vw;
+    }
+  
+    p {
+      font-size: 3vw!important;
+    }
+  
+    a {
+      font-size: 3vw!important;
+    }
+  
+    span {
+      font-size: 3vw!important;
+    }
+    /* Global */
+  
+  
+  
+    /* Forms */
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    textarea {
+      padding-block: 3rem;
+    }
+    input, textarea, select {
+      font-size: 3vw!important;
+      padding-inline: 1rem!important;
+    }
+    label {
+      font-size: 3vw!important;
+    }
+    /* Forms */
+  
+  
+    /* buttons */
+    .btn-stroke-yellow {
+      font-size: 3vw!important;
+      padding: 8px 16px!important;
+    }
+  
+    .btn-line-blue {
+      text-align: center;
+      width: 10rem!important ;
+      font-size: 3.5vw!important;
+  
+    }
+  
+  /* buttons */
+  
+    button {
+      width: 9rem;
+      height: 3rem;
+      font-size: 4vw;
+    }
+  
+    /* buttons */
+  }
+  ////////////////////// Phone //////////////////

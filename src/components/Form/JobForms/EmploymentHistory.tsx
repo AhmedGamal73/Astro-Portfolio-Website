@@ -115,7 +115,6 @@ export function EmploymentHistory() {
     >
       <div className="inputs-wrapper">
         <input
-          autoFocus
           placeholder="Company Name"
           type="text"
           value={companyName}

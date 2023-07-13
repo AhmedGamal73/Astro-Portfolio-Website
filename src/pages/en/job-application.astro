@@ -12,50 +12,51 @@ const lang = getLangFromUrl(Astro.url);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application</title>
   </head>
-  <body> </body>
-  <section class="job-container">
-    <MultiStepForm client:load />
-  </section>
+  <body>
+    <section class="job-container">
+      <MultiStepForm client:load />
+    </section>
+  </body>
+
+  <style>
+    section.job-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background: var(--bgc);
+    }
+
+    div.con-col {
+      display: flex;
+      width: 90vw;
+      height: 80vh;
+      border-radius: 1.1rem;
+      box-shadow: var(--box-shadow);
+      background: white;
+    }
+
+    div.right-col {
+      width: 60%;
+    }
+
+    div.con-col div.left-col {
+      width: 40%;
+      padding: 0;
+    }
+    div.con-col div.left-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.1rem 0 0 1.1rem;
+    }
+    div.con-col div.right-col {
+      width: 70%;
+    }
+    div.con-col div.right-col {
+      padding-inline-start: 3rem;
+      width: 70%;
+    }
+  </style>
 </html>
-
-<style>
-  section.job-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background: var(--bgc);
-  }
-
-  div.con-col {
-    display: flex;
-    width: 90vw;
-    height: 80vh;
-    border-radius: 1.1rem;
-    box-shadow: var(--box-shadow);
-    background: white;
-  }
-
-  div.right-col {
-    width: 60%;
-  }
-
-  div.con-col div.left-col {
-    width: 40%;
-    padding: 0;
-  }
-  div.con-col div.left-col img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.1rem 0 0 1.1rem;
-  }
-  div.con-col div.right-col {
-    width: 70%;
-  }
-  div.con-col div.right-col {
-    padding-inline-start: 3rem;
-    width: 70%;
-  }
-</style>

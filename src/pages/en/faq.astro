@@ -1,34 +1,32 @@
 ---
 import { Layout } from "../../layouts";
-import FAskedQuestions from '../../components/FAskedQuestions.jsx'
+import FAskedQuestions from "../../components/FAQs/FAskedQuestions.jsx";
 ---
 
-
-<Layout title="FAQ" >
-    <div class="faq-cont">
-        <div class="faq-wrapper">
-            <FAskedQuestions client:load/>
-        </div>
+<Layout title="FAQ">
+  <div class="faq-cont">
+    <div class="faq-wrapper">
+      <FAskedQuestions client:load />
     </div>
+  </div>
 </Layout>
 
-
 <style>
-    .faq-cont {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-block: 8rem;
-        color: var(--sky-gradiant)
-    }
+  .faq-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 8rem;
+    color: var(--sky-gradiant);
+  }
 
-    .faq-wrapper {
-        width: 60%;
-        padding: 4rem 2rem;
-        background: var(--bgc);
-        border: 1px solid var(--border-color);
-        border-radius: 10px;
-        box-shadow: var(--box-shadow1);
-    }
+  .faq-wrapper {
+    width: 60%;
+    padding: 4rem 2rem;
+    background: var(--bgc);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow1);
+  }
 </style>

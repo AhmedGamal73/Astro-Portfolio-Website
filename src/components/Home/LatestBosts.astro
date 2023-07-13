@@ -2,51 +2,49 @@
 import PostCard from "../Card/PostCard.astro";
 import Content1 from "../Content/Content1.astro";
 
-import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
- interface Props {
-	lang: string;
+interface Props {
+  lang: string;
 }
 ---
+
 <section class="posts-cont">
-        <div class="up-row">
-            <Content1
-                tag="Our Latest Posts"
-                title="Solutions for all your taxis"
-                titleColor="#152040"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                subtitleColor="#152040"
-                btn="See All"
-            />
-        </div>
-        <div class="cards-wrap">
-            <PostCard 
-                title="Here's A new Blog Post!!"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="home/blog1.jpg"
-
-            />
-            <PostCard 
-                title="Here's A new Blog Post!!"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="home/blog2.jpg"
-
-            />
-            <PostCard 
-                title="Here's A new Blog Post!!"
-                subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-                img="home/blog3.jpg"
-
-            />
-        </div>
-        <a class="all-posts btn-stroke-yellow" href={`/${lang}/blog`}>See All Posts</a>
+  <div class="up-row">
+    <Content1
+      tag="Our Latest Posts"
+      title="Solutions for all your taxis"
+      titleColor="#152040"
+      subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+      subtitleColor="#152040"
+    />
+  </div>
+  <div class="cards-wrap">
+    <PostCard
+      title="Here's A new Blog Post!!"
+      subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+      img="home/blog1.jpg"
+    />
+    <PostCard
+      title="Here's A new Blog Post!!"
+      subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+      img="home/blog2.jpg"
+    />
+    <PostCard
+      title="Here's A new Blog Post!!"
+      subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+      img="home/blog3.jpg"
+    />
+  </div>
+  <a class="all-posts btn-stroke-yellow" href={`/${lang}/blog`}>See All Posts</a
+  >
 </section>
 
 <style>
-section.posts-cont{
+  section.posts-cont {
     width: 100%;
     display: flex;
     gap: 3rem;
@@ -54,30 +52,34 @@ section.posts-cont{
     justify-content: center;
     align-items: center;
     padding-block: 3rem;
-    background: linear-gradient(186deg, rgba(255,255,255,1) 15%, rgba(232,244,250,1) 100%);
-}
+    background: linear-gradient(
+      186deg,
+      rgba(255, 255, 255, 1) 15%,
+      rgba(232, 244, 250, 1) 100%
+    );
+  }
 
-div.up-row {
+  div.up-row {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-div.cards-wrap {
+  div.cards-wrap {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-}
+  }
 
-.all-posts {
+  .all-posts {
     padding-inline: 2rem;
-}
+  }
 
-@media (max-width: 769px) {
+  @media (max-width: 769px) {
     .cards-wrap {
-        flex-direction: column;
+      flex-direction: column;
     }
-}
+  }
 </style>
