@@ -9,7 +9,7 @@ type Language = {
   speak: string;
 };
 
-export function Language() {
+export function Language({ getLangData }) {
   const [title, setTitle] = useState<string>("");
   const [read, setRead] = useState<string>("");
   const [write, setWrite] = useState<string>("");
@@ -49,9 +49,7 @@ export function Language() {
   };
 
   const onDeleting = () => {
-    setCertificates((prev) => {
-      return prev.slice(0, -1);
-    });
+    setCertificates((prev) => prev.slice(0, -1));
     setTitle("");
     setRead("");
     setWrite("");
@@ -59,7 +57,8 @@ export function Language() {
   };
 
   useEffect(() => {
-    if (certificates.length > 0) {
+    if (certificates) {
+      getLangData(certificates);
       console.log(certificates);
     }
   }, [certificates]);
@@ -81,7 +80,7 @@ export function Language() {
           name="read"
           onChange={(e) => updateField(e)}
         >
-          <option value="">Your Level In Speaking</option>
+          <option value="">Your Level In Reading</option>
           <option value="Excellent">Excellent</option>
           <option value="Fair">Fair</option>
           <option value="Weak">Weak</option>

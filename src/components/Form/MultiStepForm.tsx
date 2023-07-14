@@ -5,6 +5,7 @@ import { Information } from "./JobForms/Information";
 import { Education } from "./JobForms/Education";
 import { Language } from "./JobForms/Languages";
 import { EmploymentHistory } from "./JobForms/EmploymentHistory";
+import { DetailedInformation } from "./JobForms/DetailedInformation";
 
 type FormData = {
   firstName: string;
@@ -36,6 +37,19 @@ const INITIAL_DATA: FormData = {
 
 const MultiStepForm = () => {
   const [data, setData] = useState(INITIAL_DATA);
+  const [languages, setLanguages] = useState([]);
+  const [employmentHistory, setEmploymentHistory] = useState([]);
+  const [education, setEducation] = useState([]);
+
+  const getLangData = (languages: Array<string>) => {
+    setLanguages(languages);
+  };
+  const geEmploymentHisData = (employmentHistory: Array<string>) => {
+    setEmploymentHistory(employmentHistory);
+  };
+  const getEducationData = (education: Array<string>) => {
+    setEducation(education);
+  };
 
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => {
@@ -46,17 +60,32 @@ const MultiStepForm = () => {
   const { step, steps, isFirstStep, isLastStep, currentStepIndex, next, prev } =
     useMultistepForm([
       <Information {...data} updateFields={updateFields} />,
-      <Language />,
-      <Education />,
-      <EmploymentHistory />,
+      <DetailedInformation {...data} updateFields={updateFields} />,
+      <Language getLangData={getLangData} />,
+      <Education getEducationData={getEducationData} />,
+      <EmploymentHistory geEmploymentHisData={geEmploymentHisData} />,
     ]);
 
   function submitForm(e: FormEvent) {
     e.preventDefault();
-    next();
+    if (currentStepIndex == 2 && languages.length === 0) {
+      alert("please enter a value");
+    } else if (currentStepIndex == 3 && education.length === 0) {
+      alert("please enter a value");
+    } else if (currentStepIndex == 4 && employmentHistory.length === 0) {
+      alert("please enter a value");
+    } else {
+      next();
+    }
   }
 
-  const stepTitle = ["Information", "Language", "Education", "Job History"];
+  const stepTitle = [
+    "Language",
+    "Information",
+    "Personal Information",
+    "Education",
+    "Job History",
+  ];
 
   return (
     <div className="job-app-cont">

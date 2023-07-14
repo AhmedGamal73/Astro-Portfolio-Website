@@ -11,7 +11,7 @@ type Certificate = {
   year: string;
 };
 
-export function Education() {
+export function Education({ getEducationData }) {
   const [title, setTitle] = useState<string>("");
   const [degree, setDegree] = useState<string>("");
   const [major, setMajor] = useState<string>("");
@@ -79,7 +79,8 @@ export function Education() {
   };
 
   useEffect(() => {
-    if (certificates.length > 0) {
+    if (certificates) {
+      getEducationData(certificates);
       console.log(certificates);
     }
   }, [certificates]);

@@ -14,7 +14,7 @@ type Company = {
   country: string;
 };
 
-export function EmploymentHistory() {
+export function EmploymentHistory({ geEmploymentHisData }) {
   const [companyName, setCompanyName] = useState<string>("");
   const [jobTitle, setJobTitle] = useState<string>("");
   const [period, setPeriod] = useState<number>(null);
@@ -104,6 +104,7 @@ export function EmploymentHistory() {
 
   useEffect(() => {
     if (companies.length > 0) {
+      geEmploymentHisData(companies);
       console.log(companies);
     }
   }, [companies]);
