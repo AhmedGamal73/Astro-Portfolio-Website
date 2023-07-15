@@ -3,14 +3,10 @@ import "../../styles/hero.scss";
 import Button from "../Modal/Button";
 import HeroSlider from "../Slider/HeroSlider.astro";
 
-export interface props {
-  title: string;
-  span: string;
-  subtitle: string;
-  consaltBtn: string;
-  btn: string;
-  btnSrc: string;
-}
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const p = Astro.props;
 ---
@@ -20,13 +16,15 @@ const p = Astro.props;
     <div class="content-col">
       <div class="content-wrap">
         <div class="head">
-          <h1>{p.title}<span>{p.span}</span></h1>
+          <h1>{t("home.hero.title")}<span>{t("home.hero.span")}</span></h1>
         </div>
-        <p>{p.subtitle}</p>
+        <p>{t("home.hero.subtitle")}</p>
         <div class="content_btns">
-          <a href={p.btnSrc} class="btn-stroke-yellow">{p.btn}</a>
+          <a href={`/${lang}/about#process`} class="btn-stroke-yellow"
+            >{t("home.hero.btn.process")}</a
+          >
           <Button className="btn-line-blue" client:load>
-            {p.consaltBtn}
+            {t("home.hero.consaltBtn")}
           </Button>
         </div>
       </div>

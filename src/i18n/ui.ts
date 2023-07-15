@@ -14,25 +14,33 @@ export const ui = {
     "nav.contact": 'Contact',
     "nav.courses": 'Courses',
     // header
+
+
     // home
     "home.hero.title": "When You Need Results ",
     "home.hero.span": "We Care.",
     "home.hero.subtitle": "We offer a wide range of financial and accounting services that cater to the unique needs of individuals and businesses.",
     "home.hero.btn.process": "Our Process",
     "home.hero.consaltBtn": "Free consaltant now",
+
     "home.tax.tag": "Taxes",
     "home.tax.title": "Our tax specialists are ready",
     "home.tax.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+
     "home.bookkeeping.title": "Expert Services In",
     "home.bookkeeping.span": "Bookkeeping",
     "home.bookkeeping.subtitle": "Keeping Your Books in Perfect Harmony: Empowering Your Business with Expert Bookkeeping Services.",
     "home.bookkeeping.consaltBtn": "Free Consaltant Know",
     "home.bookkeeping.btn": "Know more about bookkeeping",
+
     "home.audit.title": "Excellence And Assurance Means",
     "home.audit.span": "Audit",
     "home.audit.subtitle": "We provide a wide range of services in the field of accounting and taxes, including",
     "home.audit.consaltBtn": "Free Consaltant Know",
     "home.audit.btn": "Know more about audit",
+
+    "home.development.tag": "Why choose to do business with us",
+    "home.development.title": "Our enterprise development steps",
     "home.development.firstTitle": "Bookkeeping",
     "home.development.firstSubTitle": "Daily Bokkeeping: Comprehensive Financial Records for All Departments and Timely Preparation of Department-specific Reports, Ensuring Effective Company Development.",
     "home.development.secondTitle": "Import Financial Cycle",
@@ -43,23 +51,33 @@ export const ui = {
     "latestPosts.title": "Solutions for all your taxis",
     "latestPosts.subtitle": "Unlocking Financial Success: Explore Our Latest Articles for Expert Insights and Solutions in Tax Preparation and Consulting Services.",
     // home
+
+
     // services page
     "services.hero.title": "Solutions to all your facility problems",
     "services.hero.subtitle": "comprehensive financial services designed to empower businesses and individuals in achieving their financial goals. With a dedicated team of experienced professionals, we provide a range of services including bookkeeping, tax preparation, consulting, and financial advisory.",
+
     "services.audit.title": "Audit",
     "services.audit.subtitle": "he primary purpose of an audit is to provide an objective assessment of the organization's financial health, internal controls, and overall operational efficiency.",
+
     "services.bookkeeping.title": "BookKeeping",
     "services.bookkeeping.subtitle": "provide businesses with accurate and efficient financial record-keeping solutions. We understand the importance of maintaining organized and up-to-date books",
+
     "services.accountant.title": "Accountant",
     "services.accountant.subtitle": "he primary purpose of an audit is to provide an objective assessment of the organization's financial health, internal controls, and overall operational efficiency.",
+
     "services.courses.title": "Courses",
     "services.courses.subtitle": "he primary purpose of an audit is to provide an objective assessment of the organization's financial health, internal controls, and overall operational efficiency.",
+
     "services.taxes.title": "Taxes",
     "services.taxes.subtitle": "he primary purpose of an audit is to provide an objective assessment of the organization's financial health, internal controls, and overall operational efficiency.",
+
     "services.programmes.title": "Programmes",
     "services.programmes.subtitle": "programmes are designed to equip individuals with the essential knowledge and skills needed to excel in the field of accounting.",
+
     "services.jobs.title": "Jobs",
     "services.jobs.subtitle": "Assist individuals in their pursuit of employment opportunities. We understand that the job application process can be daunting and time-consuming",
+
     "services.programs.title": "Our Programms",
     "services.programs.subtitle": "We Have Programms to Help Your Bussines",
     "services.program1.title": "Dinner Mind",
@@ -77,11 +95,14 @@ export const ui = {
     "services.program3.feature1": "",
     "services.program3.feature2": "",
     "services.program3.feature3": "",
+
     "services.consaltant.title": "Our Expertese here to help you with understanding your financial sitiuation and More",
     "services.consaltant.subtitle": "If You Have An Enterprise Company, where to go from here where to go from here where to go from here",
     "services.consaltant.btn": "Free Consaltant Know",
     // services page
+
     // bookkeeping page
+    //FAQ
     "bookkeeping.question1": "What is bookkeeping?",
     "bookkeeping.answer1": "A: Bookkeeping is the process of recording, organizing, and maintaining financial transactions and records for a business or organization. It involves tracking income, expenses, assets, and liabilities to ensure accurate financial reporting.",
     "bookkeeping.question2": "What is bookkeeping?",
@@ -98,8 +119,36 @@ export const ui = {
     "bookkeeping.answer7": "A: Bookkeeping is a critical component of tax preparation. Accurate and organized financial records ensure that tax returns are filed correctly and on time. Bookkeeping helps track deductible expenses, reconcile financial data with tax forms, calculate tax liabilities, and provide the necessary documentation for audits or inquiries from tax authorities. Proper bookkeeping simplifies tax preparation and helps businesses remain compliant with tax regulations.",
     "bookkeeping.question8": "Can bookkeeping help with financial analysis and decision-making?",
     "bookkeeping.answer8": "A: Yes, bookkeeping plays a vital role in financial analysis and decision-making. It provides the necessary data to analyze income, expenses, cash flow, and profitability. Financial reports generated from bookkeeping records help identify trends, assess the financial health of the business, evaluate performance against goals, and make informed decisions regarding investments, cost-cutting measures, pricing strategies, and business expansion.",
+    //FAQ
     // bookkeeping page
 
+    // about page
+    "about.hero.title": "A successful enterprise only successfully finds its employees",
+    "about.hero.subtitle": "We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member.",
+    "about.box1.title": "Who We Are ?",
+    "about.box1.subtitle": "We, at Business Partners, offer comprehensive financial and accounting solutions for individuals and companies in Egypt. With our qualified and exceptional team, we assist our clients in achieving their financial goals in a proper and reliable manner. Discover how our financial and accounting services can benefit you today!",
+    "about.box2.title": "Our Mission",
+    "about.box2.subtitle": "our mission is to empower individuals and businesses in Egypt by providing comprehensive financial and accounting solutions that drive success. We are dedicated to helping our clients navigate the complexities of the financial world with confidence and ease. Our mission is to be a trusted partner, delivering expert guidance and support to our clients as they strive to achieve their financial goals. ",
+    "about.box3.title": "Our Vision",
+    "about.box3.subtitle": "We offer comprehensive financial and accounting solutions for individuals and companies in Egypt. With our qualified and exceptional team, we assist our clients in achieving their financial goals in a proper and reliable manner. Discover how our financial and accounting services can benefit you today!",
+    "about.box4.title": "Our Values",
+    "about.box4.subtitle": " We value excellence and continuously strive to deliver exceptional financial and accounting solutions to our clients, exceeding their expectations. Collaboration is another key value we hold dear, as we believe in working closely with our clients to understand their unique needs and provide tailored solutions.",
+
+    "about.team.tag": "Our Team",
+    "about.team.title": "you are the driving force behind our success.",
+    "about.team.subtitle": "Through our qualified and exceptional team, we are committed to delivering reliable and accurate financial services that enable our clients to make informed decisions and seize opportunities for growth.",
+
+    "about.process.step1.title": "Getting to know the company",
+    "about.process.step1.subtitle": "Step one in our comprehensive financial and accounting process is the meticulous collection and accurate bookkeeping of your company's data. By carefully organizing and managing your financial information, we lay the foundation for insightful analysis and effective decision-making.",
+    "about.process.step2.title": "calculating and analyzing",
+    "about.process.step2.subtitle": "Moving onto step two, we embark on the crucial task of calculating and analyzing the collected data. Our skilled team employs advanced techniques and cutting-edge tools to meticulously process the information, unveiling meaningful insights and trends. Through meticulous analysis, we unravel the financial story of your company, enabling us to provide informed recommendations and strategic guidance for your continued growth and success.",
+    "about.process.step3.title": "Taxes & Financial",
+    "about.process.step3.subtitle": "In step three, we delve into the core financial matters that drive the success of your company. Drawing upon our expertise, we navigate the intricate landscape of financial management, covering areas such as budgeting, cash flow management, financial reporting, and risk assessment. By implementing sound financial practices and strategies, we help optimize your financial performance, enhance profitability, and ensure long-term sustainability. Our dedicated team works closely with you to identify opportunities for growth, mitigate risks, and make informed financial decisions that align with your goals and aspirations.",
+    "about.process.step4.title": "Hiring",
+    "about.process.step4.subtitle": "hiring a skilled and qualified team for your company. We understand that your success relies on having the right people in key positions. Our expert consultants provide invaluable support throughout the hiring process, from defining job roles and requirements to sourcing, screening, and interviewing potential candidates. We assess candidates not only for their technical proficiency but also for their cultural fit and alignment with your company's values. By carefully selecting top talent, we aim to build a cohesive and high-performing team that will drive your company's growth and contribute to its long-term success.",
+    "about.process.step5.title": "Shine",
+    "about.process.step.subtitle": "all about making your company shine in the marketplace. We leverage our expertise in branding, marketing, and strategic positioning to elevate your company's visibility and enhance its reputation. Through comprehensive marketing strategies, we craft compelling messaging and engaging campaigns that resonate with your target audience. Our team works collaboratively with you to develop a distinctive brand identity, create impactful digital and offline marketing initiatives, and implement effective communication channels. By showcasing your unique value proposition, we strive to differentiate your company, attract new customers, and foster enduring relationships that contribute to your overall success.",
+    // about page
   },
 
   ar: {

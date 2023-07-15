@@ -5,6 +5,10 @@ import OurTeam from "../../components/About/OurTeam.astro";
 import OurProcess from "../../components/About/OurProcess.astro";
 import { Layout, Base } from "../../layouts";
 import LatestBosts from "../../components/Home/LatestBosts.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 // Colors
 const prim1 = "#152040",
@@ -17,13 +21,13 @@ const prim1 = "#152040",
   <Base>
     <AboutHero
       heroImg="about-hero.png"
-      title="A successful enterprise only successfully finds its employees"
-      subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+      title={t("about.hero.title")}
+      subtitle={t("about.hero.subtitle")}
     />
     <BoxToBox
       uniqueKey="2"
-      title="Who We Are ?"
-      subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+      title={t("about.box1.title")}
+      subtitle={t("about.box1.subtitle")}
       bgc={prim3}
       iconColor={prim1}
       contDirection="row-reverse"
@@ -31,8 +35,8 @@ const prim1 = "#152040",
     />
     <BoxToBox
       uniqueKey="1"
-      title="Our Mission"
-      subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+      title={t("about.box2.title")}
+      subtitle={t("about.box2.subtitle")}
       bgc={blue}
       iconColor=`var(--prim3)`
       contDirection="row"
@@ -40,8 +44,8 @@ const prim1 = "#152040",
     />
     <BoxToBox
       uniqueKey="3"
-      title="Our Vision"
-      subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+      title={t("about.box3.title")}
+      subtitle={t("about.box3.subtitle")}
       bgc={sky}
       iconColor=`var(--prim1)`
       contDirection="row-reverse"
@@ -49,14 +53,18 @@ const prim1 = "#152040",
     />
     <BoxToBox
       uniqueKey="4"
-      title="Our Values"
-      subtitle="We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member."
+      title={t("about.box4.title")}
+      subtitle={t("about.box4.subtitle")}
       bgc={prim1}
       iconColor=`var(--prim3)`
       contDirection="row"
       icon="internet-of-things"
     />
-    <OurTeam />
+    <OurTeam
+      tag={t("about.team.tag")}
+      title={t("about.team.title")}
+      subtitle={t("about.team.subtitle")}
+    />
     <OurProcess id="process" />
     <LatestBosts />
   </Base>
