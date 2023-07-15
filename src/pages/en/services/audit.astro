@@ -5,7 +5,7 @@ import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import Button from "../../../components/Modal/Button";
 import "../../../styles/ServiceTemplate.scss";
 import LatestBosts from "../../../components/Home/LatestBosts.astro";
-import ServiceTemplate from "../../../components/FAQs/ServiceTemplate";
+import AuditFAQ from "../../../components/FAQs/AuditFAQ ";
 import IconTextCard from "../../../components/IconTextCard.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -130,7 +130,7 @@ const t = useTranslations(lang);
       width: 60%;
       display: flex;
       ">
-        <ServiceTemplate client:visible />
+        <AuditFAQ client:visible />
       </div>
     </div>
   </section>

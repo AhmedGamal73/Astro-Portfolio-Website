@@ -22,7 +22,6 @@ const t = useTranslations(lang);
     btnSrc={`/${lang}/about#process`}
   />
   <PartnersSlider />
-  <TaxSection />
   <Bookkeeping
     bkeepTitle={t("home.bookkeeping.title")}
     bkeepSubTitle={t("home.bookkeeping.subtitle")}
@@ -40,10 +39,10 @@ const t = useTranslations(lang);
   <Development
     tag="Why choose to do business with us"
     title="Our enterprise development steps"
-    stepTitle1="Fast turnaround time."
-    stepSubtitle1="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
-    stepTitle2="Fast turnaround time."
-    stepSubtitle2="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+    stepTitle1={t("home.development.firstTitle")}
+    stepSubtitle1={t("home.development.firstSubTitle")}
+    stepTitle2={t("home.development.secondTitle")}
+    stepSubtitle2={t("home.development.secondSubTitle")}
     stepTitle3="Fast turnaround time."
     stepSubtitle3="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
     img="mechanic.jpg"

@@ -6,11 +6,8 @@ export interface props {
   title: "string";
   subtitle: "string";
   feature1: "string";
-  featureSrc1: "string";
   feature2: "string";
-  featureSrc2: "string";
   feature3: "string";
-  featureSrc3: "string";
   btn: "string";
   btnSrc: "string";
   img: "string";
@@ -37,21 +34,15 @@ const { bgc = "var(--accent1)" } = Astro.props;
     <div style={{ flexdirection: p.featuresort }} class="feature-wrap">
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} href={p.featureSrc1} class="feature"
-          >{p.feature1}</a
-        >
+        <a target={p.newTab} class="feature">{p.feature1}</a>
       </div>
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} href={p.featureSrc2} class="feature"
-          >{p.feature2}</a
-        >
+        <a target={p.newTab} class="feature">{p.feature2}</a>
       </div>
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} href={p.featureSrc3} class="feature"
-          >{p.feature3}</a
-        >
+        <a target={p.newTab} class="feature">{p.feature3}</a>
       </div>
     </div>
     <div class="btn">

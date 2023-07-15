@@ -19,10 +19,13 @@ const t = useTranslations(lang);
         name="arrow-up-thin"
       />
       <Content1
-        title="Solutions to all your facility problems"
-        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+        tag=""
+        title={t("services.hero.title")}
+        subtitle={t("services.hero.subtitle")}
       />
-      <a class="btn-stroke-blue-heavy" href="">Contact one of our experts</a>
+      <Button className="btn-stroke-blue-heavy" client:load>
+        Contact one of our experts
+      </Button>
     </div>
     <div class="content-103">
       <div class="container">
@@ -40,10 +43,9 @@ const t = useTranslations(lang);
                   <Icon name="book-light" />
                 </div>
                 <!-- service-icon -->
-                <h3 class="service-title">BookKeeping</h3>
+                <h3 class="service-title">{t("services.bookkeeping.title")}</h3>
                 <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
+                  {t("services.bookkeeping.subtitle")}
                 </p>
               </div>
               <!-- service-content -->
@@ -62,10 +64,9 @@ const t = useTranslations(lang);
                   <Icon name="audit-outlined" />
                 </div>
                 <!-- .s-icon -->
-                <h3 class="service-title">Audit</h3>
+                <h3 class="service-title">{t("services.audit.title")}</h3>
                 <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
+                  {t("services.audit.subtitle")}
                 </p>
               </div>
               <!-- service-content -->
@@ -84,10 +85,9 @@ const t = useTranslations(lang);
                   <Icon name="money-thin" />
                 </div>
                 <!-- .s-icon -->
-                <h3 class="service-title">Taxis</h3>
+                <h3 class="service-title">{t("services.taxes.title")}</h3>
                 <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
+                  {t("services.taxes.subtitle")}
                 </p>
               </div>
               <!-- service-content -->
@@ -106,11 +106,8 @@ const t = useTranslations(lang);
                   <Icon name="work-outline" />
                 </div>
                 <!-- .s-icon -->
-                <h3 class="service-title">Jobs</h3>
-                <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
-                </p>
+                <h3 class="service-title">{t("services.jobs.title")}</h3>
+                <p class="service-description">{t("services.jobs.subtitle")}</p>
               </div>
               <!-- service-content -->
               <div class="service-hover"></div>
@@ -128,10 +125,9 @@ const t = useTranslations(lang);
                   <Icon name="course" />
                 </div>
                 <!-- .s-icon -->
-                <h3 class="service-title">Courses</h3>
+                <h3 class="service-title">{t("services.courses.title")}</h3>
                 <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
+                  {t("services.courses.subtitle")}
                 </p>
               </div>
               <!-- service-content -->
@@ -150,10 +146,9 @@ const t = useTranslations(lang);
                   <Icon name="programming-broken" />
                 </div>
                 <!-- .s-icon -->
-                <h3 class="service-title">Accounting Programs</h3>
+                <h3 class="service-title">{t("services.programmes.title")}</h3>
                 <p class="service-description">
-                  Seitan brunch meh, food truck Wes Anderson quinoa XOXO
-                  readymade gastropub gluten-free heirloom wolf skateboard.
+                  {t("services.programmes.subtitle")}
                 </p>
               </div>
               <!-- service-content -->
@@ -166,42 +161,47 @@ const t = useTranslations(lang);
   </section>
   <section class="courses-container">
     <Content1
-      tag="Our Programms"
-      title="We Have Programms to Help Your Bussines"
+      tag={t("services.programs.title")}
+      title={t("services.programs.subtitle")}
       titleColor="white"
     />
     <div class="card-container">
       <Card
         size="40%"
         img="/service/program1.png"
-        title={t("program1.title")}
-        subtitle={t("program1.subtitle")}
-        feature1="Growth of sales"
-        feature2="Manage your employees"
-        feature3="customers and suppliers"
+        title={t("services.program1.title")}
+        subtitle={t("services.program1.subtitle")}
+        feature1={t("services.program1.feature1")}
+        feature2={t("services.program1.feature2")}
+        feature3={t("services.program1.feature3")}
+        btnSrc="https://clicksolutionseg.tech"
         btn="See All Features"
+        newTab="_blanck"
       />
       <Card
         img="/service/program2.png"
         size="40%"
-        title={t("program2.title")}
-        subtitle={t("program2.subtitle")}
-        feature1="Growth of sales"
-        feature2="Manage your employees"
-        feature3="customers and suppliers"
+        title={t("services.program2.title")}
+        subtitle={t("services.program2.subtitle")}
+        feature1={t("services.program2.feature1")}
+        feature2={t("services.program2.feature2")}
+        feature3={t("services.program2.feature3")}
         btn="See All Features"
+        btnSrc="https://clicksolutionseg.tech"
         bgc="var(--accent2)"
+        newTab="_blanck"
       />
       <Card
         size="60%"
         featureSort="row"
         img="/service/program3.png"
-        title={t("program3.title")}
-        subtitle={t("program3.subtitle")}
-        feature1="Growth of sales"
-        feature2="Manage your employees"
-        feature3="customers and suppliers"
+        title={t("services.program3.title")}
+        subtitle={t("services.program3.subtitle")}
+        feature1={t("services.program3.feature1")}
+        feature2={t("services.program3.feature2")}
+        feature3={t("services.program3.feature3")}
         btn="See All Features"
+        btnSrc="https://clicksolutionseg.tech"
         newTab="_blanck"
         bgc="var(--accent1)"
       />
@@ -209,17 +209,11 @@ const t = useTranslations(lang);
   </section>
   <section class="consaltant-container">
     <div class="right">
-      <h3>
-        Our Expertese here to help you with understanding your financial
-        sitiuation and More
-      </h3>
-      <p>
-        If You Have An Enterprise Company, where to go from here where to go
-        from here where to go from here
-      </p>
+      <h3>{t("services.consaltant.title")}</h3>
+      <p>{t("services.consaltant.subtitle")}</p>
       <div class="btn-cont">
         <Button className="btn-stroke-yellow" client:load>
-          Free Consaltant Know
+          {t("services.consaltant.btn")}
         </Button>
       </div>
     </div>
@@ -231,6 +225,9 @@ const t = useTranslations(lang);
 
 <style>
   /* Consultant Section */
+  .service-hero button {
+    padding: 13px 52px;
+  }
   .service-hero .content-wrap {
     padding-top: 5rem;
   }
@@ -278,7 +275,7 @@ const t = useTranslations(lang);
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
     background: var(--prim3);
     padding-block: 6rem;
     box-shadow: var(--boxShadow2);
@@ -402,12 +399,18 @@ const t = useTranslations(lang);
 
     .consaltant-container {
       flex-direction: column-reverse;
+      padding-inline: 0.8rem !important;
     }
 
     .consaltant-container div.right {
       padding: 0;
       width: 100% !important;
     }
+
+    .right h3 {
+      text-align: center;
+    }
+
     img {
       width: 105%;
     }
