@@ -3,22 +3,12 @@ import "../../styles/Bookkeeping.scss";
 import Content2 from "../Content/Content2.astro";
 import Icon from "astro-icon";
 
-export interface props {
-  bkeepTitle: string;
-  bkeepSubTitle: string;
-  bkeepSpan: string;
-  bkeepConsaltBtn: string;
-  bkeepBtn: string;
-  bkeepBtnSrc: string;
-  auditTitle: string;
-  auditSubTitle: string;
-  auditSpan: string;
-  auditConsaltBtn: string;
-  auditBtn: string;
-  auditBtnSrc: string;
-}
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
-const p = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 ---
 
 <section>
@@ -27,12 +17,12 @@ const p = Astro.props;
       <div class="start-col">
         <Icon name="arrow-solid" />
         <Content2
-          span={p.bkeepSpan}
-          title={p.bkeepTitle}
-          subtitle={p.bkeepSubTitle}
-          consaltBtn={p.bkeepBn1}
-          btn={p.bkeepBtn2}
-          btnSrc={p.bkeepBtn2Src}
+          title={t("home.bookkeeping.title")}
+          span={t("home.bookkeeping.span")}
+          subtitle={t("home.bookkeeping.subtitle")}
+          consaltBtn={t("home.bookkeeping.consaltBtn")}
+          btn={t("home.bookkeeping.btn")}
+          btnSrc={`/${lang}/services/bookkeeping`}
         />
       </div>
 
@@ -46,12 +36,12 @@ const p = Astro.props;
     <div class="lower-col">
       <div class="start-col1">
         <Content2
-          span={p.auditSpan}
-          title={p.auditTitle}
-          subtitle={p.auditSubTitle}
-          consaltBtn={p.auditBn1}
-          btn={p.auditBtn2}
-          btnSrc={p.auditBtn2Src}
+          title={t("home.audit.title")}
+          span={t("home.audit.span")}
+          subtitle={t("home.audit.subtitle")}
+          consaltBtn={t("home.audit.consaltBtn")}
+          btn={t("home.audit.btn")}
+          btnSrc={`/${lang}/services/audit`}
         />
       </div>
       <div class="end-col1">
