@@ -2,6 +2,8 @@
 import Icon from "astro-icon";
 
 export interface props {
+  title: string;
+  subtitle: string;
   titleProcess1: string;
   subtitleProcess1: string;
   titleProcess2: string;
@@ -13,13 +15,15 @@ export interface props {
   titleProcess5: string;
   subtitleProcess5: string;
 }
+
+const p = Astro.props;
 ---
 
 <section>
   <div class="process-cont">
     <div class="top-col">
-      <h6>Our Process</h6>
-      <h3>The mechanism of action that leads to the success of the system</h3>
+      <h6>{p.title}</h6>
+      <h3>{p.subtitle}</h3>
     </div>
     <div class="bot-col">
       <div class="content-cont">
@@ -27,60 +31,40 @@ export interface props {
         <div class="icon-wrapper">
           <Icon name="book-light" />
         </div>
-        <h5>Getting to know the company</h5>
-        <p>
-          Pull up a chair in our office or stay on the couch. We have all the
-          tax filing options you need. And by any file method, you'll always get
-          the maximum for your recovery. Guaranteed."
-        </p>
+        <h5>{p.titleProcess1}</h5>
+        <p>{p.subtitleProcess1}</p>
       </div>
       <div class="content-cont">
         <span>2</span>
         <div class="icon-wrapper">
           <Icon name="audit-outlined" />
         </div>
-        <h5>Caluculating and analyse teh data</h5>
-        <p>
-          Pull up a chair in our office or stay on the couch. We have all the
-          tax filing options you need. And by any file method, you'll always get
-          the maximum for your recovery. Guaranteed."
-        </p>
+        <h5>{p.titleProcess2}</h5>
+        <p>{p.subtitleProcess2}</p>
       </div>
       <div class="content-cont">
         <span>3</span>
         <div class="icon-wrapper">
           <Icon name="money-thin" />
         </div>
-        <h5>Caluculate all your taxis</h5>
-        <p>
-          Pull up a chair in our office or stay on the couch. We have all the
-          tax filing options you need. And by any file method, you'll always get
-          the maximum for your recovery. Guaranteed."
-        </p>
+        <h5>{p.titleProcess3}</h5>
+        <p>{p.subtitleProcess3}</p>
       </div>
       <div class="content-cont">
         <span>4</span>
         <div class="icon-wrapper">
           <Icon name="work-outline" />
         </div>
-        <h5>Getting to know the company</h5>
-        <p>
-          Pull up a chair in our office or stay on the couch. We have all the
-          tax filing options you need. And by any file method, you'll always get
-          the maximum for your recovery. Guaranteed."
-        </p>
+        <h5>{p.titleProcess4}</h5>
+        <p>{p.subtitleProcess4}</p>
       </div>
       <div class="content-cont">
         <span>5</span>
         <div class="icon-wrapper">
           <Icon name="course" />
         </div>
-        <h5>Getting to know the company</h5>
-        <p>
-          Pull up a chair in our office or stay on the couch. We have all the
-          tax filing options you need. And by any file method, you'll always get
-          the maximum for your recovery. Guaranteed."
-        </p>
+        <h5>{p.titleProcess5}</h5>
+        <p>{p.subtitleProcess5}</p>
       </div>
     </div>
   </div>

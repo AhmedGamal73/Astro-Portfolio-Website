@@ -135,19 +135,22 @@ export const ui = {
     "about.box4.subtitle": " We value excellence and continuously strive to deliver exceptional financial and accounting solutions to our clients, exceeding their expectations. Collaboration is another key value we hold dear, as we believe in working closely with our clients to understand their unique needs and provide tailored solutions.",
 
     "about.team.tag": "Our Team",
-    "about.team.title": "you are the driving force behind our success.",
+    "about.team.title": "You are the driving force behind our success.",
     "about.team.subtitle": "Through our qualified and exceptional team, we are committed to delivering reliable and accurate financial services that enable our clients to make informed decisions and seize opportunities for growth.",
 
+
+    "about.process.title": "Our Process",
+    "about.process.subtitle": "The mechanism of action that drives the system towards success",
     "about.process.step1.title": "Getting to know the company",
     "about.process.step1.subtitle": "Step one in our comprehensive financial and accounting process is the meticulous collection and accurate bookkeeping of your company's data. By carefully organizing and managing your financial information, we lay the foundation for insightful analysis and effective decision-making.",
     "about.process.step2.title": "calculating and analyzing",
-    "about.process.step2.subtitle": "Moving onto step two, we embark on the crucial task of calculating and analyzing the collected data. Our skilled team employs advanced techniques and cutting-edge tools to meticulously process the information, unveiling meaningful insights and trends. Through meticulous analysis, we unravel the financial story of your company, enabling us to provide informed recommendations and strategic guidance for your continued growth and success.",
+    "about.process.step2.subtitle": "Moving onto step two, we embark on the crucial task of calculating and analyzing the collected data. Our skilled team employs advanced techniques and cutting-edge tools to meticulously process the information, unveiling meaningful insights and trends.",
     "about.process.step3.title": "Taxes & Financial",
-    "about.process.step3.subtitle": "In step three, we delve into the core financial matters that drive the success of your company. Drawing upon our expertise, we navigate the intricate landscape of financial management, covering areas such as budgeting, cash flow management, financial reporting, and risk assessment. By implementing sound financial practices and strategies, we help optimize your financial performance, enhance profitability, and ensure long-term sustainability. Our dedicated team works closely with you to identify opportunities for growth, mitigate risks, and make informed financial decisions that align with your goals and aspirations.",
+    "about.process.step3.subtitle": "In step three, we delve into the core financial matters that drive the success of your company. Drawing upon our expertise, we navigate the intricate landscape of financial management, covering areas such as budgeting, cash flow management, financial reporting, and risk assessment.",
     "about.process.step4.title": "Hiring",
-    "about.process.step4.subtitle": "hiring a skilled and qualified team for your company. We understand that your success relies on having the right people in key positions. Our expert consultants provide invaluable support throughout the hiring process, from defining job roles and requirements to sourcing, screening, and interviewing potential candidates. We assess candidates not only for their technical proficiency but also for their cultural fit and alignment with your company's values. By carefully selecting top talent, we aim to build a cohesive and high-performing team that will drive your company's growth and contribute to its long-term success.",
+    "about.process.step4.subtitle": "Hiring a skilled and qualified team for your company. We understand that your success relies on having the right people in key positions. Our expert consultants provide invaluable support throughout the hiring process.",
     "about.process.step5.title": "Shine",
-    "about.process.step.subtitle": "all about making your company shine in the marketplace. We leverage our expertise in branding, marketing, and strategic positioning to elevate your company's visibility and enhance its reputation. Through comprehensive marketing strategies, we craft compelling messaging and engaging campaigns that resonate with your target audience. Our team works collaboratively with you to develop a distinctive brand identity, create impactful digital and offline marketing initiatives, and implement effective communication channels. By showcasing your unique value proposition, we strive to differentiate your company, attract new customers, and foster enduring relationships that contribute to your overall success.",
+    "about.process.step5.subtitle": "All about making your company shine in the marketplace. We leverage our expertise in branding, marketing, and strategic positioning to elevate your company's visibility and enhance its reputation.",
     // about page
   },
 
