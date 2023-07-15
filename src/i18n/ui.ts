@@ -7,11 +7,15 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
+    // header
     "nav.home": 'Home',
     "nav.about": 'About',
     "nav.services": 'Services',
     "nav.contact": 'Contact',
     "nav.courses": 'Courses',
+    // header
+
+    // home
     "home.hero.title": "When You Need Results ",
     "home.hero.span": "We Care.",
     "home.hero.subtitle": "We offer a wide range of financial and accounting services that cater to the unique needs of individuals and businesses.",
@@ -39,6 +43,7 @@ export const ui = {
     "latestPosts.tag": "Our Latest Posts",
     "latestPosts.title": "Solutions for all your taxis",
     "latestPosts.subtitle": "Unlocking Financial Success: Explore Our Latest Articles for Expert Insights and Solutions in Tax Preparation and Consulting Services.",
+    // home
 
 
     // services page

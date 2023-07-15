@@ -5,16 +5,16 @@ import "../../styles/TaxSection.scss";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Button from "../../components/Modal/Button";
 
-export const lang = getLangFromUrl(Astro.url);
-export const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section>
   <div class="container">
     <Content1
-      tag='{t("home.tax.tag")}'
-      title='{t("home.tax.title")}'
-      subtitle='{t("home.tax.subtitle")}'
+      tag={t("home.tax.tag")}
+      title={t("home.tax.title")}
+      subtitle={t("home.tax.subtitle")}
       titleColor="white"
       subtitleColor="white"
     />
