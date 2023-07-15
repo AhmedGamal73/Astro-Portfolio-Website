@@ -1,11 +1,18 @@
 ---
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import "../../styles/hero.scss";
 import Button from "../Modal/Button";
 import HeroSlider from "../Slider/HeroSlider.astro";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+export interface props {
+  title: string;
+  span: string;
+  subtitle: string;
+  consaltBtn: string;
+  btn: string;
+  btnSrc: string;
+}
+
+const p = Astro.props;
 ---
 
 <div class="hero-container">
@@ -13,14 +20,13 @@ const t = useTranslations(lang);
     <div class="content-col">
       <div class="content-wrap">
         <div class="head">
-          <h6>{t("hero.question")}</h6>
-          <h1>{t("hero.title")}<span>{t("hero.span")}</span></h1>
+          <h1>{p.title}<span>{p.span}</span></h1>
         </div>
-        <p>{t("hero.subtitle")}</p>
+        <p>{p.subtitle}</p>
         <div class="content_btns">
-          <a class="btn-stroke-yellow">Our Strategy</a>
+          <a href={p.btnSrc} class="btn-stroke-yellow">{p.btn}</a>
           <Button className="btn-line-blue" client:load>
-            Free Consultant Now
+            {p.consaltBtn}
           </Button>
         </div>
       </div>

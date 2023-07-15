@@ -28,11 +28,20 @@
             border-radius: 0.8rem 0 0 0.8rem;
             height: -webkit-fill-available;
             height: 80vh;
-            gap: 5rem;
+            gap: 1rem;
 
+            p {
+                color: var(--bgc);
+            }
             .steps-title {
                 padding-top: 4rem;
-                color: white;
+                color: #ffbf00;
+
+                span {
+                    color: var(--prim3);
+                    font-size: 1.3vw;
+                    padding-inline-start: .3rem;
+                }
             }
 
     
@@ -172,10 +181,6 @@
     color: white; 
 }
 
-.done {
-    transition: background-color 0.4s ease-in-out;
-    background-color: var(--blue)!important;
-}
 
 
 

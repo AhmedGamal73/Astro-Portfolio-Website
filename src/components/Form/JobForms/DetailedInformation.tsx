@@ -25,6 +25,7 @@ export function DetailedInformation({
         <label>Nationality</label>
         <input
           autoFocus
+          placeholder="Enter your country"
           required
           type="text"
           value={nationality}
@@ -35,6 +36,7 @@ export function DetailedInformation({
         <label>Religion</label>
         <input
           required
+          placeholder="Enter your religion"
           type="text"
           value={religion}
           onChange={(e) => updateFields({ religion: e.target.value })}
@@ -58,6 +60,7 @@ export function DetailedInformation({
         <label>National ID</label>
         <input
           required
+          placeholder="Find it in your national card"
           type="text"
           value={nationalId}
           onChange={(e) => updateFields({ nationalId: e.target.value })}

@@ -2,6 +2,23 @@
 import "../../styles/Bookkeeping.scss";
 import Content2 from "../Content/Content2.astro";
 import Icon from "astro-icon";
+
+export interface props {
+  bkeepTitle: string;
+  bkeepSubTitle: string;
+  bkeepSpan: string;
+  bkeepConsaltBtn: string;
+  bkeepBtn: string;
+  bkeepBtnSrc: string;
+  auditTitle: string;
+  auditSubTitle: string;
+  auditSpan: string;
+  auditConsaltBtn: string;
+  auditBtn: string;
+  auditBtnSrc: string;
+}
+
+const p = Astro.props;
 ---
 
 <section>
@@ -10,13 +27,12 @@ import Icon from "astro-icon";
       <div class="start-col">
         <Icon name="arrow-solid" />
         <Content2
-          title="Don't bother with tax"
-          span="calculations"
-          subtitle="We can help explain what it means and even solve the problem for you."
-          btn1="Book Appointment"
-          btn2="Know More About Us"
-          btn1Src="#"
-          btn2Src="#"
+          span={p.bkeepSpan}
+          title={p.bkeepTitle}
+          subtitle={p.bkeepSubTitle}
+          consaltBtn={p.bkeepBn1}
+          btn={p.bkeepBtn2}
+          btnSrc={p.bkeepBtn2Src}
         />
       </div>
 
@@ -30,13 +46,12 @@ import Icon from "astro-icon";
     <div class="lower-col">
       <div class="start-col1">
         <Content2
-          title="Don't bother with calculations"
-          span="Tax"
-          subtitle="We can help explain what it means and even solve the problem for you."
-          btn1="Book Appointment"
-          btn2="Know More About Us"
-          btn1Src="#"
-          btn2Src="#"
+          span={p.auditSpan}
+          title={p.auditTitle}
+          subtitle={p.auditSubTitle}
+          consaltBtn={p.auditBn1}
+          btn={p.auditBtn2}
+          btnSrc={p.auditBtn2Src}
         />
       </div>
       <div class="end-col1">

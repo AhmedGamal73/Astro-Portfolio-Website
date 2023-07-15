@@ -6,16 +6,37 @@ import TaxSection from "../../components/Home/TaxSection.astro";
 import Bookkeeping from "../../components/Home/Bookkeeping.astro";
 import Development from "../../components/Home/Development.astro";
 import LatestBosts from "../../components/Home/LatestBosts.astro";
-import { getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Home">
-  <Hero />
+  <Hero
+    title={t("home.hero.title")}
+    span={t("home.hero.span")}
+    subtitle={t("home.hero.subtitle")}
+    consaltBtn={t("home.hero.consaltBtn")}
+    btn={t("home.hero.btn.process")}
+    btnSrc={`/${lang}/about#process`}
+  />
   <PartnersSlider />
   <TaxSection />
-  <Bookkeeping />
+  <Bookkeeping
+    bkeepTitle={t("home.bookkeeping.title")}
+    bkeepSubTitle={t("home.bookkeeping.subtitle")}
+    bkeepSpan={t("home.bookkeeping.span")}
+    bkeepBn1={t("home.bookkeeping.consaltBtn")}
+    bkeepBtn2={t("home.bookkeeping.btn")}
+    bkeepBtn2Src={`/${lang}/services/bookkeeping`}
+    auditTitle={t("home.audit.title")}
+    auditSubTitle={t("home.audit.subtitle")}
+    auditSpan={t("home.audit.span")}
+    auditBn1={t("home.audit.consaltBtn")}
+    auditBtn2={t("home.audit.btn")}
+    auditBtn2Src={`/${lang}/services/audit`}
+  />
   <Development
     tag="Why choose to do business with us"
     title="Our enterprise development steps"

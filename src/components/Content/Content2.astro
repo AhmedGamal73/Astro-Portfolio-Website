@@ -1,24 +1,24 @@
 ---
+import Button from "../Modal/Button";
 export interface Props {
-  btn1: string;
-  btn2: string;
-  title: string;
   span: string;
+  title: string;
   subtitle: string;
-  btn1Src: string;
-  btn2Src: string;
+  consaltBtn: string;
+  btn: string;
+  btnSrc: string;
 }
 const p = Astro.props;
 ---
 
 <div class="content2-container">
   <div class="content-wrap">
-    <h1>{p.title} <span>{p.span}</span></h1>
+    <h2>{p.title} <span>{p.span}</span></h2>
     <p>{p.subtitle}</p>
   </div>
   <div class="btn-wrap">
-    <a href={p.btn1Src} class="btn-stroke-yellow">{p.btn1}</a>
-    <a href={p.btn2Src} class="btn-line-blue">{p.btn2}</a>
+    <Button className="btn-stroke-yellow" client:visible>{p.consaltBtn}</Button>
+    <a href={p.btnSrc} class="btn-line-blue">{p.btn}</a>
   </div>
 </div>
 
@@ -39,7 +39,11 @@ const p = Astro.props;
   .btn-wrap {
     display: flex;
     gap: 2.3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2.3rem;
   }
+
   span {
     color: #0080f9;
     font-family: "Poppins light";
@@ -49,10 +53,18 @@ const p = Astro.props;
   @media (max-width: 768px) {
     .content-wrap {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    .content-wrap p {
+    .content-wrap p,
+    h2 {
       text-align: center;
+    }
+    .content-wrap h2 span {
+      font-size: 6.5vw !important;
     }
 
     .content2-container {
@@ -62,9 +74,16 @@ const p = Astro.props;
     }
 
     .btn-wrap {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       padding: 0;
-      gap: 0;
+      gap: 0.5rem;
+    }
+
+    .btn-wrap a {
+      padding-inline-start: 1rem;
     }
     span {
       font-size: 5vw !important;

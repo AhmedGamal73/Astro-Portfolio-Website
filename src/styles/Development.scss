@@ -119,7 +119,17 @@ hr {
 
 @media (max-width: 768px) {
     .dev-cont {
-        gap: 0
+        gap: 0;
+
+        .third-col {
+            gap: 1rem;
+            width: 86%!important;
+            padding-top: 2rem!important;
+    
+            a {
+                text-align: center;
+            }
+        }
     }
     div.second-col .process-cont {
         flex-direction: column-reverse;
@@ -152,14 +162,6 @@ hr {
         
     }
 
-    .third-col {
-        gap: 2rem;
-        width: 86%!important;
-        padding-top: 2rem!important;
-
-        a {
-            text-align: center;
-        }
-    }
+    
 
 }

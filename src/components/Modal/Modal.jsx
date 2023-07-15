@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ConsaltantForm from "../Form/ContactForms/ConsaltantForm";
 import { Schedule } from "./Schedule";
-import "./../../styles/Modal.scss";
 import { userDate } from "../../global/appoinmentStore";
+import "./../../styles/Modal.scss";
 
 // First Step Address
 const Address = () => {

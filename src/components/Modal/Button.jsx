@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
-import "../../styles/Button.scss";
 
 export default function Button({ className, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +10,10 @@ export default function Button({ className, children }) {
 
   return (
     <>
-      <button className={className} onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className={`${className} modal-btn`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {children}
       </button>
 

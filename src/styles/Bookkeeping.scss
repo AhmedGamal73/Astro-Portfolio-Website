@@ -1,5 +1,5 @@
 
-  [astro-icon="teenyicons:arrow-solid"] {
+  [astro-icon="arrow-solid"] {
     color: var(--blue);
     position: absolute;
     font-size: 5rem;
@@ -30,11 +30,11 @@
     .start-col {
       display: flex;
       position: relative;
-      width: 45%;
+      width: 50%;
     } 
 
     .end-col {
-      width: 55%;
+      width: 50%;
 
       .bgc {
         width: 100%;
@@ -56,33 +56,6 @@
     }
   }
 
-  @media (max-width: 768px) {
-
-  [astro-icon="arrow-solid"] {
-    display: none!important;
-  }
-    .upper-col {
-      flex-direction: column-reverse;
-      
-      .start-col {
-        width: 100%;
-
-        .content2-container {
-          align-items: center;
-
-          .content-wrap {
-            width: 70%;
-            padding-top: 2rem;
-          }
-        }
-      }
-      .end-col {
-        width: 100%;
-      }
-    } 
-
-  }
-
   .lower-col {
     width: 100%;
     display: flex;
@@ -90,11 +63,11 @@
 
     .start-col1 {
       display: flex;
-      width: 55%;
+      width: 50%;
     } 
 
     .end-col1 {
-      width: 45%;
+      width: 50%;
 
       .bgc {
         width: 100%;
@@ -118,18 +91,55 @@
   }
 
   @media (max-width: 768px) {
+
+  [astro-icon="arrow-solid"] {
+    display: none!important;
+  }
+    .upper-col {
+      flex-direction: column-reverse;
+      
+      .start-col, .start-col1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content2-container {
+          width: 80%;
+          padding: 1.3rem;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .end-col {
+        width: 100%;
+      }
+    } 
+
+  }
+
+
+
+  @media (max-width: 768px) {
     .lower-col {
       margin-top: 3rem;
 
       flex-direction: column-reverse;
       .start-col1 {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .content2-container {
-          width: 100%;
+          width: 80%;
           padding: 1.3rem;
+          justify-content: center;
+          display: flex;
           align-items: center;
         }
+       
       }
       .end-col1 {
         width: 100%;

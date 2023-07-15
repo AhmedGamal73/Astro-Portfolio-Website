@@ -11,7 +11,7 @@
 body {
 
   h1,h2,h3,h4{
-    color: var(--prim1);
+    color: var(--prim2);
     line-height: 1.1;
     font-family: 'Poppins regular';
   }
@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-font-size: 2.3vw;
+font-size: 2.5vw;
 }
 h2 {
 font-size: 2.3vw;
@@ -164,6 +164,10 @@ input, select, textarea {
     text-decoration: none;
 
   }
+
+  button {
+    font-size: .9vw;
+  }
 }
 
 
@@ -189,7 +193,7 @@ input, select, textarea {
 // Buttons
 .btn-stroke-yellow {
   display: inline-block;
-  padding: .5rem 1.3rem;
+  padding: .8rem 1.3rem;
   border-radius: 4px;
   cursor: pointer;
   color: var(--prim1);
@@ -291,7 +295,6 @@ input, select, textarea {
   background: transparent;
   border: none;
   font-size: 1vw;
-  width: 30rem;
   transition: 500ms;
 
   text: {
@@ -321,16 +324,14 @@ input, select, textarea {
 @media (max-width: 768px) {
   /* Global */
   h1 {
-      font-size: 6vw!important;
-      text-align: center;
+      font-size: 7.7vw!important;
       line-height: 1.2!important;
     }
     h2 {
-      font-size: 7.7vw!important;
+      font-size: 7vw!important;
     }
     h3 {
       font-size: 6vw;
-      text-align: center;
     }
     h4 {
       font-size: 3.9vw;
@@ -343,7 +344,7 @@ input, select, textarea {
     }
   
     p {
-      font-size: 3vw!important;
+      font-size: 3.3vw!important;
     }
   
     a {
@@ -380,12 +381,14 @@ input, select, textarea {
     /* buttons */
     .btn-stroke-yellow {
       font-size: 3vw!important;
-      padding: 8px 16px!important;
+      padding: 10px 12px !important;
     }
   
+    .btn-stroke-blue-heavy {
+      padding: 10px 12px !important;
+    }
     .btn-line-blue {
       text-align: center;
-      width: 10rem!important ;
       font-size: 3.5vw!important;
   
     }
@@ -393,8 +396,6 @@ input, select, textarea {
   /* buttons */
   
     button {
-      width: 9rem;
-      height: 3rem;
       font-size: 4vw;
     }
   

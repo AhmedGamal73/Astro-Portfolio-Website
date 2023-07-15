@@ -39,13 +39,16 @@
     border-radius: 0 0 20px 20px ;
     display: flex;
     flex-direction: column;
-    min-height: 350px;
+    justify-content: space-between;
+    min-height: 400px;
 
     
     .title-wrap {
       padding: 12px;
       width: 90%;
-      padding-inline-start: 2rem;
+      padding-inline-start: 1.5rem;
+      box-sizing: border-box;
+  
 
       p {
         font-size: .9vw;
@@ -70,15 +73,21 @@
           margin-inline-end: -1.3rem;
           color: var(--blue)
         }
+      }
     }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+
+      a {
+        border-radius: 12px;
+      }
     }
   }
 
-  .btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem
-  }
+
   a {
     width: 80%;
     text-align: center;

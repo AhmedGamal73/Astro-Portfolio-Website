@@ -37,9 +37,15 @@
     .btns-wrapper {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       align-items: center;
       width: 100%;
-      gap: 2rem;
+      gap: 0.5rem;
+
+      button {
+        font-size: .9vw;
+        padding: 1rem 1.8rem;
+      }
 
       .all-services::after {
         background-image: url(../icons/chevron-right-white.svg);
@@ -57,7 +63,6 @@
       border-radius: 10px;
       font-size: .9vw;
       padding: 1rem ;
-      width: 20%;
       padding-block: 10px;
     }
   }
@@ -84,6 +89,15 @@
     .btn-wrap {
       padding-top: 5rem;
       flex-direction: column;
+    }
+
+    .bottom {
+
+      .btn {
+
+        padding-bottom: 2rem;
+
+      }
     }
   }
 

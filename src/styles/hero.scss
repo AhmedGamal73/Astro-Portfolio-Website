@@ -60,6 +60,7 @@
       p {
         font-size: 1.1vw;
         text-align: start;
+        width: 74%;
       }
       h1 {
         color: var(--prim2);
@@ -71,10 +72,6 @@
       .head {
         max-width: 80%;
       }
-      p {
-        width: 90%;
-      }
-
 
     }
     .content_btns {
@@ -85,10 +82,7 @@
       align-items: center;
       gap: 20px;
 
-      a:nth-child(1) {
-      border: 0;
-      font-size: 12px;
-    }
+
     }
   }
 
@@ -105,6 +99,7 @@
   .hero-container {
     flex-direction: column-reverse;
     padding: 0;
+    
 
     .left-col {
       height: 50vh;
@@ -119,9 +114,19 @@
       }
     }
     .content-col {
+      display: flex;
+      text-align: center;
       height: 40vh;
       margin-bottom: 0;
       padding-inline-start: 0!important;
+      height: 30vh;
+
+      .content-wrap {
+        gap: .8rem;
+        p {
+          text-align: center;
+        }
+      }
       &::after{
         display: none!important;
       }
@@ -129,7 +134,7 @@
     .right-col {
       padding-top: 0;
       img {
-        border-top-left-radius: 0px;
+        border-radius: 0 0 20px 0 !important;
       }
     }
 
@@ -140,6 +145,8 @@
     .content_btns {
       justify-content: center;
       align-items: center!important;
+      padding-top: 1.8rem;
+
     }
   }
 }

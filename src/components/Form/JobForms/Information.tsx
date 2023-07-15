@@ -31,6 +31,7 @@ export function Information({
         <label>Name</label>
         <input
           autoFocus
+          placeholder="Enter your name"
           required
           type="text"
           value={firstName}
@@ -41,6 +42,7 @@ export function Information({
         <label>WhatsApp Number</label>
         <input
           required
+          placeholder="Enter your phone number"
           type="tel"
           name="phone"
           value={phoneNum}
@@ -51,6 +53,7 @@ export function Information({
         <label>Age</label>
         <input
           required
+          placeholder="Enter your age"
           min={1}
           type="number"
           value={age}
@@ -72,9 +75,9 @@ export function Information({
         </select>
       </div>
       <div className="field-wrapper">
-        <label>Job Code</label>
+        <label>Job Code (optional)</label>
         <input
-          required
+          placeholder="Find it in facebook post"
           type="text"
           value={jobCode}
           onChange={(e) => updateFields({ jobCode: e.target.value })}

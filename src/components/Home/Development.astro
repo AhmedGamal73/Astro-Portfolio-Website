@@ -1,64 +1,61 @@
 ---
-import Content1 from '../Content/Content1.astro'
-import '../../styles/Development.scss'
-import Icon from 'astro-icon'
+import Content1 from "../Content/Content1.astro";
+import "../../styles/Development.scss";
 
 export interface props {
-    tag: 'string',
-    title: 'string',
-    img: 'string',
-    imgData: 'string',
-    stepTitle1: 'string',
-    stepSubtitle1: 'string',
-    stepTitle2: 'string',
-    stepSubtitle2: 'string',
-    stepTitle3: 'string',
-    stepSubtitle3: 'string',
-    btn1: 'string',
-    btn2: 'string',
-    btnSrc1: 'string',
-    btnSrc2: 'string',
+  tag: "string";
+  title: "string";
+  img: "string";
+  imgData: "string";
+  stepTitle1: "string";
+  stepSubtitle1: "string";
+  stepTitle2: "string";
+  stepSubtitle2: "string";
+  stepTitle3: "string";
+  stepSubtitle3: "string";
+  btn1: "string";
+  btn2: "string";
+  btnSrc1: "string";
+  btnSrc2: "string";
 }
 
-const p = Astro.props
+const p = Astro.props;
 ---
+
 <section class="dev-cont">
-    <div class="first-col">
-        <Content1 
-            tag={p.tag}  
-            title={p.title}
-        />
-    </div>
-    <div class="second-col">
-        <div class="process-cont">
-            <div class="right-col">
-                <div class="steps-cont">
-                    <div class="step">
-                        <h3 class="num">1</h3>
-                        <h4>{p.stepTitle1}</h4>
-                        <p>{p.stepSubtitle1}</p>
-                        <hr class="line">
-                    </div>
-                    <div class="step">
-                        <h3 class="num">2</h3>
-                        <h4>{p.stepTitle2}</h4>
-                        <p>{p.stepSubtitle2}</p>
-                        <hr class="line">
-                    </div>
-                    <div class="step">
-                        <h3 class="num">3</h3>
-                        <h4>{p.stepTitle3}</h4>
-                        <p>{p.stepSubtitle3}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="left-col">
-                <img src=`/home/${p.img}` alt={p.imgData}>
-            </div>
+  <div class="first-col">
+    <Content1 tag={p.tag} title={p.title} />
+  </div>
+  <div class="second-col">
+    <div class="process-cont">
+      <div class="right-col">
+        <div class="steps-cont">
+          <div class="step">
+            <h3 class="num">1</h3>
+            <h4>{p.stepTitle1}</h4>
+            <p>{p.stepSubtitle1}</p>
+            <hr class="line" />
+          </div>
+          <div class="step">
+            <h3 class="num">2</h3>
+            <h4>{p.stepTitle2}</h4>
+            <p>{p.stepSubtitle2}</p>
+            <hr class="line" />
+          </div>
+          <div class="step">
+            <h3 class="num">3</h3>
+            <h4>{p.stepTitle3}</h4>
+            <p>{p.stepSubtitle3}</p>
+          </div>
         </div>
+      </div>
+      <div class="left-col">
+        <img src=`/home/${p.img}` alt={p.imgData} />
+      </div>
     </div>
-    <div class="third-col">
-        <a class="btn-stroke-yellow" href={p.btnSrc1}>{p.btn1}</a>
-        <a class="btn-stroke-blue-heavy" href={p.btnSrc2}>{p.btn2}</a>
-    </div>
+  </div>
+  <div class="third-col">
+    <a class="btn-stroke-yellow" href={p.btnSrc1}>{p.btn1}</a>
+    <a class="btn-stroke-blue-heavy" href={p.btnSrc2}>{p.btn2}</a>
+  </div>
 </section>

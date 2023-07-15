@@ -64,7 +64,10 @@ export function Language({ getLangData }) {
   }, [certificates]);
 
   return (
-    <FormWrapper title="Education" subtitle="Tell Us About Education Journy">
+    <FormWrapper
+      title="Languages"
+      subtitle="Tell Us More About Languages That You Know"
+    >
       <div className="inputs-wrapper">
         <input
           id="lang-input"
