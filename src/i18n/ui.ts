@@ -14,7 +14,6 @@ export const ui = {
     "nav.contact": 'Contact',
     "nav.courses": 'Courses',
     // header
-
     // home
     "home.hero.title": "When You Need Results ",
     "home.hero.span": "We Care.",
@@ -44,8 +43,6 @@ export const ui = {
     "latestPosts.title": "Solutions for all your taxis",
     "latestPosts.subtitle": "Unlocking Financial Success: Explore Our Latest Articles for Expert Insights and Solutions in Tax Preparation and Consulting Services.",
     // home
-
-
     // services page
     "services.hero.title": "Solutions to all your facility problems",
     "services.hero.subtitle": "comprehensive financial services designed to empower businesses and individuals in achieving their financial goals. With a dedicated team of experienced professionals, we provide a range of services including bookkeeping, tax preparation, consulting, and financial advisory.",
@@ -63,8 +60,6 @@ export const ui = {
     "services.programmes.subtitle": "programmes are designed to equip individuals with the essential knowledge and skills needed to excel in the field of accounting.",
     "services.jobs.title": "Jobs",
     "services.jobs.subtitle": "Assist individuals in their pursuit of employment opportunities. We understand that the job application process can be daunting and time-consuming",
-    
-
     "services.programs.title": "Our Programms",
     "services.programs.subtitle": "We Have Programms to Help Your Bussines",
     "services.program1.title": "Dinner Mind",
@@ -82,13 +77,10 @@ export const ui = {
     "services.program3.feature1": "",
     "services.program3.feature2": "",
     "services.program3.feature3": "",
-
     "services.consaltant.title": "Our Expertese here to help you with understanding your financial sitiuation and More",
     "services.consaltant.subtitle": "If You Have An Enterprise Company, where to go from here where to go from here where to go from here",
     "services.consaltant.btn": "Free Consaltant Know",
     // services page
-
-    
     // bookkeeping page
     "bookkeeping.question1": "What is bookkeeping?",
     "bookkeeping.answer1": "A: Bookkeeping is the process of recording, organizing, and maintaining financial transactions and records for a business or organization. It involves tracking income, expenses, assets, and liabilities to ensure accurate financial reporting.",
