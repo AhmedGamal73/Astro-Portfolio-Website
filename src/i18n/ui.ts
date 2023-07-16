@@ -41,7 +41,7 @@ export const ui = {
 
     "home.development.tag": "Why choose to do business with us",
     "home.development.title": "Our enterprise development steps",
-    "home.development.firstTitle": "Bookkeeping",
+    "home.development.firstTitle": "Understand Your Business",
     "home.development.firstSubTitle": "Daily Bokkeeping: Comprehensive Financial Records for All Departments and Timely Preparation of Department-specific Reports, Ensuring Effective Company Development.",
     "home.development.secondTitle": "Import Financial Cycle",
     "home.development.secondSubTitle": "Financial Cycle Establishment for Company Departments: Strategic Budgeting, Expense and Revenue Analysis, and Monthly Inventory Management to Drive Company Development.",
@@ -87,14 +87,14 @@ export const ui = {
     "services.program1.feature3": "Registration of all components used by the item",
     "services.program2.title": "Tracker ERP",
     "services.program2.subtitle": "Complete management of the purchasing cycle within the organization, starting from registering an exchange request for items to find out what is available in stores",
-    "services.program2.feature1": "looking for ways to organize cash flow.",
+    "services.program2.feature1": "Organize cash flow.",
     "services.program2.feature2": "Creation of the administrative structure",  
     "services.program2.feature3": "Meet the customer's requirements.",
     "services.program3.title": "Trade",
     "services.program3.subtitle": "With the trade program you can control everything large and small in your trading shop from the first accounts, inventory, stores, suppliers, pilots and customers",
-    "services.program3.feature1": "",
-    "services.program3.feature2": "",
-    "services.program3.feature3": "",
+    "services.program3.feature1": "Accommodate both large and small trading shops.",
+    "services.program3.feature2": "Handle the management of stores, suppliers, and customers.",
+    "services.program3.feature3": "Streamline your business operations",
 
     "services.consaltant.title": "Our Expertese here to help you with understanding your financial sitiuation and More",
     "services.consaltant.subtitle": "If You Have An Enterprise Company, where to go from here where to go from here where to go from here",
@@ -124,7 +124,7 @@ export const ui = {
 
     // about page
     "about.hero.title": "A successful enterprise only successfully finds its employees",
-    "about.hero.subtitle": "We care about your taxes. And your financial well-being. With options like Emerald Card ® , prepaid debit MasterCard ® , you can get what you need with H & R Block. All banking products offered by Bath Ward, na, FDIC member.",
+    "about.hero.subtitle": "Trusted provider of comprehensive financial solutions, catering to the diverse needs of businesses and individuals. With a strong focus on excellence, professionalism, and client satisfaction, we strive to deliver top-notch services that empower our clients to achieve their financial goals.",
     "about.box1.title": "Who We Are ?",
     "about.box1.subtitle": "We, at Business Partners, offer comprehensive financial and accounting solutions for individuals and companies in Egypt. With our qualified and exceptional team, we assist our clients in achieving their financial goals in a proper and reliable manner. Discover how our financial and accounting services can benefit you today!",
     "about.box2.title": "Our Mission",
@@ -152,6 +152,19 @@ export const ui = {
     "about.process.step5.title": "Shine",
     "about.process.step5.subtitle": "All about making your company shine in the marketplace. We leverage our expertise in branding, marketing, and strategic positioning to elevate your company's visibility and enhance its reputation.",
     // about page
+
+
+    // latest posts section 
+    
+    "latest-post1.title": "Egyptian taxes, their importance",
+    "latest-post1.subtitle": "About Egyptian taxes Egyptian taxes play a crucial role in achieving economic development and",
+
+    "latest-post2.title": "The 6 most important elements in examining a tax file",
+    "latest-post2.subtitle": "INTRODUCTION Examining a tax file is of great importance for individuals and businesses alike. He",
+
+    "latest-post3.title": "Company Establishment in Egypt",
+    "latest-post3.subtitle": "Egypt provides a thriving and attractive investment environment for entrepreneurship and the establishment of startup companies. With abundant opportunities available...",
+    // latest posts section 
   },
 
   ar: {
