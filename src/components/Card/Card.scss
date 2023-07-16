@@ -107,14 +107,11 @@
     }
 
     .bottom {
-      
       padding-bottom: 1rem;
       min-height: 375px;
 
       .feature-wrap {
         padding-inline-start: 1.5rem;
-
-
       }
 
       .title-wrap {
@@ -125,8 +122,7 @@
       }
     }
     .top img {
-      width: 68vw;
-      min-height: 21vh!important;
+    min-height: 27vh;
     }
   } 
 }

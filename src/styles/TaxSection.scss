@@ -82,14 +82,22 @@
     gap: 2.5rem;
     width: 90%;
     padding: 0!important;
-
     }
 
-    .btns-wrap {
-      padding-top: 5rem;
+    .btn-wrap {
+      padding-top: 6rem;
       flex-direction: column;
-    }
+      gap: 1.5rem;
+    
 
+      .btns-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+    
     .bottom {
 
       .btn {
