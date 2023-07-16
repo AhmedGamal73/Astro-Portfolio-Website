@@ -3,19 +3,19 @@ import { Icon } from "astro-icon";
 import "./Card.scss";
 
 export interface props {
-  title: "string";
-  subtitle: "string";
-  feature1: "string";
-  feature2: "string";
-  feature3: "string";
-  btn: "string";
-  btnSrc: "string";
-  img: "string";
-  size: "string";
-  featureSort: "string";
-  newTab: "string";
-  bgc?: "string";
-  imgAlt: "string";
+  title: string;
+  subtitle: string;
+  feature1: string;
+  feature2: string;
+  feature3: string;
+  btn: string;
+  btnSrc: string;
+  img: string;
+  size: string;
+  featureSort: string;
+  newTab: string;
+  bgc?: string;
+  imgAlt: string;
 }
 
 const p = Astro.props;
@@ -34,15 +34,15 @@ const { bgc = "var(--accent1)" } = Astro.props;
     <div style={{ flexdirection: p.featuresort }} class="feature-wrap">
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} class="feature">{p.feature1}</a>
+        <a class="feature">{p.feature1}</a>
       </div>
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} class="feature">{p.feature2}</a>
+        <a class="feature">{p.feature2}</a>
       </div>
       <div class="feature">
         <Icon name="chevron-right" />
-        <a target={p.newTab} class="feature">{p.feature3}</a>
+        <a class="feature">{p.feature3}</a>
       </div>
     </div>
     <div class="btn">

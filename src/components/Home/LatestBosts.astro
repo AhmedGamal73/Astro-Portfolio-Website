@@ -15,38 +15,48 @@ interface Props {
 <section class="posts-cont">
   <div class="up-row">
     <Content1
-      tag="Our Latest Posts"
-      title="Solutions for all your taxis"
+      tag={t("latestPosts.tag")}
+      title={t("latestPosts.title")}
+      subtitle={t("latestPosts.subtitle")}
       titleColor="#152040"
-      subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
       subtitleColor="#152040"
     />
   </div>
   <div class="cards-wrap">
-    <a href="#" style="color: var(--prim1)">
+    <a
+      href={`/${lang}/blog/posts/${t("latest-post1.slug")}`}
+      style="color: var(--prim1)"
+    >
       <PostCard
-        title="Here's A new Blog Post!!"
-        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+        title={t("latest-post1.title")}
+        subtitle={t("latest-post1.subtitle")}
         img="home/blog1.jpg"
       />
     </a>
 
-    <a href="#" style="color: var(--prim1)">
+    <a
+      href={`/${lang}/blog/posts/${t("latest-post2.slug")}`}
+      style="color: var(--prim1)"
+    >
       <PostCard
-        title="Here's A new Blog Post!!"
-        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+        title={t("latest-post2.title")}
+        subtitle={t("latest-post2.subtitle")}
         img="home/blog2.jpg"
       />
     </a>
-    <a href="#" style="color: var(--prim1)">
+    <a
+      href={`/${lang}/blog/posts/${t("latest-post3.slug")}`}
+      style="color: var(--prim1)"
+    >
       <PostCard
-        title="Here's A new Blog Post!!"
-        subtitle="Pull up a chair in our office or stay on the couch. We have all the tax filing options you need. And by any file method, you'll always get the maximum for your recovery. Guaranteed."
+        title={t("latest-post3.title")}
+        subtitle={t("latest-post3.subtitle")}
         img="home/blog3.jpg"
       />
     </a>
   </div>
-  <a class="all-posts btn-stroke-yellow" href={`/${lang}/blog`}>See All Posts</a
+  <a class="all-posts btn-stroke-yellow" href={`/${lang}/blog`}
+    >{t("latest-posts.btn")}</a
   >
 </section>
 

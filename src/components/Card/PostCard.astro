@@ -11,7 +11,6 @@ const p = Astro.props;
   <div class="content-wrap">
     <h4>{p.title}</h4>
     <p>{p.subtitle}</p>
-    <a class="btn-line-blue" href="#">See More</a>
   </div>
 </div>
 
@@ -42,19 +41,17 @@ const p = Astro.props;
 
   div.content-wrap {
     max-width: 350px;
-    min-height: 208px;
+    min-height: 180px;
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    gap: 1rem;
     padding: 1.3rem;
     border-radius: 0 0 20px 20px;
     padding-top: 2rem;
   }
   p {
-    padding-top: 0.5rem;
-    padding-bottom: 1.3rem;
-    text-align: start;
     font-size: 0.9vw;
   }
 
@@ -66,9 +63,7 @@ const p = Astro.props;
     p {
       text-align: start;
     }
-    div.content-wrap a {
-      text-align: start;
-    }
+
     div.content-wrap {
       min-height: 150px;
     }

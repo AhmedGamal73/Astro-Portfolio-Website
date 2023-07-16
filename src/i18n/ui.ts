@@ -23,9 +23,29 @@ export const ui = {
     "home.hero.btn.process": "Our Process",
     "home.hero.consaltBtn": "Free consaltant now",
 
-    "home.tax.tag": "Taxes",
-    "home.tax.title": "Our tax specialists are ready",
-    "home.tax.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+    "home.taxes.tag": "Taxes",
+    "home.taxes.title": "Our tax specialists are ready",
+    "home.taxes.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+    "home.taxes.btn": "Apply for registration",
+
+    "home.taxes.card1.title": "Make a File",
+    "home.taxes.card1.subtitle": "File your small business or self-employed taxes your way",
+    "home.taxes.card1.feature1": "An individual-owned, self-managed facility",
+    "home.taxes.card1.feature2": "Solidarity companies or a simple recommendation",
+    "home.taxes.card1.feature3": "An Egyptian Joint Stock Company",
+
+    "home.taxes.card2.title": "Tax Returns",
+    "home.taxes.card2.subtitle": "Simplify Your Tax Filing: Comprehensive Assistance with Tax Returns",
+    "home.taxes.card2.feature1": "Monthly check-up ",
+    "home.taxes.card2.feature2": "Annual examination",
+    "home.taxes.card2.feature3": "Quarterly inspection",
+
+    "home.taxes.card3.title": "Tax Examination",
+    "home.taxes.card3.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+    "home.taxes.card3.feature1": "An individual-owned, self-managed facility",
+    "home.taxes.card3.feature2": "Solidarity companies or a simple recommendation",
+    "home.taxes.card3.feature3": "An Egyptian Joint Stock Company",
+
 
     "home.bookkeeping.title": "Expert Services In",
     "home.bookkeeping.span": "Bookkeeping",
@@ -47,9 +67,6 @@ export const ui = {
     "home.development.secondSubTitle": "Financial Cycle Establishment for Company Departments: Strategic Budgeting, Expense and Revenue Analysis, and Monthly Inventory Management to Drive Company Development.",
     "home.development.thirdTitle": "Monitoring and analysis",
     "home.development.thirdSubTitle": "Cost Control, Strategic Planning, and Financial Policies: Annual Budgeting, Financial Statements, and Contract Review for Enhanced Company Development.",
-    "latestPosts.tag": "Our Latest Posts",
-    "latestPosts.title": "Solutions for all your taxis",
-    "latestPosts.subtitle": "Unlocking Financial Success: Explore Our Latest Articles for Expert Insights and Solutions in Tax Preparation and Consulting Services.",
     // home
 
 
@@ -155,15 +172,25 @@ export const ui = {
 
 
     // latest posts section 
+    "latest-posts.tag": "Our Latest Posts",
+    "latest-posts.title": "Solutions for all your taxes",
+    "latest-posts.subtitle": "Unlocking Financial Success: Explore Our Latest Articles for Expert Insights and Solutions in Tax Preparation and Consulting Services.",
+    "latest-posts.btn": "See All Posts",
+    
     
     "latest-post1.title": "Egyptian taxes, their importance",
     "latest-post1.subtitle": "About Egyptian taxes Egyptian taxes play a crucial role in achieving economic development and",
+    "latest-post1.slug": "the-6-most-important-elements-in-examining-a-tax-file-2",
 
+    
     "latest-post2.title": "The 6 most important elements in examining a tax file",
     "latest-post2.subtitle": "INTRODUCTION Examining a tax file is of great importance for individuals and businesses alike. He",
+    "latest-post2.slug": "the-6-most-important-elements-in-examining-a-tax-file",
 
     "latest-post3.title": "Company Establishment in Egypt",
     "latest-post3.subtitle": "Egypt provides a thriving and attractive investment environment for entrepreneurship and the establishment of startup companies. With abundant opportunities available...",
+    "latest-post3.slug": "the-6-most-important-elements-in-examining-a-tax-file-2",
+
     // latest posts section 
   },
 

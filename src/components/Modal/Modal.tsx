@@ -1,8 +1,8 @@
-import { useState } from "react";
-import ConsaltantForm from "../Form/ContactForms/ConsaltantForm";
+import { useState, FC } from "react";
 import { Schedule } from "./Schedule";
 import { userDate } from "../../global/appoinmentStore";
 import "./../../styles/Modal.scss";
+import Information from "./Information";
 
 // First Step Address
 const Address = () => {
@@ -23,14 +23,7 @@ const Address = () => {
 // First Step Address
 
 // Third Step Info
-const Information = () => {
-  return (
-    <>
-      <h1>Tell us about yourself</h1>
-      <ConsaltantForm />
-    </>
-  );
-};
+
 // Third Step Info
 
 // Third Step Info
@@ -43,10 +36,34 @@ const ThankYou = () => {
 };
 // Third Step Info
 
+type AppoinmentData = {
+  government: String;
+  city: String;
+  finrstName: String;
+  lastName: String;
+  issue: String;
+  phoneNumber: Number;
+};
+
+const INITIAL_DATA: AppoinmentData = {
+  government: "",
+  city: "",
+  finrstName: "",
+  lastName: "",
+  issue: "",
+  phoneNumber: 0,
+};
+
 export const Modal = ({ isOpen, onClose }) => {
+  const [data, setData] = useState(INITIAL_DATA);
   const [currentStep, setCurrentStep] = useState(0);
 
-  const content = [<Address />, <Schedule />, <Information />, <ThankYou />];
+  const content: JSX.Element[] = [
+    <Address />,
+    <Schedule />,
+    <Information />,
+    <ThankYou />,
+  ];
 
   console.log(userDate);
 
@@ -54,8 +71,8 @@ export const Modal = ({ isOpen, onClose }) => {
 
   function next() {
     currentStep < content.length - 1
-      ? () => setCurrentStep(currentStep + 1)
-      : onClose;
+      ? setCurrentStep(currentStep + 1)
+      : onClose();
   }
   return (
     <div className="overlay">
@@ -83,7 +100,10 @@ export const Modal = ({ isOpen, onClose }) => {
         </div>
         <div className="modal-content">{content[currentStep]}</div>
         {currentStep <= content.length && (
-          <button onClick={next} className="btn-stroke-blue-heavy next-btn">
+          <button
+            onClick={() => next()}
+            className="btn-stroke-blue-heavy next-btn"
+          >
             {currentStep == content.length - 1 ? "Submit" : "Next"}
           </button>
         )}

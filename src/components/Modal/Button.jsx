@@ -4,6 +4,9 @@ import { Modal } from "./Modal";
 export default function Button({ className, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  function isClosed() {
+    setIsOpen(false);
+  }
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
   }, [isOpen]);

@@ -3,21 +3,17 @@ import "../../../styles/ContactForm.scss";
 const ConsaltantForm = () => {
   return (
     <div>
-      <form className="contact-form">
-        <input autoFocus placeholder="First name" required type="text" />
-        <input placeholder="Last name" required type="text" />
+      <input autoFocus placeholder="First name" required type="text" />
+      <input placeholder="Last name" required type="text" />
 
-        <input placeholder="Email" required type="email" />
-        <input required placeholder="Phone Number" type="tel" />
-        <textarea
-          placeholder="Your issue"
-          id="consalt"
-          name="consalt"
-          required
-        ></textarea>
-      </form>
-      <div id="error"></div>
-      <div id="success-msg"></div>
+      <input placeholder="Email" required type="email" />
+      <input required placeholder="Phone Number" type="tel" />
+      <textarea
+        placeholder="Your issue"
+        id="consalt"
+        name="consalt"
+        required
+      ></textarea>
     </div>
   );
 };
