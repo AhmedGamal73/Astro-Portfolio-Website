@@ -80,9 +80,9 @@ const MultiStepForm = () => {
   }
 
   const stepTitle = [
-    "Language",
     "Information",
     "Personal Information",
+    "Language",
     "Education",
     "Job History",
   ];
@@ -94,7 +94,6 @@ const MultiStepForm = () => {
           <h2 className="steps-title">
             BP<span>Career</span>
           </h2>
-          <p>Just small steps towards your dream.</p>
           <div className="steps-cont">
             <div className="form_steps-container">
               {steps.map((step, i) => (
