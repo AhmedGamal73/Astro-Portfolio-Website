@@ -119,6 +119,21 @@ export const ui = {
     // services page
 
     // bookkeeping page
+
+    "bookkeeping.hero.span": "Small business bookkeeping",
+    "bookkeeping.hero.title": "Bookkeeping for up to 50% less",
+    "bookkeeping.hero.subtitle": "We have small business bookkeeping services to help you save time and money — with full-service package rates up to half off a typical accountant’s rates. Get started with a 30-minute meeting to be paired with your dedicated pro.",
+
+    "bookkeeping.service1.title": "Establishment of Internal Accounting for the Company",
+    "bookkeeping.service1.subtitle": "Efficiently Establishing and Managing Internal Accounting Systems to Enhance Financial Control and Drive Business Growth in Your Company",
+
+    "bookkeeping.service2.title": "Efficient Internal Bookkeeping and Financial Record-Keeping Services",
+    "bookkeeping.service2.subtitle": "Efficiently Maintaining Internal Accounts and Bookkeeping, Ensuring Accurate Financial Record-Keeping for Enhanced Financial Management and Decision-Making in Your Business",
+
+    "bookkeeping.service3.title": "Comprehensive Monthly Reporting and Financial Statement Preparation for Your Company",
+    "bookkeeping.service3.subtitle": "Accurate and Timely Preparation of Comprehensive Monthly Reports and Financial Statements to Provide In-Depth Insights into Your Company's Financial Performance and Support Informed Decision-Making",
+
+
     //FAQ
     "bookkeeping.question1": "What is bookkeeping?",
     "bookkeeping.answer1": "A: Bookkeeping is the process of recording, organizing, and maintaining financial transactions and records for a business or organization. It involves tracking income, expenses, assets, and liabilities to ensure accurate financial reporting.",
@@ -141,42 +156,48 @@ export const ui = {
 
 
     // taxes page
+    "taxes.hero.title": "Unlock Your Financial Potential with our Expert Tax Services",
+    "taxes.hero.subtitle": "Maximize your tax benefits with our expert tax services. We provide accurate tax preparation, strategic planning, and specialized consulting to optimize your financial outcomes. Trust us for efficient and effective tax solutions.",
+    "taxes.hero.span": "Small business taxes",
+    "taxes.hero.btn1": "Start free phone consalting",
+    "taxes.hero.btn2": "Read our FAQs",
+
     "texes.features.card1.iconText": "Making File",
-      "texes.features.card1.title": "Streamlined Company Establishment Service: Unlock Your Business Potential",
-      "texes.features.card1.feature1": "Tailored Guidance and Support",
-      "texes.features.card1.feature2": "Compliance Assurance",
-      "texes.features.card1.feature3": "Strategic Planning and Advice",
+    "texes.features.card1.title": "Streamlined Company Establishment Service: Unlock Your Business Potential",
+    "texes.features.card1.feature1": "Tailored Guidance and Support",
+    "texes.features.card1.feature2": "Compliance Assurance",
+    "texes.features.card1.feature3": "Strategic Planning and Advice",
 
 
-      "texes.features.card2.iconText": "Tax examination",
-      "texes.features.card2.title": "Navigate Tax Examinations with Confidence: Expert Support for Compliance and Resolution",
-      "texes.features.card2.feature1": "Expert Guidance and Representation",
-      "texes.features.card2.feature2": "Comprehensive Review and Analysis:",
-      "texes.features.card2.feature3": "Resolution and Compliance Assistance",
+    "texes.features.card2.iconText": "Tax examination",
+    "texes.features.card2.title": "Navigate Tax Examinations with Confidence: Expert Support for Compliance and Resolution",
+    "texes.features.card2.feature1": "Expert Guidance and Representation",
+    "texes.features.card2.feature2": "Comprehensive Review and Analysis:",
+    "texes.features.card2.feature3": "Resolution and Compliance Assistance",
 
-      "texes.features.card3.iconText": "Tax return",
-      "texes.features.card3.title": "Maximize Your Tax Returns: Expert Assistance for Optimal Refunds and Compliance",
-      "texes.features.card3.feature1": "Timely Filing and Compliance Support",
-      "texes.features.card3.feature2": "Personalized Guidance and Advice",
-      "texes.features.card3.feature3": "Accurate and Thorough Tax Preparation",
-      
-      "texes.features.card4.iconText": "Adoption of a budget",
-      "texes.features.card4.title": "Budget Adoption Made Easy: Expert Guidance for Financial Planning and Control",
-      "texes.features.card4.feature1": "Customized Budget Planning",
-      "texes.features.card4.feature2": "Financial Analysis and Forecasting",
-      "texes.features.card4.feature3": "Ongoing Monitoring and Adjustments",
+    "texes.features.card3.iconText": "Tax return",
+    "texes.features.card3.title": "Maximize Your Tax Returns: Expert Assistance for Optimal Refunds and Compliance",
+    "texes.features.card3.feature1": "Timely Filing and Compliance Support",
+    "texes.features.card3.feature2": "Personalized Guidance and Advice",
+    "texes.features.card3.feature3": "Accurate and Thorough Tax Preparation",
+    
+    "texes.features.card4.iconText": "Adoption of a budget",
+    "texes.features.card4.title": "Budget Adoption Made Easy: Expert Guidance for Financial Planning and Control",
+    "texes.features.card4.feature1": "Customized Budget Planning",
+    "texes.features.card4.feature2": "Financial Analysis and Forecasting",
+    "texes.features.card4.feature3": "Ongoing Monitoring and Adjustments",
 
-      "texes.features.card5.iconText": "Certificates of income",
-      "texes.features.card5.title": "Certify Your Income with Confidence: Professional Service for Certificates of Income",
-      "texes.features.card5.feature1": "Customized Formatting and Presentation",
-      "texes.features.card5.feature2": "Accurate and Reliable Documentation",
-      "texes.features.card5.feature3": "Timely Delivery and Confidentiality",
+    "texes.features.card5.iconText": "Certificates of income",
+    "texes.features.card5.title": "Certify Your Income with Confidence: Professional Service for Certificates of Income",
+    "texes.features.card5.feature1": "Customized Formatting and Presentation",
+    "texes.features.card5.feature2": "Accurate and Reliable Documentation",
+    "texes.features.card5.feature3": "Timely Delivery and Confidentiality",
 
-      "texes.features.card6.iconText": "Examination and appeal commissions",
-      "texes.features.card6.title": "Resolving Tax Disputes: Efficient Examination and Appeal Commissions Service",
-      "texes.features.card6.feature1": "Expert Representation",
-      "texes.features.card6.feature2": "Comprehensive Examination of Tax Matters",
-      "texes.features.card6.feature3": "Skilled Appeals and Negotiation",
+    "texes.features.card6.iconText": "Examination and appeal commissions",
+    "texes.features.card6.title": "Resolving Tax Disputes: Efficient Examination and Appeal Commissions Service",
+    "texes.features.card6.feature1": "Expert Representation",
+    "texes.features.card6.feature2": "Comprehensive Examination of Tax Matters",
+    "texes.features.card6.feature3": "Skilled Appeals and Negotiation",
     // taxes page
 
 

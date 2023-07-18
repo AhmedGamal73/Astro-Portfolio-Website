@@ -6,7 +6,7 @@ import LatestBosts from "../../../components/Home/LatestBosts.astro";
 import TaxesFAQ from "../../../components/FAQs/TaxesFAQ";
 import IconTextCard from "../../../components/IconTextCard.astro";
 import ContentCard from "../../../components/Card/ContentCard.astro";
-import "../../../styles/ServiceTemplate.scss";
+import "../../../styles/Audit.scss";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,21 +23,16 @@ const t = useTranslations(lang);
 
           <div class="right-col">
             <div class="content-wrap">
-              <span>Small business bookkeeping</span>
-              <h2>Bookkeeping for up to 50% less.</h2>
-              <p>
-                We have small business bookkeeping services to help you save
-                time and money — with full-service package rates up to half off
-                a typical accountant’s rates. Get started with a 30-minute
-                meeting to be paired with your dedicated pro.
-              </p>
+              <span>{t("taxes.hero.span")}</span>
+              <h2>{t("taxes.hero.title")}</h2>
+              <p>{t("taxes.hero.subtitle")}</p>
             </div>
             <div class="btns">
               <Button className="btn-stroke-yellow" client:load>
-                Start free phone consultation
+                {t("taxes.hero.btn1")}
               </Button>
               <a class="btn-stroke-blue-heavy" href="#taxes-faq"
-                >Read our FAQs</a
+                >{t("taxes.hero.btn2")}</a
               >
             </div>
           </div>
@@ -189,5 +184,3 @@ const t = useTranslations(lang);
     </div>
   </section>
 </Layout>
-
-<style></style>

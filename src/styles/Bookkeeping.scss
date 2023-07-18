@@ -1,151 +1,249 @@
 
-  [astro-icon="arrow-solid"] {
-    color: var(--blue);
-    position: absolute;
-    font-size: 5rem;
-    top: 2rem;
-    left: 0;
-  }
-
-.book-container {
-  .line {
-    color: #9F9F9F;
-    background-color: #9F9F9F;
-    height: 1px;
-    width: 80%;
-
-  }
-  padding: 12rem 0 4rem 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  background: var(--sky-linear-down);
-
-  .upper-col {
+  
+  
+  section.box-cont {
     width: 100%;
+    padding-block: 8rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.service-container {
 
-    .start-col {
-      display: flex;
-      position: relative;
-      width: 50%;
-    } 
-
-    .end-col {
-      width: 50%;
-
-      .bgc {
+    .faq-section {
         width: 100%;
-        position: relative;
-        background: var(--prim3);
-        border-start-start-radius: 150px;
-        height: 50vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 8rem;
+        
 
-        img {
-          object-fit: cover;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          margin: auto;
-          width: auto;
-          height: 100%;
+        .faq-cont {
+            width: 80%;
+            padding: 4rem;
         }
-      }
     }
-  }
+    
+    .hero-section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        padding: 8rem 0rem 6rem 8rem;
+        background: none;
+        background-color: var(--bgc);
 
-  .lower-col {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
+        .hero-cont {
+            width: 60%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: start;
+                
+                .btns {
+                    display: flex;
+                    gap: 1rem;
+                }
+              .content-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                width: 80%;
+                gap: 1rem;
+    
+                h2 {
+                    text-align: start;
+                }
+    
+                p {
+                    text-align: start;
+                }
+                span {
+                    font-family: "poppins regular";
+                    color: var(--prim2);
+                    background-color: var(--prim3);
+                    padding: 0.5rem;
+                    border-radius: 0.2rem;
+                    margin-bottom: 0.5rem;
+                }
+              }
+            
+        }
 
-    .start-col1 {
-      display: flex;
-      width: 50%;
-    } 
+        
+    }
 
-    .end-col1 {
-      width: 50%;
-
-      .bgc {
+    .how-it-work-section {
         width: 100%;
-        position: relative;
-        background: var(--prim3);
-        border-end-end-radius: 150px;
-        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bgc);
+        padding-block: 10rem;
 
-
-        img {
-          object-fit: cover;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          margin: auto;
-          width: auto;
-          height: 115%;
+        svg {
+            width: 70px;
+            height: 70px;
+            padding-bottom: 1rem;
         }
-      }
+        
+        .how-it-work-cont {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+
+            .process-cont {
+                width: 100;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
-  }
 
-  @media (max-width: 768px) {
+    .latest-posts-section {
+        width: 100%;
+        object-fit: contain;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--sky-gradiant);
+    }
 
-  [astro-icon="arrow-solid"] {
-    display: none!important;
-  }
-    .upper-col {
-      flex-direction: column-reverse;
+    .make-oppoinment-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--sky-gradiant);
+        padding-block: 8rem 2rem;
+
+        .make-oppoinment-cont {
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 4rem;
+            padding: 3rem 4rem;
+            text-align: center;
+            background-color: var(--bgc);
+
+            button {
+                border-radius: 10px;
+                width: 40%;
+                font-size: 1.2vw;
+            }
+
+            .img-cont {
+                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
+    
+                img {
+                    align-self: center;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+        }
+
+    }
+
+    .faq-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 3rem;
+
+        .faq-cont {
+            width: 50%;
+        }
+
+    }
       
-      .start-col, .start-col1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
 
-        .content2-container {
-          width: 80%;
-          padding: 1.3rem;
-          justify-content: center;
-          display: flex;
-          align-items: center;
+  
+@media (max-width: 768px) {
+    .service-container {
+
+        .hero-section {
+            padding: 2rem 0;
+            flex-direction: column-reverse!important;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .hero-cont {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+
+            .left-col {
+                width: 100%!important;
+                justify-content: center!important;
+
+                img {
+                    width: 100% !important;
+                }
+            }
+
+            .right-col {
+                width: 100%!important;
+                gap: 3rem!important;
+
+                .content-wrap {
+                    width: 90%;
+                }
+
+
+            }
         }
-      }
-      .end-col {
-        width: 100%;
-      }
-    } 
 
-  }
+        .feature-section {
+            text-align: center;
+            h3 {
+                width: 90%;
+            }
 
+            .card-wrap {
+                flex-direction: column;
+                width: 90%;
+            }
 
-
-  @media (max-width: 768px) {
-    .lower-col {
-      margin-top: 3rem;
-
-      flex-direction: column-reverse;
-      .start-col1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .content2-container {
-          width: 80%;
-          padding: 1.3rem;
-          justify-content: center;
-          display: flex;
-          align-items: center;
+            .faq-section {
+            
+                .faq-cont {
+                    width: 90%;
+                    padding: 0 2rem;
+            }   }
         }
-       
-      }
-      .end-col1 {
-        width: 100%;
-      }
 
+        .process-cont {
+            flex-direction: column!important;
+        }
+
+        .make-oppoinment-cont {
+            width: 80%!important;
+            padding: 3rem 2rem!important;
+
+            button {
+                width: 80% !important;
+                font-size: 3vw !important;
+            }
+        }
     }
-  }
 
 }

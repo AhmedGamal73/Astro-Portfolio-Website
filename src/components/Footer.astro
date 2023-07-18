@@ -1,28 +1,43 @@
 ---
+import { logo } from "../icons";
 import Icon from "astro-icon";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+console.log(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer>
   <div class="fot-cont">
     <div class="up-cont">
       <div class="bio-col">
-        <Icon name="logo" width="54px" />
+        <img src={logo} width="54px" />
         <p>
           At Business Partners, we provide comprehensive financial and
-          accounting solutions for individuals and companies in Egypt. With our
-          qualified and exceptional team, we assist our clients in achieving
-          their financial goals in a reliable and ethical manner.
+          accounting solutions for individuals and companies in Egypt.
         </p>
       </div>
       <div class="right-cont">
         <div class="child-col">
-          <h5>BookKeeping</h5>
+          <h5>Bookkeeping</h5>
           <ul>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
+            <li>
+              <a href={`/${lang}/services/bookkeeping#service1`}
+                >Establishment</a
+              >
+            </li>
+            <li>
+              <a href={`/${lang}/services/bookkeeping#service2`}
+                >Financial Record</a
+              >
+            </li>
+            <li>
+              <a href={`/${lang}/services/bookkeeping#service3`}>Reporting</a>
+            </li>
+            <li>
+              <a href={`/${lang}/services/bookkeeping#faq`}>BookKeeping FAQs</a>
+            </li>
           </ul>
         </div>
         <div class="child-col">
@@ -69,43 +84,31 @@ import Icon from "astro-icon";
     </div>
     <div class="bottom-col">
       <p id="rights">
-        ©BusinessPartners | All rights reserved | Made by <a
+        © BusinessPartners | All rights reserved | Made by <a
           id="creator"
           target="_blank"
           href="https://the73agency.com">The73Agency®</a
         >
       </p>
       <div class="social-icons">
-        <a target="_blank" href="https://wa.me/201557144441"
-          ><Icon
-            name="baseline-whatsapp"
-            style="width: 23px; color: #2FB844;"
-          /></a
-        >
-        <a href="malito:info@businesspartners.com"
-          ><Icon
-            name="email-fast-outline"
-            style="width: 23px; color: grey;"
-          /></a
-        >
-        <a href="tel:+20-1557144441"
-          ><Icon
-            name="phone-outlined"
-            style="width: 23px; color: #DFC063;"
-          /></a
-        >
-        <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY"
-          ><Icon
-            name="baseline-facebook"
-            style="color: #1877F2; width: 23px"
-          /></a
-        >
-        <!-- <a><Icon name="mdi:linkedin" style="color: #0077B5; width: 23px"/></a> -->
+        <a target="_blank" href="https://wa.me/201557144441">
+          <Icon name="baseline-whatsapp" style="width: 23px; color: #2FB844;" />
+        </a>
+        <a href="malito:info@businesspartners.com">
+          <Icon name="email-fast-outline" style="width: 23px; color: grey;" />
+        </a>
+        <a href="tel:+20-1557144441">
+          <Icon name="phone-outlined" style="width: 23px; color: #DFC063;" />
+        </a>
+        <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY">
+          <Icon name="baseline-facebook" style="color: #1877F2; width: 23px" />
+        </a>
         <a
           target="_blank"
           href="https://www.instagram.com/businesspartnersegy/?fbclid=IwAR2xnU-pjLzT441cD7ikd3y6L2kwdcVDdG3mqP5mdGsQ2pyuGNI8ZjBJnyA"
-          ><Icon name="instagram" style="color: #ff005f; width: 20px" /></a
         >
+          <Icon name="instagram" style="color: #ff005f; width: 20px" />
+        </a>
       </div>
     </div>
   </div>
@@ -184,10 +187,12 @@ import Icon from "astro-icon";
     padding-bottom: 1rem;
   }
 
-  ul li a {
+  ul > li > a {
     color: rgba(182, 182, 182, 0.871);
     padding-top: 0.5rem;
     transition: 200ms;
+    display: inline-block !important;
+    width: 100%;
   }
   ul li a:hover {
     color: white;

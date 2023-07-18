@@ -1,12 +1,12 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import Card from "../../../components/Card/Card.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import Button from "../../../components/Modal/Button";
-import "../../../styles/ServiceTemplate.scss";
 import LatestBosts from "../../../components/Home/LatestBosts.astro";
 import BookkeepingFAQ from "../../../components/FAQs/BookkeepingFAQ";
 import IconTextCard from "../../../components/IconTextCard.astro";
+import "../../../styles/Bookkeeping.scss";
+import BoxToBox2 from "../../../components/BoxToBox2.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,111 +14,98 @@ const t = useTranslations(lang);
 
 <Layout title="BookKeeping">
   <section>
-    <div class="container">
+    <div class="service-container">
       <div class="hero-section">
         <div class="hero-cont">
-          <div class="left-col">
-            <img src=`/service/hero.jpg` alt="" />
-          </div>
-
-          <div class="right-col">
-            <div class="content-wrap">
-              <span>Small business bookkeeping</span>
-              <h2>Bookkeeping for up to 50% less.</h2>
-              <p>
-                We have small business bookkeeping services to help you save
-                time and money — with full-service package rates up to half off
-                a typical accountant’s rates. Get started with a 30-minute
-                meeting to be paired with your dedicated pro.
-              </p>
-            </div>
-            <div class="btns">
-              <a class="btn-stroke-yellow" href="#"
-                >Start free phone consultation</a
-              >
-              <a class="btn-stroke-blue-heavy" href="#">Read our FAQs</a>
-            </div>
+          <div class="content-wrap">
+            <span>{t("bookkeeping.hero.span")}</span>
+            <h1>{t("bookkeeping.hero.title")}</h1>
+            <p>{t("bookkeeping.hero.subtitle")}</p>
           </div>
         </div>
       </div>
 
-      <div class="feature-section">
-        <h3>
-          Whether you’re looking for small business or self-employed
-          bookkeeping, we have services to meet your needs.
-        </h3>
-        <div class="card-wrap">
-          <Card
-            title="Make a File"
-            subtitle="Do your own bookkeeping with our On-Demand support along the way."
-            img="/home/company1.png"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc1="#"
-            feature2="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc2="#"
-            feature3="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc3="#"
-            btn="Apply for registration"
-            btnSrc={`/${lang}/contact`}
-          />
-          <Card
-            title="Tax returns"
-            subtitle="Do your own bookkeeping with our On-Demand support along the way."
-            img="/home/company2.png"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc1="#"
-            feature2="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc2="#"
-            feature3="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc3="#"
-            btn="Apply for registration"
-            btnSrc={`/${lang}/contact`}
-          />
-        </div>
-        <div class="cont-bottom">
-          <h3>Still didn't Know which category ?</h3>
-          <Button className="btn-stroke-yellow" client:load>
-            Free Consaltant Call
-          </Button>
-        </div>
+      <div class="features-section">
+        <BoxToBox2
+          id="service1"
+          uniqueKey="2"
+          title={t("bookkeeping.service1.title")}
+          subtitle={t("bookkeeping.service1.subtitle")}
+          bgc="var(--accent1)"
+          iconColor="var(--prim1)"
+          contDirection="row-reverse"
+          icon="handshake"
+        />
+        <BoxToBox2
+          id="service2"
+          uniqueKey="1"
+          title={t("bookkeeping.service2.title")}
+          subtitle={t("bookkeeping.service2.subtitle")}
+          bgc="var(--blue)"
+          iconColor=`var(--prim3)`
+          contDirection="row"
+          icon="report"
+        />
+        <BoxToBox2
+          id="service3"
+          uniqueKey="1"
+          title={t("bookkeeping.service3.title")}
+          subtitle={t("bookkeeping.service3.subtitle")}
+          bgc="var(--accent)"
+          contDirection="row-reverse"
+          icon="arrow-growth"
+        />
       </div>
 
       <div class="how-it-work-section">
         <div class="how-it-work-cont">
-          <h2>How it works.</h2>
+          <h2>How it works</h2>
           <div class="process-cont">
             <IconTextCard
-              icon="schedule"
-              title="Schedule your free consultation"
-              subtitle="Talk to our team around your specific bookkeeping needs. They will provide a personalized quote on your first call."
+              icon="paper-fill"
+              title="Recording Transactions"
+              subtitle="Capturing and Documenting Financial Activities for Precise Record-Keeping"
             />
             <IconTextCard
-              icon="person"
-              title="Get matched with the perfect account manager."
-              subtitle="Based on your unique business situation, we will match you with the account manager who best meets your needs."
+              icon="mind-mapping"
+              title="Classification and Organization."
+              subtitle="Organizing and Categorizing Transactions into Relevant Accounts for Clear Financial Tracking"
             />
             <IconTextCard
-              icon="work-outline"
-              title="Get back to business."
-              subtitle="Get back to business! Need to reach your account manager? Connect over the phone, video, or in person."
+              icon="financial-solid"
+              title="Preparation of Financial Statements."
+              subtitle="Creating Comprehensive Statements for Informed Decision-Making and Performance Evaluation"
             />
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="latest-posts-section">
-      <div class="posts-cont">
+      <div class="make-oppoinment-section">
+        <div class="make-oppoinment-cont">
+          <div class="img-cont">
+            <img src="/service/team.webp" alt="" />
+          </div>
+          <h2>Small business owner? Your taxes are our specialty.</h2>
+          <p>
+            Block Advisors small business certified tax pros will help maximize
+            your tax outcome to help you grow your bottom line. Something every
+            small business owner needs.
+          </p>
+          <Button className="btn-stroke-blue-heavy" client:visible>
+            Make tax oppoinment
+          </Button>
+        </div>
+      </div>
+
+      <div class="latest-posts-section">
         <LatestBosts />
       </div>
-    </div>
 
-    <div class="faq-section">
-      <h2>FAQs</h2>
-      <div class="faq-cont">
-        <BookkeepingFAQ client:visible />
+      <div id="faq" class="faq-section">
+        <h2>FAQs In Bookkeeping</h2>
+        <div class="faq-cont">
+          <BookkeepingFAQ client:visible />
+        </div>
       </div>
     </div>
   </section>

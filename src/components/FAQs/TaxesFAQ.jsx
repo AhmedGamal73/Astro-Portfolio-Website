@@ -1,7 +1,7 @@
 import Faq from "react-faq-component";
 
 const data = {
-  title: "Frequently Asked Questions In Audit",
+  title: "",
   rows: [
     {
       title: "What types of tax services do you offer?",
