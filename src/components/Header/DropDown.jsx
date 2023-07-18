@@ -26,14 +26,14 @@ export const DropDown = ({ lang }) => {
             Bookeeping
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             style={{ textDecoration: "none" }}
             href={`/${lang}/services/audit`}
           >
             Audit
           </a>
-        </li>
+        </li> */}
 
         <li>
           <a

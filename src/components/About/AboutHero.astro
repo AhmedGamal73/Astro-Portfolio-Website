@@ -29,7 +29,7 @@ const a = Astro.props;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 6rem;
     background: linear-gradient(
       7deg,
@@ -38,16 +38,21 @@ const a = Astro.props;
     );
   }
   .about-hero .content-col {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     margin-block: 6rem;
     text-align: center;
     padding-inline: 1rem;
   }
   .about-hero .content-col h1 {
     color: #dfc063;
+  }
+  .about-hero .content-col p {
+    width: 70%;
   }
 
   .img-col {
@@ -83,6 +88,13 @@ const a = Astro.props;
   }
 
   @media (max-width: 768px) {
+    .about-hero .content-col {
+      width: 90%;
+    }
+    .about-hero .content-col p {
+      width: 100%;
+    }
+
     .about-hero {
       gap: 0;
     }
