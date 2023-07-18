@@ -1,11 +1,11 @@
 .job-cont {
+    width: 80%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: row-reverse;
     padding: 3rem 2rem;
     border: 3px solid var(--prim1);
     border-radius: 4px;
-    width: 80%;
     transition: .3s;
     gap: 1.5rem;
 
@@ -13,28 +13,32 @@
         background-color: var(--bgc);
     }
 
-    .first {
+    .right-col {
+        width: 20%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        flex-direction: column;
 
-        h3 {
+        h4 {
             padding: 1rem;
             transition: .3s;
             border-radius: 10px;
+            background: var(--prim3);
             cursor: pointer;
 
-            &:hover {
-                background: var(--prim3);
-            }
             a {
-                font-size: 1.5vw!important;
                 color: var(--prim1);
-    
+            }
+
+            &:hover {
+                a {
+                    color: var(--blue);
+                }
             }
         }
         
-        h3::after {
+        h4::after {
             content: '';
             background-image: url('../icons/arrow-br.svg');
             display: inline-block;
@@ -52,6 +56,23 @@
 
             
         }
+    }
+
+    .left-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    width: 80%;
+    transition: .3s;
+    gap: 1.5rem;
+
+    .first {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
 
     }
 
@@ -72,27 +93,86 @@
                 display: flex;
                 justify-content: start;
                 align-items: center;
+                gap: .2rem;
                 transition: .3s;
 
-                &:hover {
-                    background: var(--prim2);
+                .icon {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background-size: cover;
+                }
 
-                    color: white;
-                    svg {
-                        color: white;
-                    }
+                .clock-icon {
+                    background-image: url(../icons/clock.svg);
+                }
+                .location-icon {
+                    background-image: url(../icons/location.svg);
                 }
                 
-
-                svg {
-                    width: 23px;
-                    height: 23px;
-                    padding-inline-end: .4rem;
+                &:hover {
+                    .clock-icon {
+                        background-image: url(../icons/clock-white.svg)!important;
+                    }
+                    .location-icon {
+                        background-image: url(../icons/location-white.svg);
+                    }
+                    p {
+                        color: white                  
+                    }
+                    background-color: var(--prim1);
                 }
+
             }
         }
     }
+    }
+    
 }
 
 
 
+@media (max-width: 768px) {
+
+    .job-cont {
+        width: 88%;
+        padding: 2rem 1rem;
+        flex-direction: column-reverse;
+        .left-col {
+            width: 100%;
+            padding: 0!important;
+
+            .job-statue, .last {
+                display: flex;
+                flex-direction: row;
+                width: 100%!important;
+                justify-content: space-between !important;
+                align-items: center ;
+            }
+        }
+
+        .right-col {
+            width: 100%;
+            display: flex;
+                flex-direction: row;
+                width: 100%!important;
+                justify-content: space-between !important;
+                align-items: center ;
+        }
+    }
+
+    .top {
+        h4 {
+            font-size: 4.5vw!important;
+        }
+    }
+
+    .job-statue {
+        flex-direction: column;
+        gap: .2rem!important;
+    }
+
+    .statue1 {
+        width: 150px;
+    }
+}

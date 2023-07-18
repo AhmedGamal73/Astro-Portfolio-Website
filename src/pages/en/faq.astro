@@ -1,12 +1,12 @@
 ---
 import { Layout } from "../../layouts";
-import FAskedQuestions from "../../components/FAQs/FAskedQuestions.jsx";
+import GeneralFAQ from "../../components/FAQs/GeneralFAQ.jsx";
 ---
 
 <Layout title="FAQ">
   <div class="faq-cont">
     <div class="faq-wrapper">
-      <FAskedQuestions client:load />
+      <GeneralFAQ client:load />
     </div>
   </div>
 </Layout>
@@ -28,5 +28,12 @@ import FAskedQuestions from "../../components/FAQs/FAskedQuestions.jsx";
     border: 1px solid var(--border-color);
     border-radius: 10px;
     box-shadow: var(--box-shadow1);
+  }
+
+  @media (max-width: 768px) {
+    .faq-wrapper {
+      width: 90%;
+      box-shadow: none;
+    }
   }
 </style>

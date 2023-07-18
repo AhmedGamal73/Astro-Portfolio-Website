@@ -1,12 +1,7 @@
-[astro-icon="arrow-solid"] {
-  width: 35px;
-  height: 35px;
-  rotate: 180deg;
-}
 
-[astro-icon="chevron-right"] {
-  width: 35px;
-  height: 35px;
+[astro-icon] {
+  width: 40px;
+  height: 40px;
   color: var(--prim3)!important;
 }
 
@@ -40,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 400px;
+    min-height: 340px;
 
     
     .title-wrap {

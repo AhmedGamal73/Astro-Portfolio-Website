@@ -123,7 +123,7 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/faq`}>FAQs</a>
             </li>
-            {openServices && <DropDown />}
+            {openServices && <DropDown lang={props.lang} />}
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? "open" : ""}`}>

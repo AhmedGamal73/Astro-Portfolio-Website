@@ -33,7 +33,7 @@ const t = useTranslations(lang);
           <Content1 tag="services" title="Our Services" />
 
           <a
-            href="/en/services/bookkeeping"
+            href={`/${lang}/services/bookkeeping`}
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -54,7 +54,7 @@ const t = useTranslations(lang);
           </a>
 
           <a
-            href="/en/services/bookkeeping"
+            href={`/${lang}/services/audit`}
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -75,7 +75,7 @@ const t = useTranslations(lang);
           </a>
 
           <a
-            href="/en/services/bookkeeping"
+            href={`/${lang}/services/taxes`}
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -96,7 +96,7 @@ const t = useTranslations(lang);
           </a>
 
           <a
-            href="/en/services/bookkeeping"
+            href={`/${lang}/services/career`}
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -115,7 +115,7 @@ const t = useTranslations(lang);
           </a>
 
           <a
-            href="/en/services/bookkeeping"
+            href="#"
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -136,7 +136,7 @@ const t = useTranslations(lang);
           </a>
 
           <a
-            href="/en/services/bookkeeping"
+            href="#our-programes"
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -165,7 +165,7 @@ const t = useTranslations(lang);
       title={t("services.programs.subtitle")}
       titleColor="white"
     />
-    <div class="card-container">
+    <div id="our-programes" class="card-container">
       <Card
         size="40%"
         img="/service/program1.png"

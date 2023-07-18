@@ -1,12 +1,12 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import Card from "../../../components/Card/Card.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import Button from "../../../components/Modal/Button";
-import "../../../styles/ServiceTemplate.scss";
 import LatestBosts from "../../../components/Home/LatestBosts.astro";
-import ServiceTemplate from "../../../components/FAQs/BookkeepingFAQ";
+import TaxesFAQ from "../../../components/FAQs/TaxesFAQ";
 import IconTextCard from "../../../components/IconTextCard.astro";
+import ContentCard from "../../../components/Card/ContentCard.astro";
+import "../../../styles/ServiceTemplate.scss";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,7 +14,7 @@ const t = useTranslations(lang);
 
 <Layout title="BookKeeping">
   <section>
-    <div class="container">
+    <div class="service-container">
       <div class="hero-section">
         <div class="hero-cont">
           <div class="left-col">
@@ -33,54 +33,122 @@ const t = useTranslations(lang);
               </p>
             </div>
             <div class="btns">
-              <a class="btn-stroke-yellow" href="#"
-                >Start free phone consultation</a
+              <Button className="btn-stroke-yellow" client:load>
+                Start free phone consultation
+              </Button>
+              <a class="btn-stroke-blue-heavy" href="#taxes-faq"
+                >Read our FAQs</a
               >
-              <a class="btn-stroke-blue-heavy" href="#">Read our FAQs</a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="feature-section">
-        <h3>
-          Whether you’re looking for small business or self-employed
-          bookkeeping, we have services to meet your needs.
-        </h3>
-        <div class="card-wrap">
-          <Card
-            title="Make a File"
-            subtitle="Do your own bookkeeping with our On-Demand support along the way."
-            img="/home/company1.png"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc1="#"
-            feature2="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc2="#"
-            feature3="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc3="#"
-            btn="Apply for registration"
-            btnSrc={`/${lang}/contact`}
+        <h2>Get help with all your tax needs.</h2>
+        <div class="card-cont">
+          <ContentCard
+            iconBgc="green"
+            icon="company"
+            iconText={t("texes.features.card1.iconText")}
+            ;
+            title={t("texes.features.card1.title")}
+            ;
+            feature1={t("texes.features.card1.feature1")}
+            ;
+            feature2={t("texes.features.card1.feature2")}
+            ;
+            feature3={t("texes.features.card1.feature3")}
+            ;
           />
-          <Card
-            title="Tax returns"
-            subtitle="Do your own bookkeeping with our On-Demand support along the way."
-            img="/home/company2.png"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            feature1="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc1="#"
-            feature2="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc2="#"
-            feature3="A dedicated account manager to handle all paperwork on your behalf"
-            featureSrc3="#"
-            btn="Apply for registration"
-            btnSrc={`/${lang}/contact`}
+          <ContentCard
+            icon="search"
+            iconText={t("texes.features.card2.iconText")}
+            ;
+            title={t("texes.features.card2.title")}
+            ;
+            feature1={t("texes.features.card2.feature1")}
+            ;
+            feature2={t("texes.features.card2.feature2")}
+            ;
+            feature3={t("texes.features.card2.feature3")}
+            ;
+            iconBgc="var(--blue)"
+          />
+          <ContentCard
+            icon="note-pencil"
+            iconText={t("texes.features.card3.iconText")}
+            ;
+            title={t("texes.features.card3.title")}
+            ;
+            feature1={t("texes.features.card3.feature1")}
+            ;
+            feature2={t("texes.features.card3.feature2")}
+            ;
+            feature3={t("texes.features.card3.feature3")}
+            iconBgc="var(--accent1)"
+          />
+          <ContentCard
+            icon="money-bag"
+            iconText={t("texes.features.card4.iconText")}
+            ;
+            title={t("texes.features.card4.title")}
+            ;
+            feature1={t("texes.features.card4.feature1")}
+            ;
+            feature2={t("texes.features.card4.feature2")}
+            ;
+            feature3={t("texes.features.card4.feature3")}
+            iconBgc="var(--accent2)"
+          />
+          <ContentCard
+            icon="certificate"
+            iconText={t("texes.features.card5.iconText")}
+            ;
+            title={t("texes.features.card5.title")}
+            ;
+            feature1={t("texes.features.card5.feature1")}
+            ;
+            feature2={t("texes.features.card5.feature2")}
+            ;
+            feature3={t("texes.features.card5.feature3")}
+            iconBgc="var(--blue)"
+          />
+          <ContentCard
+            icon="court-hammer"
+            iconText={t("texes.features.card6.iconText")}
+            ;
+            title={t("texes.features.card6.title")}
+            ;
+            feature1={t("texes.features.card6.feature1")}
+            ;
+            feature2={t("texes.features.card6.feature2")}
+            ;
+            feature3={t("texes.features.card6.feature3")}
+            iconBgc="red"
           />
         </div>
         <div class="cont-bottom">
           <h3>Still didn't Know which category ?</h3>
           <Button className="btn-stroke-yellow" client:load>
             Free Consaltant Call
+          </Button>
+        </div>
+      </div>
+
+      <div class="make-oppoinment-section">
+        <div class="make-oppoinment-cont">
+          <div class="img-cont">
+            <img src="/service/team.webp" alt="" />
+          </div>
+          <h2>Small business owner? Your taxes are our specialty.</h2>
+          <p>
+            Block Advisors small business certified tax pros will help maximize
+            your tax outcome to help you grow your bottom line. Something every
+            small business owner needs.
+          </p>
+          <Button className="btn-stroke-blue-heavy" client:visible>
+            Make tax oppoinment
           </Button>
         </div>
       </div>
@@ -107,19 +175,19 @@ const t = useTranslations(lang);
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="latest-posts-section">
-      <div class="posts-cont">
+      <div class="latest-posts-section">
         <LatestBosts />
       </div>
-    </div>
 
-    <div class="faq-section">
-      <h2>FAQs</h2>
-      <div class="faq-cont">
-        <ServiceTemplate client:visible />
+      <div id="taxes-faq" class="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-cont">
+          <TaxesFAQ client:visible />
+        </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<style></style>

@@ -1,0 +1,40 @@
+---
+import Icon from "astro-icon";
+import "../../styles/ContentCard.scss";
+import Button from "../Modal/Button";
+
+export interface props {
+  iconBgc: string;
+  title: string;
+  iconText: string;
+  feature1: string;
+  feature2: string;
+  feature3: string;
+  icon: string;
+}
+
+const p = Astro.props;
+---
+
+<div class="card-wrapper">
+  <div class="icon-content-wrapper">
+    <Icon style={`background-color: ${p.iconBgc};`} name={p.icon} />
+    <h5>{p.iconText}</h5>
+  </div>
+  <h3 class="title">{p.title}</h3>
+  <ul class="features">
+    <li class="">
+      <span class="astro-icon-wrapper"><Icon name="approve" /></span>
+      <span>{p.feature1}</span>
+    </li>
+    <li class="">
+      <span class="astro-icon-wrapper"><Icon name="approve" /></span>
+      <span>{p.feature2}</span>
+    </li>
+    <li class="">
+      <span class="astro-icon-wrapper"><Icon name="approve" /></span>
+      <span>{p.feature3}</span>
+    </li>
+  </ul>
+  <Button className="btn-stroke-blue" client:visible>Fill your tax</Button>
+</div>

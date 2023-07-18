@@ -2,7 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import { Job } from "../../components/Job";
 import Icon from "astro-icon";
-import FAskedQuestions from "../../components/FAQs/FAskedQuestions";
+import JobFAQ from "../../components/FAQs/JobFAQ";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Jobs">
@@ -10,21 +14,31 @@ import FAskedQuestions from "../../components/FAQs/FAskedQuestions";
     <div class="top">
       <Icon name="doc-success" />
       <Icon name="partypopper" />
-      <h1>Join our world-class team of creators & dreamers</h1>
-
+      <h1>{t("career.hero.title")}</h1>
       <h4>
-        Our philosophy is simple - hire a team of diverse, passionate people and
-        foster a culture that empowers you to do
+        {t("career.hero.subtitle")}
       </h4>
     </div>
     <div class="active-jobs-cont">
-      <Job />
-      <Job />
-      <Job />
-      <Job />
+      <Job
+        title={t("career.jobs.job1.title")}
+        jobDesc={t("career.jobs.job1.desc")}
+      />
+      <Job
+        title={t("career.jobs.job2.title")}
+        jobDesc={t("career.jobs.job2.desc")}
+      />
+      <Job
+        title={t("career.jobs.job3.title")}
+        jobDesc={t("career.jobs.job3.desc")}
+      />
+      <Job
+        title={t("career.jobs.job4.title")}
+        jobDesc={t("career.jobs.job4.desc")}
+      />
     </div>
     <div class="faq">
-      <FAskedQuestions client:load />
+      <JobFAQ client:visible />
     </div>
   </div>
 </Layout>

@@ -139,6 +139,47 @@ export const ui = {
     //FAQ
     // bookkeeping page
 
+
+    // taxes page
+    "texes.features.card1.iconText": "Making File",
+      "texes.features.card1.title": "Streamlined Company Establishment Service: Unlock Your Business Potential",
+      "texes.features.card1.feature1": "Tailored Guidance and Support",
+      "texes.features.card1.feature2": "Compliance Assurance",
+      "texes.features.card1.feature3": "Strategic Planning and Advice",
+
+
+      "texes.features.card2.iconText": "Tax examination",
+      "texes.features.card2.title": "Navigate Tax Examinations with Confidence: Expert Support for Compliance and Resolution",
+      "texes.features.card2.feature1": "Expert Guidance and Representation",
+      "texes.features.card2.feature2": "Comprehensive Review and Analysis:",
+      "texes.features.card2.feature3": "Resolution and Compliance Assistance",
+
+      "texes.features.card3.iconText": "Tax return",
+      "texes.features.card3.title": "Maximize Your Tax Returns: Expert Assistance for Optimal Refunds and Compliance",
+      "texes.features.card3.feature1": "Timely Filing and Compliance Support",
+      "texes.features.card3.feature2": "Personalized Guidance and Advice",
+      "texes.features.card3.feature3": "Accurate and Thorough Tax Preparation",
+      
+      "texes.features.card4.iconText": "Adoption of a budget",
+      "texes.features.card4.title": "Budget Adoption Made Easy: Expert Guidance for Financial Planning and Control",
+      "texes.features.card4.feature1": "Customized Budget Planning",
+      "texes.features.card4.feature2": "Financial Analysis and Forecasting",
+      "texes.features.card4.feature3": "Ongoing Monitoring and Adjustments",
+
+      "texes.features.card5.iconText": "Certificates of income",
+      "texes.features.card5.title": "Certify Your Income with Confidence: Professional Service for Certificates of Income",
+      "texes.features.card5.feature1": "Customized Formatting and Presentation",
+      "texes.features.card5.feature2": "Accurate and Reliable Documentation",
+      "texes.features.card5.feature3": "Timely Delivery and Confidentiality",
+
+      "texes.features.card6.iconText": "Examination and appeal commissions",
+      "texes.features.card6.title": "Resolving Tax Disputes: Efficient Examination and Appeal Commissions Service",
+      "texes.features.card6.feature1": "Expert Representation",
+      "texes.features.card6.feature2": "Comprehensive Examination of Tax Matters",
+      "texes.features.card6.feature3": "Skilled Appeals and Negotiation",
+    // taxes page
+
+
     // about page
     "about.hero.title": "A successful enterprise only successfully finds its employees",
     "about.hero.subtitle": "Trusted provider of comprehensive financial solutions, catering to the diverse needs of businesses and individuals. With a strong focus on excellence, professionalism, and client satisfaction, we strive to deliver top-notch services that empower our clients to achieve their financial goals.",
@@ -190,8 +231,29 @@ export const ui = {
     "latest-post3.title": "Company Establishment in Egypt",
     "latest-post3.subtitle": "Egypt provides a thriving and attractive investment environment for entrepreneurship and the establishment of startup companies. With abundant opportunities available...",
     "latest-post3.slug": "the-6-most-important-elements-in-examining-a-tax-file-2",
-
     // latest posts section 
+
+    // Career page
+    "career.hero.title": "Join our world-class team of creators & dreamers",
+    "career.hero.subtitle": "Our philosophy is simple - hire a team of diverse, passionate people and foster a culture that empowers you to do",
+
+    "career.jobs.job1.title": "Information Technology (IT)  ",
+    "career.jobs.job1.desc": "IT jobs encompass a diverse range of roles and responsibilities within the field of Information Technology, involving the design, development, implementation, and maintenance of computer systems, software applications, networks, and other technological infrastructure.",
+
+    "career.jobs.job2.title": "Accountant",
+    "career.jobs.job2.desc": "An accountant is responsible for managing financial records, performing financial analysis, and ensuring the accuracy and integrity of financial transactions. They play a vital role in maintaining financial health and providing valuable insights to support decision-making within organizations.",
+
+    "career.jobs.job3.title": "Tax Accountant",
+    "career.jobs.job3.desc": "A tax accountant specializes in tax planning, preparation, and compliance, ensuring that individuals and organizations fulfill their tax obligations while optimizing tax strategies and minimizing liabilities. They possess expertise in tax laws, regulations, and reporting requirements to provide accurate and comprehensive tax services.",
+
+    "career.jobs.job4.title": "Secretarial",
+    "career.jobs.job4.desc": "A secretary plays a vital role in providing administrative and organizational support to an individual or a team within an organization. They contribute to the smooth operation of the office by managing correspondence, scheduling appointments, and assisting in various administrative tasks.",
+
+    "career.jobs.job5.title": "References",
+    "career.jobs.job5.desc": "A secretary plays a vital role in providing administrative and organizational support to an individual or a team within an organization. They contribute to the smooth operation of the office by managing correspondence, scheduling appointments, and assisting in various administrative tasks.",
+
+    // Career page
+
   },
 
   ar: {

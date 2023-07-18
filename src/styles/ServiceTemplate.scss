@@ -1,3 +1,6 @@
+
+  
+  
   section.box-cont {
     width: 100%;
     padding-block: 8rem;
@@ -6,7 +9,7 @@
     align-items: center;
   }
   
-.container {
+.service-container {
 
     .faq-section {
         width: 100%;
@@ -28,7 +31,7 @@
         flex-direction: row-reverse;
         justify-content: center;
         padding: 8rem 4rem 8rem 4rem;
-        background: var(--bgc);
+        background: none;
 
         .hero-cont {
             display: flex;
@@ -55,7 +58,7 @@
                 gap: 5rem;
                 
                 .btns {
-                        display: flex;
+                    display: flex;
                     gap: 1rem;
                 }
               .content-wrap {
@@ -89,34 +92,29 @@
 
     .feature-section {
         padding-block: 5rem;
-        background: var(--prim2);
+        background: var(--bgc);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 3rem;
 
-        h3 {
-            color: white;
-            width: 50%;
-            text-align: center;
+        h2 {
+            color: var(--prim1);
+            text-align: start;
         }
 
-        .card-wrap {
+        a {
+            border-radius: 12px;        
+        }
+        .card-cont {
+            width: 80%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: row !important;
+            gap: 2rem;
 
-            h3 {
-                color: var(--prim1);
-                text-align: start;
-            }
-
-            a {
-                border-radius: 12px;        
-            }
+            
         }
 
         .cont-bottom {
@@ -127,9 +125,6 @@
             align-items: center;
             gap: 1rem;
 
-            h3 {
-                color: white;
-            }
         }
     }
 
@@ -157,7 +152,7 @@
     }
 
     .latest-posts-section {
-        width: 80%;
+        width: 100%;
         object-fit: contain;
         overflow: hidden;
         display: flex;
@@ -166,17 +161,70 @@
         background-color: var(--sky-gradiant);
     }
 
+    .make-oppoinment-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--sky-gradiant);
+        padding-block: 8rem 2rem;
+
+        .make-oppoinment-cont {
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 4rem;
+            padding: 3rem 4rem;
+            text-align: center;
+            background-color: var(--bgc);
+
+            button {
+                border-radius: 10px;
+                width: 40%;
+                font-size: 1.2vw;
+            }
+
+            .img-cont {
+                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
     
+                img {
+                    align-self: center;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+        }
+
+    }
+
+    .faq-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 3rem;
+
+        .faq-cont {
+            width: 50%;
+        }
+
+    }
       
 }
 
-
+  
 @media (max-width: 768px) {
-    .container {
+    .service-container {
 
         .hero-section {
             padding: 2rem 0;
-            flex-direction: column-reverse;
+            flex-direction: column-reverse!important;
             justify-content: center;
             align-items: center;
             gap: 3rem;
@@ -211,6 +259,7 @@
         }
 
         .feature-section {
+            text-align: center;
             h3 {
                 width: 90%;
             }
@@ -220,21 +269,27 @@
                 width: 90%;
             }
 
-
-            }
-        }
-
-        .faq-section {
-        
-            .faq-cont {
-                width: 90%;
-                padding: 0 2rem;
-            }
+            .faq-section {
+            
+                .faq-cont {
+                    width: 90%;
+                    padding: 0 2rem;
+            }   }
         }
 
         .process-cont {
-            flex-direction: column;
+            flex-direction: column!important;
         }
-}
 
- 
+        .make-oppoinment-cont {
+            width: 80%!important;
+            padding: 3rem 2rem!important;
+
+            button {
+                width: 80% !important;
+                font-size: 3vw !important;
+            }
+        }
+    }
+
+}

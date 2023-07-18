@@ -19,7 +19,7 @@ body {
     font-family: "Poppins Light";
   }
   div {
-    font-family: 'poppins regar';
+    font-family: 'poppins regular';
   }
   span {
     font-size: .9vw;
@@ -285,7 +285,7 @@ input, select, textarea {
   }
   &:hover {
     background: white;
-    color: --blue;
+    color: var(--blue);
     border-color: var(--blue);
   }
 };
@@ -318,6 +318,13 @@ input, select, textarea {
     background-repeat: no-repeat;
   }
 };
+
+.wrap-icon {
+  display: flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
 
 
 
