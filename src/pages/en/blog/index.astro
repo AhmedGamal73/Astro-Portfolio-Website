@@ -43,20 +43,19 @@ export const prerender = true;
     <div class="cards-wrap">
       {
         enPosts.map((p) => (
-          <div class="card">
-            <div class="img-wrap">
-              <img src={p.better_featured_image.source_url} alt="" />
-            </div>
-            <div class="content-wrap">
-              <div class="content-wrapper">
-                <h4>{p.title.rendered}</h4>
-                <p set:html={limit(p.excerpt.rendered, 100)} />
-                <a class="btn-line-blue" href={`/${lang}/blog/posts/${p.slug}`}>
-                  See More
-                </a>
+          <a href={`/${lang}/blog/posts/${p.slug}`}>
+            <div class="card">
+              <div class="img-wrap">
+                <img src={p.better_featured_image.source_url} alt="" />
+              </div>
+              <div class="content-wrap">
+                <div class="content-wrapper">
+                  <h4>{p.title.rendered}</h4>
+                  <p set:html={limit(p.excerpt.rendered, 100)} />
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>

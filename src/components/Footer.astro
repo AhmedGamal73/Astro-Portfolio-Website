@@ -1,5 +1,5 @@
 ---
-import { logo } from "../icons";
+import { logo, footerLogo } from "../icons";
 import Icon from "astro-icon";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
@@ -8,261 +8,287 @@ console.log(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer>
-  <div class="fot-cont">
-    <div class="up-cont">
-      <div class="bio-col">
-        <img src={logo} width="54px" />
-        <p>
-          At Business Partners, we provide comprehensive financial and
-          accounting solutions for individuals and companies in Egypt.
-        </p>
-      </div>
-      <div class="right-cont">
-        <div class="child-col">
-          <h5>Services</h5>
-          <ul>
-            <li>
-              <a href={`/${lang}/services/accounting`}>Accounting</a>
-            </li>
-            <li>
-              <a href={`/${lang}/services/taxes`}>Taxes</a>
-            </li>
-            <li>
-              <a href={`/${lang}/services#our-programs`}>Programs</a>
-            </li>
-            <li>
-              <a href={`/${lang}/services/bookkeeping#faq`}>BookKeeping FAQs</a>
-            </li>
-          </ul>
-        </div>
-        <div class="child-col">
-          <h5>Tax</h5>
-          <ul>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-          </ul>
-        </div>
-        <div class="child-col">
-          <h5>Audit</h5>
-          <ul>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-          </ul>
-        </div>
-        <div class="child-col">
-          <h5>Career</h5>
-          <ul>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-          </ul>
-        </div>
-        <div class="child-col">
-          <h5>Courses</h5>
-          <ul>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-            <li><a href="#">Tax1</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="bottom-col">
-      <p id="rights">
-        © BusinessPartners | All rights reserved | Made by <a
-          id="creator"
-          target="_blank"
-          href="https://the73agency.com">The73Agency®</a
-        >
+<!-- Site footer -->
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <img src={footerLogo} alt="" />
+    <p class="footer-company-name">
+      Trusted provider of comprehensive financial solutions, catering to the
+      diverse needs of businesses and individuals.
+    </p>
+
+    <p class="footer-links">
+      <a href={`/${lang}/`} class="link-1">Home</a>
+
+      <a href={`/${lang}/blog`}>Blog</a>
+
+      <a href={`/${lang}/services`}>Services</a>
+
+      <a href={`/${lang}/about`}>About</a>
+
+      <a href={`/${lang}/faq`}>Faq</a>
+
+      <a href={`/${lang}/contact`}>Contact</a>
+    </p>
+  </div>
+
+  <div class="footer-center">
+    <div class="icon-box">
+      <Icon name="person" />
+      <p style="text-align: start;">
+        شارع الجلاء وسط البلد برج التوحيد الدور العاشر Zagazig, Al Sharqia
+        Governorate, Egypt 055
       </p>
-      <div class="social-icons">
-        <a target="_blank" href="https://wa.me/201557144441">
-          <Icon name="baseline-whatsapp" style="width: 23px; color: #2FB844;" />
-        </a>
-        <a href="malito:info@businesspartners.com">
-          <Icon name="email-fast-outline" style="width: 23px; color: grey;" />
-        </a>
-        <a href="tel:+20-1557144441">
-          <Icon name="phone-outlined" style="width: 23px; color: #DFC063;" />
-        </a>
-        <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY">
-          <Icon name="baseline-facebook" style="color: #1877F2; width: 23px" />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.instagram.com/businesspartnersegy/?fbclid=IwAR2xnU-pjLzT441cD7ikd3y6L2kwdcVDdG3mqP5mdGsQ2pyuGNI8ZjBJnyA"
-        >
-          <Icon name="instagram" style="color: #ff005f; width: 20px" />
-        </a>
-      </div>
+    </div>
+
+    <div class="icon-box">
+      <Icon name="phone-outlined" />
+      <p>(+20)-155-714-4441</p>
+    </div>
+
+    <div class="icon-box">
+      <Icon name="email-fast-outline" />
+      <p>
+        <a href="mailto:support@company.com">info@businesspartners-eg.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <a target="_blank" href="https://goo.gl/maps/QznzMcqCMpByqtsx6">
+      <img src="/location.png" />
+    </a>
+
+    <div class="footer-icons">
+      <a><Icon name="linkedin" /></a>
+      <a href="tel:+20-1557144441"><Icon name="baseline-whatsapp" /></a>
+      <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY"
+        ><Icon name="baseline-facebook" /></a
+      >
+      <a
+        target="_blank"
+        href="https://www.instagram.com/businesspartnersegy/?fbclid=IwAR2xnU-pjLzT441cD7ikd3y6L2kwdcVDdG3mqP5mdGsQ2pyuGNI8ZjBJnyA"
+        ><Icon name="instagram" /></a
+      >
     </div>
   </div>
 </footer>
 
 <style>
-  div.fot-cont {
+  .icon-box-cont {
     display: flex;
+    width: 20%;
     flex-direction: column;
-    z-index: 10;
-    width: 100%;
-    background: #152040;
     justify-content: space-between;
-    overflow-x: hidden;
-  }
-
-  div.up-cont {
-    display: flex;
     align-items: center;
-    width: 100%;
-    gap: 5rem;
-    border-radius: 20px 20px 0 0;
-    padding-inline: 3rem;
-    height: auto;
-  }
-
-  .bio-col {
-    width: 25%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 0.5rem;
-    border-inline-end: 1px solid rgba(128, 128, 128, 0.213);
-    padding-inline-end: 2rem;
-  }
-  .bio-col p {
-    width: 100%;
-    text-align: start;
-  }
-  h5,
-  p {
-    color: white;
-  }
-
-  #rights {
-    font-size: 0.9vw;
-  }
-
-  #creator {
-    color: #d9b752;
-  }
-
-  .right-cont {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5rem;
-    align-items: center;
-    height: 30vh;
-    color: white;
-    width: 50%;
-  }
-
-  .child-col {
-    display: flex;
-    width: 15%;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Poppins Light";
-    gap: 1rem;
-    padding-top: 2rem;
-  }
-
-  .child-col h4 {
-    padding-bottom: 1rem;
-  }
-
-  ul > li > a {
-    color: rgba(182, 182, 182, 0.871);
-    padding-top: 0.5rem;
-    transition: 200ms;
-    display: inline-block !important;
-    width: 100%;
-  }
-  ul li a:hover {
-    color: white;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    padding: 0;
-  }
-
-  .bottom-col {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 2.5rem;
-    padding-block: 1rem;
-    border-top: 1px solid rgb(217, 183, 82, 0.3);
-  }
-  .social-icons {
-    display: flex;
     gap: 2rem;
   }
 
-  @media (max-width: 768px) {
-    div.fot-cont {
-      flex-direction: column !important;
-      padding-top: 1.5rem;
-      min-height: 100vh;
-    }
-    .up-cont {
-      flex-direction: column !important;
-      width: 100%;
-      padding-inline: 0 !important;
-      gap: 1rem !important;
-    }
-    div.bio-col {
-      width: 100%;
-      padding: 0;
-      align-items: center;
-    }
+  .icon-box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+  }
 
-    div.bio-col p {
-      text-align: center;
-      width: 90%;
-    }
+  .footer-icons [astro-icon] {
+    padding: 0.3rem !important;
+    background-color: var(--prim3) !important;
+    border-radius: 50px !important;
+    width: 27px !important;
+    height: 30px !important;
+    color: var(--prim1) !important;
+  }
+  .footer-distributed [astro-icon] {
+    padding: 0.3rem !important;
+    background-color: var(--prim3) !important;
+    border-radius: 50px !important;
+    width: 27px !important;
+    height: 30px !important;
+    color: var(--prim1) !important;
+  }
+  .footer-distributed {
+    background: var(--prim1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 55px 50px;
+  }
 
-    .right-cont {
-      padding-inline: 0;
-      width: 100%;
-      gap: 0;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 2rem;
-      height: auto;
-    }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
 
-    .child-col {
-      align-items: center;
-      justify-content: center;
-      width: 30%;
-    }
+  /* Footer left */
 
-    .child-col ul {
-      padding: 0 !important;
-    }
+  .footer-distributed .footer-left {
+    width: 40%;
+  }
 
-    .bottom-col {
+  .footer-distributed .footer-left .footer-company-name {
+    color: white !important;
+  }
+  /* Footer links */
+
+  .footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+  }
+  .footer-distributed .footer-links a:hover {
+    color: var(--prim3);
+  }
+
+  /* Footer Center */
+
+  .footer-distributed .footer-center {
+    width: 35%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .footer-distributed .footer-center p a {
+    color: lightseagreen;
+    text-decoration: none;
+  }
+
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+
+  /* Footer Right */
+
+  .footer-distributed .footer-right {
+    width: 20%;
+    gap: 1rem;
+    display: flex;
+  }
+
+  .footer-distributed .footer-right img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .footer-distributed .footer-company-name {
+    padding-top: 0.3rem;
+    color: rgb(216, 216, 216);
+    width: 80%;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer-distributed .footer-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-distributed .footer-icons a {
+    width: 35px !important;
+    height: 35px !important;
+    cursor: pointer;
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 880px) {
+    .footer-distributed {
+      font: bold 14px sans-serif;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
       text-align: center;
+    }
+
+    .footer-company-name {
+      width: 100% !important;
+    }
+    .footer-distributed .footer-center i {
+      margin-left: 0;
+    }
+
+    .footer-distributed .footer-center {
+      gap: 2rem !important;
+    }
+
+    [astro-icon] {
+      padding: 0.2rem;
+      background-color: var(--prim3);
+      border-radius: 50px;
+      width: 20px;
+      color: var(--prim1);
+    }
+    .footer-right p {
+      display: none;
     }
   }
 </style>
