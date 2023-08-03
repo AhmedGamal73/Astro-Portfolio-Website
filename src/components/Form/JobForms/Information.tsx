@@ -26,7 +26,10 @@ export function Information({
   updateFields,
 }: UserFormProps) {
   return (
-    <FormWrapper title="Information" subtitle="Let's get to know you">
+    <FormWrapper
+      title="Contact information"
+      subtitle="Tell us about yourself and how we can contact you :)"
+    >
       <div className="field-wrapper">
         <label>Name</label>
         <input

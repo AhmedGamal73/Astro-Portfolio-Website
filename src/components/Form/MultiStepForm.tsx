@@ -61,9 +61,9 @@ const MultiStepForm = () => {
     useMultistepForm([
       <Information {...data} updateFields={updateFields} />,
       <DetailedInformation {...data} updateFields={updateFields} />,
-      <Language getLangData={getLangData} />,
-      <Education getEducationData={getEducationData} />,
-      <EmploymentHistory geEmploymentHisData={geEmploymentHisData} />,
+      // <Language getLangData={getLangData} />,
+      // <Education getEducationData={getEducationData} />,
+      // <EmploymentHistory geEmploymentHisData={geEmploymentHisData} />,
     ]);
 
   function submitForm(e: FormEvent) {
@@ -89,31 +89,37 @@ const MultiStepForm = () => {
 
   return (
     <div className="job-app-cont">
-      <form onSubmit={submitForm}>
-        <div className="left-col">
-          <h2 className="steps-title">
-            BP<span>Career</span>
-          </h2>
-          <div className="steps-cont">
-            <div className="form_steps-container">
-              {steps.map((step, i) => (
-                <div className="form_step-wrapper">
-                  <div
-                    className={`form__step-box ${
-                      currentStepIndex >= i ? "active" : ""
-                    }`}
-                  >
-                    <span className="step-num">
-                      {currentStepIndex > i ? "✔" : i + 1}
-                    </span>
-                  </div>
-                  <h6>{stepTitle[i]}</h6>
+      <div className="left-col">
+        <h2 className="steps-title">
+          BP<span>Career</span>
+        </h2>
+        <div className="steps-cont">
+          <div className="form_steps-container">
+            {steps.map((step, i) => (
+              <div className="form_step-wrapper">
+                <div
+                  className={`form__step-box ${
+                    currentStepIndex >= i ? "active" : ""
+                  }`}
+                >
+                  <span className="step-num">
+                    {currentStepIndex > i ? "✔" : i + 1}
+                  </span>
                 </div>
-              ))}
-            </div>
+                <h6>{stepTitle[i]}</h6>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="right-col">
+      </div>
+      <div className="right-col">
+        <h2>Contact our sales team</h2>
+        <p>
+          We have developed our payment infrastructure to bring everything you
+          will need in a single place. Keep growing your client base through our
+          growing ecosystem of networks and payment technologies.
+        </p>
+        <form onSubmit={submitForm}>
           <div className="form-content-container">
             <span className="steps-counter">
               step {currentStepIndex + 1} / {steps.length}
@@ -130,8 +136,8 @@ const MultiStepForm = () => {
               {isLastStep ? "Finish" : "Next Step"}
             </button>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };

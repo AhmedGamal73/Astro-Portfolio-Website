@@ -11,6 +11,10 @@ export const ui = {
     "nav.home": 'Home',
     "nav.about": 'About',
     "nav.services": 'Services',
+    "nav.services.accounting": 'Services',
+    "nav.services.tax": 'Services',
+    "nav.services.courses": 'Services',
+    "nav.services.programs": 'Services',
     "nav.contact": 'Contact',
     "nav.courses": 'Courses',
     // header
@@ -23,28 +27,35 @@ export const ui = {
     "home.hero.btn.process": "Our Process",
     "home.hero.consaltBtn": "Free consaltant now",
 
-    "home.taxes.tag": "Taxes",
-    "home.taxes.title": "Our tax specialists are ready",
-    "home.taxes.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
-    "home.taxes.btn": "Apply for registration",
+    "home.ourServices.tag": "Our Services",
+    "home.ourServices.title": "Our tax specialists are ready",
+    "home.ourServices.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+    "home.ourServices.btn": "See More",
 
-    "home.taxes.card1.title": "Make a File",
-    "home.taxes.card1.subtitle": "File your small business or self-employed taxes your way",
-    "home.taxes.card1.feature1": "An individual-owned, self-managed facility",
-    "home.taxes.card1.feature2": "Solidarity companies or a simple recommendation",
-    "home.taxes.card1.feature3": "An Egyptian Joint Stock Company",
+    "home.ourServices.accounting.title": "Accounting Solutions",
+    "home.ourServices.accounting.subtitle": "Streamlining Your Financial Success",
+    "home.ourServices.accounting.feature1": "Precise Bookkeeping",
+    "home.ourServices.accounting.feature2": "Financial Analysis & Reporting",
+    "home.ourServices.accounting.feature3": "Expert Tax Preparation",
+    
 
-    "home.taxes.card2.title": "Tax Returns",
-    "home.taxes.card2.subtitle": "Simplify Your Tax Filing: Comprehensive Assistance with Tax Returns",
-    "home.taxes.card2.feature1": "Monthly check-up ",
-    "home.taxes.card2.feature2": "Annual examination",
-    "home.taxes.card2.feature3": "Quarterly inspection",
+    "home.ourServices.taxes.title": "Expert Tax Services",
+    "home.ourServices.taxes.subtitle": "Minimizing Your Burden, Maximizing Your Returns",
+    "home.ourServices.taxes.feature1": "Personalized Tax Planning",
+    "home.ourServices.taxes.feature2": "IRS Representation",
+    "home.ourServices.taxes.feature3": "Tax Compliance Advisory",
 
-    "home.taxes.card3.title": "Tax Examination",
-    "home.taxes.card3.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
-    "home.taxes.card3.feature1": "An individual-owned, self-managed facility",
-    "home.taxes.card3.feature2": "Solidarity companies or a simple recommendation",
-    "home.taxes.card3.feature3": "An Egyptian Joint Stock Company",
+    "home.ourServices.courses.title": "Courses Will Make You Caliber",
+    "home.ourServices.courses.subtitle": "Enroll in Top-notch Accounting Courses",
+    "home.ourServices.courses.feature1": "Experienced Instructors",
+    "home.ourServices.courses.feature2": "Hands-on Practical Training",
+    "home.ourServices.courses.feature3": "Flexible Learning Options",
+
+    "home.ourServices.programs.title": "Unlock Your Accounting Potential",
+    "home.ourServices.programs.subtitle": "Explore our Cutting-edge Programs",
+    "home.ourServices.programs.feature1": "Comprehensive Curriculum",
+    "home.ourServices.programs.feature2": "Internship & Job Placement",
+    "home.ourServices.programs.feature3": "Industry-standard Tools",
 
 
     "home.bookkeeping.title": "Expert Services In",
@@ -101,12 +112,14 @@ export const ui = {
     "services.program1.subtitle": "With the dinermind program, you can control everything large and small in your restaurant or cafe from the first accounts, inventory, stores, suppliers, pilots and customers",
     "services.program1.feature1": "Procurement system for used resources",
     "services.program1.feature2": "The tree of varieties is a section-main",
-    "services.program1.feature3": "Registration of all components used by the item",
+    "services.program1.feature3": "Registration of all components",
+
     "services.program2.title": "Tracker ERP",
     "services.program2.subtitle": "Complete management of the purchasing cycle within the organization, starting from registering an exchange request for items to find out what is available in stores",
     "services.program2.feature1": "Organize cash flow.",
     "services.program2.feature2": "Creation of the administrative structure",  
     "services.program2.feature3": "Meet the customer's requirements.",
+
     "services.program3.title": "Trade",
     "services.program3.subtitle": "With the trade program you can control everything large and small in your trading shop from the first accounts, inventory, stores, suppliers, pilots and customers",
     "services.program3.feature1": "Accommodate both large and small trading shops.",
@@ -118,20 +131,22 @@ export const ui = {
     "services.consaltant.btn": "Free Consaltant Know",
     // services page
 
-    // bookkeeping page
 
-    "bookkeeping.hero.span": "Small business bookkeeping",
-    "bookkeeping.hero.title": "Bookkeeping for up to 50% less",
-    "bookkeeping.hero.subtitle": "We have small business bookkeeping services to help you save time and money — with full-service package rates up to half off a typical accountant’s rates. Get started with a 30-minute meeting to be paired with your dedicated pro.",
 
-    "bookkeeping.service1.title": "Establishment of Internal Accounting for the Company",
-    "bookkeeping.service1.subtitle": "Efficiently Establishing and Managing Internal Accounting Systems to Enhance Financial Control and Drive Business Growth in Your Company",
+    // accounting page
 
-    "bookkeeping.service2.title": "Efficient Internal Bookkeeping and Financial Record-Keeping Services",
-    "bookkeeping.service2.subtitle": "Efficiently Maintaining Internal Accounts and Bookkeeping, Ensuring Accurate Financial Record-Keeping for Enhanced Financial Management and Decision-Making in Your Business",
+    "accounting.hero.span": "Small business bookkeeping",
+    "accounting.hero.title": "Bookkeeping for up to 50% less",
+    "accounting.hero.subtitle": "We have small business bookkeeping services to help you save time and money — with full-service package rates up to half off a typical accountant’s rates. Get started with a 30-minute meeting to be paired with your dedicated pro.",
 
-    "bookkeeping.service3.title": "Comprehensive Monthly Reporting and Financial Statement Preparation for Your Company",
-    "bookkeeping.service3.subtitle": "Accurate and Timely Preparation of Comprehensive Monthly Reports and Financial Statements to Provide In-Depth Insights into Your Company's Financial Performance and Support Informed Decision-Making",
+    "accounting.service1.title": "Establishment of Internal Accounting for the Company",
+    "accounting.service1.subtitle": "Efficiently Establishing and Managing Internal Accounting Systems to Enhance Financial Control and Drive Business Growth in Your Company",
+
+    "accounting.service2.title": "Efficient Internal Bookkeeping and Financial Record-Keeping Services",
+    "accounting.service2.subtitle": "Efficiently Maintaining Internal Accounts and Bookkeeping, Ensuring Accurate Financial Record-Keeping for Enhanced Financial Management and Decision-Making in Your Business",
+
+    "accounting.service3.title": "Comprehensive Monthly Reporting and Financial Statement Preparation for Your Company",
+    "accounting.service3.subtitle": "Accurate and Timely Preparation of Comprehensive Monthly Reports and Financial Statements to Provide In-Depth Insights into Your Company's Financial Performance and Support Informed Decision-Making",
 
 
     //FAQ

@@ -23,6 +23,7 @@ const t = useTranslations(lang);
         title={t("services.hero.title")}
         subtitle={t("services.hero.subtitle")}
       />
+      <img id="service-hero" src="/service/hero.webp" />
       <Button className="btn-stroke-blue-heavy" client:load>
         Contact one of our experts
       </Button>
@@ -167,27 +168,25 @@ const t = useTranslations(lang);
     />
     <div id="our-programes" class="card-container">
       <Card
-        size="40%"
+        size="45%"
         img="/service/program1.png"
         title={t("services.program1.title")}
         subtitle={t("services.program1.subtitle")}
         feature1={t("services.program1.feature1")}
         feature2={t("services.program1.feature2")}
         feature3={t("services.program1.feature3")}
-        btnSrc="https://clicksolutionseg.tech"
         btn="See All Features"
         newTab="_blanck"
       />
       <Card
         img="/service/program2.png"
-        size="40%"
+        size="45%"
         title={t("services.program2.title")}
         subtitle={t("services.program2.subtitle")}
         feature1={t("services.program2.feature1")}
         feature2={t("services.program2.feature2")}
         feature3={t("services.program2.feature3")}
         btn="See All Features"
-        btnSrc="https://clicksolutionseg.tech"
         bgc="var(--accent2)"
         newTab="_blanck"
       />
@@ -201,7 +200,6 @@ const t = useTranslations(lang);
         feature2={t("services.program3.feature2")}
         feature3={t("services.program3.feature3")}
         btn="See All Features"
-        btnSrc="https://clicksolutionseg.tech"
         newTab="_blanck"
         bgc="var(--accent1)"
       />
@@ -224,32 +222,12 @@ const t = useTranslations(lang);
 </Layout>
 
 <style>
-  /* Consultant Section */
-  .service-hero button {
-    padding: 13px 52px;
-  }
-  .service-hero .content-wrap {
-    padding-top: 5rem;
-  }
-  section.consaltant-container {
-    padding: 6rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  section.consaltant-container .right {
-    padding: 2rem 2rem 0 3rem;
-    width: 40%;
-  }
-  section.consaltant-container .right p {
-    text-align: start;
-  }
-  section.consaltant-container .left img {
-    margin-bottom: 2rem;
+  #service-hero {
+    width: 90%;
   }
 
   section.courses-container {
-    background-color: var(--prim1);
+    background-color: var(--prim2);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -258,6 +236,11 @@ const t = useTranslations(lang);
     padding-block: 3rem;
     border-radius: 1.5rem;
   }
+
+  .service-hero .content-wrap {
+    padding-top: 5rem;
+  }
+
   div.card-container {
     display: flex;
     width: 80%;
@@ -281,8 +264,9 @@ const t = useTranslations(lang);
     box-shadow: var(--boxShadow2);
   }
 
-  .service-hero a {
-    border-radius: 4px;
+  .service-hero button {
+    border-radius: 10px !important;
+    margin-top: 2rem;
     padding: 0.8rem 3rem;
   }
   .service-hero a:hover {
@@ -385,16 +369,44 @@ const t = useTranslations(lang);
     font-size: 1vw;
   }
 
+  /* Consultant Section */
+
+  section.consaltant-container {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.consaltant-container .right {
+    padding: 2rem 2rem 0 3rem;
+    gap: 1rem;
+    width: 40%;
+  }
+  section.consaltant-container .right p {
+    text-align: start;
+    padding-bottom: 2rem;
+  }
+  section.consaltant-container .left img {
+    margin-bottom: 2rem;
+  }
+
   @media (max-width: 768px) {
     .container .content {
       display: flex;
       justify-content: center;
     }
+
+    .service-hero img {
+      width: 100%;
+    }
+
+    .service-hero button {
+      font-size: 3vw;
+      margin-bottom: 0;
+    }
+
     .content-wrap {
       width: 80% !important;
-    }
-    .service-hero {
-      height: 55vh;
     }
 
     .consaltant-container {

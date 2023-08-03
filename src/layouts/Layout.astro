@@ -32,57 +32,56 @@ const { title } = Astro.props;
     </article>
     <div class="preloader"></div>
     <Footer />
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        transition: opacity 0.75s, visibility 0.75s;
+      }
+
+      .hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loader::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid #3498db;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
   </body>
 </html>
-
-<style>
-  .loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    transition: opacity 0.75s, visibility 0.75s;
-  }
-
-  .hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .loader::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 4px solid #3498db;
-    border-top-color: transparent;
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>
-
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-
-    loader.classList.add("hidden");
-
-    loader.addEventListener("transitionend", () => {
-      document.body.removeChild(loader);
-    });
-  });
-</script>

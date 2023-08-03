@@ -21,19 +21,11 @@ export const DropDown = ({ lang }) => {
         <li>
           <a
             style={{ textDecoration: "none" }}
-            href={`/${lang}/services/bookkeeping`}
+            href={`/${lang}/services/accounting`}
           >
-            Bookeeping
+            Accounting
           </a>
         </li>
-        {/* <li>
-          <a
-            style={{ textDecoration: "none" }}
-            href={`/${lang}/services/audit`}
-          >
-            Audit
-          </a>
-        </li> */}
 
         <li>
           <a

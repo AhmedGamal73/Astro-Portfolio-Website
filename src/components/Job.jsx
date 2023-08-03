@@ -6,12 +6,7 @@ export const Job = ({ title, jobDesc }) => {
       <div className="right-col">
         <h4>
           <a target="_blank" href="/en/job-application">
-            Apply as employee
-          </a>
-        </h4>
-        <h4>
-          <a target="_blank" href="/en/job-application">
-            Apply as trainee
+            Apply For This job
           </a>
         </h4>
       </div>

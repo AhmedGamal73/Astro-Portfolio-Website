@@ -3,7 +3,6 @@ import Card from "../Card/Card.astro";
 import Content1 from "../Content/Content1.astro";
 import "../../styles/TaxSection.scss";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import Button from "../../components/Modal/Button";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,56 +11,68 @@ const t = useTranslations(lang);
 <section>
   <div class="container">
     <Content1
-      tag={t("home.taxes.tag")}
-      title={t("home.taxes.title")}
-      subtitle={t("home.taxes.subtitle")}
+      tag={t("home.ourServices.tag")}
+      title={t("home.ourServices.title")}
+      subtitle={t("home.ourServices.subtitle")}
       titleColor="white"
       subtitleColor="white"
     />
     <div class="card-wrap">
       <Card
-        title={t("home.taxes.card1.title")}
-        subtitle={t("home.taxes.card1.subtitle")}
-        feature1={t("home.taxes.card1.feature1")}
-        feature2={t("home.taxes.card1.feature2")}
-        feature3={t("home.taxes.card1.feature3")}
-        img="/home/company1.avif"
-        btn={t("home.taxes.btn")}
+        title={t("home.ourServices.accounting.title")}
+        subtitle={t("home.ourServices.accounting.subtitle")}
+        feature1={t("home.ourServices.accounting.feature1")}
+        feature2={t("home.ourServices.accounting.feature2")}
+        feature3={t("home.ourServices.accounting.feature3")}
+        img="/home/accounting.webp"
+        btn={t("home.ourServices.btn")}
         btnSrc={`/${lang}/contact`}
         bgc="var(--accent2)"
+        size="40%"
       />
       <Card
-        title={t("home.taxes.card2.title")}
-        subtitle={t("home.taxes.card2.subtitle")}
-        feature1={t("home.taxes.card2.feature1")}
-        feature2={t("home.taxes.card2.feature2")}
-        feature3={t("home.taxes.card2.feature3")}
-        img="/home/company2.png"
-        btn="Apply for registration"
+        title={t("home.ourServices.taxes.title")}
+        subtitle={t("home.ourServices.taxes.subtitle")}
+        feature1={t("home.ourServices.taxes.feature1")}
+        feature2={t("home.ourServices.taxes.feature2")}
+        feature3={t("home.ourServices.taxes.feature3")}
+        img="/home/taxes.webp"
+        btn={t("home.ourServices.btn")}
         btnSrc={`/${lang}/contact`}
+        size="40%"
       />
       <Card
-        title={t("home.taxes.card3.title")}
-        subtitle={t("home.taxes.card3.subtitle")}
-        feature1={t("home.taxes.card3.feature1")}
-        feature2={t("home.taxes.card3.feature2")}
-        feature3={t("home.taxes.card3.feature3")}
-        img="/home/company3.png"
-        btn="Apply for registration"
+        title={t("home.ourServices.courses.title")}
+        subtitle={t("home.ourServices.courses.subtitle")}
+        feature1={t("home.ourServices.courses.feature1")}
+        feature2={t("home.ourServices.courses.feature2")}
+        feature3={t("home.ourServices.courses.feature3")}
+        img="/home/courses.webp"
+        btn={t("home.ourServices.btn")}
         btnSrc={`/${lang}/contact`}
         bgc="var(--prim3-light)"
+        size="40%"
+      />
+      <Card
+        title={t("home.ourServices.programs.title")}
+        subtitle={t("home.ourServices.programs.subtitle")}
+        feature1={t("home.ourServices.programs.feature1")}
+        feature2={t("home.ourServices.programs.feature2")}
+        feature3={t("home.ourServices.programs.feature3")}
+        img="/home/programs.webp"
+        btn={t("home.ourServices.btn")}
+        btnSrc={`/${lang}/contact`}
+        bgc="var(--prim3)"
+        size="40%"
       />
     </div>
     <div class="btn-wrap">
-      <h3>Still didn't Know which category ?</h3>
+      <h3>See All Of Our Services</h3>
       <div class="btns-wrapper">
-        <Button className="btn-stroke-yellow" client:visible>
-          Book Appoinment
-        </Button>
         <a
-          href=`/${lang}/services/taxes`
-          class="all-services btn-line-blue"
-          style="color: white;">Browse All of Our Tax Services</a
+          href=`/${lang}/services`
+          class="all-services btn-stroke-yellow"
+          style="">All Services</a
         >
       </div>
     </div>

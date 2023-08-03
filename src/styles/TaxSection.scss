@@ -10,18 +10,22 @@
   justify-content: center;
   align-items: center;
 
-  [astro-icon="teenyicons:arrow-solid"] {
+  [astro-icon="arrow-solid"] {
     position: absolute;
     color: var(--prim3);
     font-size: 5rem;
     top: 5rem;
     left: 0;
+
+
   }
 
   .card-wrap {
-    margin-top: 5rem;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
     padding-inline: 46px;
 
   }

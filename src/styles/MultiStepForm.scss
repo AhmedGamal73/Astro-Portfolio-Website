@@ -1,33 +1,24 @@
 .job-app-cont {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
-    height: 80vh;
+    height: 100%;
     background: white;
-    border-radius: 0.8rem 1.4rem 1.4rem 0.8rem;
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 29px 29px 10px;
+    margin-block: 9rem;
 
 
-    form {
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        gap: 3rem;
-        width: 100%;
-        min-height: 100%;
-    
+
         .left-col {
             display: flex;
+            visibility: hidden;
             flex-direction: column;
             width: 25%;
             height: 100vh;
             padding-inline-start: 3rem;
             background-color: var(--prim2);
             border-radius: 0.8rem 0 0 0.8rem;
-            height: -webkit-fill-available;
-            height: 80vh;
             gap: 1rem;
 
             p {
@@ -76,23 +67,26 @@
                             margin: .8rem 1rem; 
                         }    
                     }
-                }
             }
-    
         }
     
     
+    
+    
         .right-col {
-            width: 70%;
+            width: 80%;
             min-height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: start;
-            gap: 3rem;
+            gap: 1rem;
             padding-inline-end: 3rem;
             overflow-wrap: break-word;
 
+            p {
+                width: 80%;
+            }
 
     
             .steps-counter {
@@ -100,31 +94,41 @@
                 padding-top: 2rem;
 
             }
-    
+            
+            form {
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
     
             .form-content-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                gap: 1rem;
                 align-items: start;
-                height: auto;
-                gap: 2rem;
+                width: 100%;
                 min-height: 100%;
 
+                .container {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                }
                 
                 .form-data-wrapper {
                     width: 100%;
                     display: flex;
                     justify-content: start;
                     align-items: start;
-                    gap: 3rem;
+                    gap: 2.5rem;
                     flex-wrap: wrap;
                     min-height: auto;
                     
                     div.field-wrapper {
                         display: flex;
                         flex-direction: column;
-                        width: 40%;
+                        width: 80%;
                     
                         label {
                             padding-bottom: .3rem;
@@ -139,18 +143,18 @@
                 display: flex;
                 justify-content: flex-end;
                 gap: 0rem;
-                width: 100%;
+                width: 80%;
                 padding-inline-end:2rem ;
                 padding-bottom: 2rem;
     
                 & .prev-btn{
                     padding: 1.5rem 3rem;
                     background: white;
+                    font-family: "poppins bold";
                     border: 1px solid transparent;
                     border-radius: 8px;
-                    font-size: 1.1rem;
+                    font-size: 1.1vw;
                     color: var(--prim1);
-                    font-family: 'poppins bold';
                 }
     
                 & .next-btn{
@@ -158,10 +162,10 @@
                         background: var(--blue);
                         border: 1px solid transparent;
                         border-radius: 8px;
-                        font-size: 1vw;
+                        font-size: 1.1vw;
                         color: white;
-                        font-family: poppins bold;
                         transition: 300ms;
+                        font-family: "poppins bold";
     
                     &:hover {
                         background-color: #0558A6;
@@ -171,7 +175,7 @@
             }
         }
     
-    }
+    
 
 
 
@@ -188,7 +192,6 @@
 
 
 .step-title {
-    font-family: "Poppins bold";
     text-align: start;
     margin-top: -2rem;
     margin: 0;
@@ -291,4 +294,4 @@
 
 
 
-}
+}}

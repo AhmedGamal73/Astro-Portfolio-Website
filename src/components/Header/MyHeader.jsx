@@ -1,12 +1,11 @@
 import "../../styles/MyHeader.scss";
 import { logo } from "../../icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { DropDown } from "./DropDown";
 import { useMediaQuery } from "react-responsive";
 
 const MyHeader = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
   const [openServices, setOpenServices] = useState(false);
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
@@ -37,30 +36,13 @@ const MyHeader = (props) => {
       </svg>
     );
   }
-  useEffect(() => {
-    const handleScroll = () => {
-      const headerHeight = 70;
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= headerHeight) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    console.log(isDesktopOrLaptop);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <header className={isSticky ? "sticky show" : "sticky"}>
+    <header>
       <div className="header-container">
         <div className="header-start">
           <a href={`/${props.lang}/`}>
