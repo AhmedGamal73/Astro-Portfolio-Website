@@ -24,7 +24,7 @@ export const ui = {
     "home.hero.title": "When You Need Results ",
     "home.hero.span": "We Care.",
     "home.hero.subtitle": "We offer a wide range of financial and accounting services that cater to the unique needs of individuals and businesses.",
-    "home.hero.btn.process": "Our Process",
+    "home.hero.btn.process": "What We Offer",
     "home.hero.consaltBtn": "Free consaltant now",
 
     "home.ourServices.tag": "Our Services",

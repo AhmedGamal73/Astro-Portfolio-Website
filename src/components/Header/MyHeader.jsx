@@ -73,22 +73,10 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/home`}>Home</a>
             </li>
-            {!isDesktopOrLaptop ? (
-              <li>
-                <a href={`/${props.lang}/services`}>Services</a>
-              </li>
-            ) : (
-              <li
-                className="service-item"
-                onClick={() => setOpenServices((prev) => !prev)}
-                style={{ position: "relative" }}
-              >
-                <div className="navbar-services">
-                  <span>Services</span>
-                  {icon}
-                </div>
-              </li>
-            )}
+
+            <li>
+              <a href={`/${props.lang}/services`}>Services</a>
+            </li>
 
             <li>
               <a href={`/${props.lang}/about`}>About</a>
@@ -105,16 +93,12 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/faq`}>FAQs</a>
             </li>
-            {openServices && <DropDown lang={props.lang} />}
           </ul>
         </nav>
         <div className={`header-end ${isOpen ? "open" : ""}`}>
-          <a href={`/${props.lang}/cpanel-login`} className="btn-stroke-yellow">
-            Log in
-          </a>
           <a
             href={`/${props.lang}/job-application`}
-            className="btn-stroke-white"
+            className="btn-stroke-yellow"
             type="button"
           >
             Apply for job

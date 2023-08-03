@@ -1,3 +1,15 @@
+  .sticky {
+  position: fixed;
+  top: -80px;
+  z-index: 9999;
+  transition: top .3s ease-in-out;
+  width: 100%;
+}
+
+
+.sticky.show {
+  top: 0px;
+}
 
 .hamburger {
 		display: none;
@@ -159,7 +171,7 @@ nav {
         max-height: 60vh;
         transition: max-height 0.3s ease-in-out;
         padding: 1rem 0 5rem 0;
-        position: relative;
+        position: relative; 
       }
       ul{
         width: 100%;
@@ -214,7 +226,9 @@ nav {
     &.open {
       opacity: 1;
       max-height: 40vh;
+      position: relative;
       transition: max-height 0.3s ease-in-out;
+      background: var(--prim2);
     }
   }
 }
