@@ -37,25 +37,28 @@ export const ui = {
     "home.ourServices.accounting.feature1": "Precise Bookkeeping",
     "home.ourServices.accounting.feature2": "Financial Analysis & Reporting",
     "home.ourServices.accounting.feature3": "Expert Tax Preparation",
-    
+    "home.ourServices.accounting.btn": "Know More About Accounting",
 
     "home.ourServices.taxes.title": "Expert Tax Services",
     "home.ourServices.taxes.subtitle": "Minimizing Your Burden, Maximizing Your Returns",
     "home.ourServices.taxes.feature1": "Personalized Tax Planning",
     "home.ourServices.taxes.feature2": "IRS Representation",
     "home.ourServices.taxes.feature3": "Tax Compliance Advisory",
+    "home.ourServices.taxes.btn": "Know More About Taxes",
 
     "home.ourServices.courses.title": "Courses Will Make You Caliber",
     "home.ourServices.courses.subtitle": "Enroll in Top-notch Accounting Courses",
     "home.ourServices.courses.feature1": "Experienced Instructors",
     "home.ourServices.courses.feature2": "Hands-on Practical Training",
     "home.ourServices.courses.feature3": "Flexible Learning Options",
+    "home.ourServices.courses.btn": "Know More About Us",
 
     "home.ourServices.programs.title": "Unlock Your Accounting Potential",
     "home.ourServices.programs.subtitle": "Explore our Cutting-edge Programs",
     "home.ourServices.programs.feature1": "Comprehensive Curriculum",
     "home.ourServices.programs.feature2": "Internship & Job Placement",
     "home.ourServices.programs.feature3": "Industry-standard Tools",
+    "home.ourServices.programs.btn": "Know More About Programs",
 
 
     "home.bookkeeping.title": "Expert Services In",
@@ -135,8 +138,7 @@ export const ui = {
 
     // accounting page
 
-    "accounting.hero.span": "Small business bookkeeping",
-    "accounting.hero.title": "Bookkeeping for up to 50% less",
+    "accounting.hero.title": "Accounting for up to 50% less",
     "accounting.hero.subtitle": "We have small business bookkeeping services to help you save time and money — with full-service package rates up to half off a typical accountant’s rates. Get started with a 30-minute meeting to be paired with your dedicated pro.",
 
     "accounting.service1.title": "Establishment of Internal Accounting for the Company",

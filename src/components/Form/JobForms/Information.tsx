@@ -80,7 +80,7 @@ export function Information({
       <div className="field-wrapper">
         <label>Job Code (optional)</label>
         <input
-          placeholder="Find it in facebook post"
+          placeholder="Get it from our facebook page"
           type="text"
           value={jobCode}
           onChange={(e) => updateFields({ jobCode: e.target.value })}
@@ -90,7 +90,6 @@ export function Information({
         <label>Job Title</label>
         <select
           required
-          defaultValue="select"
           value={jobTitle}
           onChange={(e) => updateFields({ jobTitle: e.target.value })}
         >
@@ -107,7 +106,6 @@ export function Information({
         <label>Where did you know about us</label>
         <select
           required
-          defaultValue="select"
           value={advertiser}
           onChange={(e) => updateFields({ advertiser: e.target.value })}
         >

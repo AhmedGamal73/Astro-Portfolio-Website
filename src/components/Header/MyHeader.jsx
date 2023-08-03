@@ -113,7 +113,6 @@ const MyHeader = (props) => {
             Log in
           </a>
           <a
-            target="_blank"
             href={`/${props.lang}/job-application`}
             className="btn-stroke-white"
             type="button"
