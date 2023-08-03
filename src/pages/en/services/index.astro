@@ -34,7 +34,7 @@ const t = useTranslations(lang);
           <Content1 tag="services" title="Our Services" />
 
           <a
-            href={`/${lang}/services/bookkeeping`}
+            href={`/${lang}/services/accounting`}
             style="text-decoration: none!important; color: black; cursor: pointer "
             class="col-md-4 col-sm-4"
           >
@@ -54,27 +54,7 @@ const t = useTranslations(lang);
             </div>
           </a>
 
-          <a
-            href="#"
-            style="text-decoration: none!important; color: black; cursor: pointer "
-            class="col-md-4 col-sm-4"
-          >
-            <div class="service-post">
-              <div class="service-content">
-                <div class="service-icon">
-                  <Icon name="audit-outlined" />
-                </div>
-                <!-- .s-icon -->
-                <h3 class="service-title">{t("services.audit.title")}</h3>
-                <p class="service-description">
-                  {t("services.audit.subtitle")}
-                </p>
-              </div>
-              <!-- service-content -->
-              <div class="service-hover"></div>
-            </div>
-          </a>
-
+          <!-- Taxes -->
           <a
             href={`/${lang}/services/taxes`}
             style="text-decoration: none!important; color: black; cursor: pointer "
@@ -95,7 +75,32 @@ const t = useTranslations(lang);
               <div class="service-hover"></div>
             </div>
           </a>
+          <!-- Taxes -->
 
+          <!-- Accounting -->
+          <a
+            href={`/${lang}/services/accounting`}
+            style="text-decoration: none!important; color: black; cursor: pointer "
+            class="col-md-4 col-sm-4"
+          >
+            <div class="service-post">
+              <div class="service-content">
+                <div class="service-icon">
+                  <Icon name="audit-outlined" />
+                </div>
+                <!-- .s-icon -->
+                <h3 class="service-title">{t("services.audit.title")}</h3>
+                <p class="service-description">
+                  {t("services.audit.subtitle")}
+                </p>
+              </div>
+              <!-- service-content -->
+              <div class="service-hover"></div>
+            </div>
+          </a>
+          <!-- Accounting -->
+
+          <!-- Career -->
           <a
             href={`/${lang}/career`}
             style="text-decoration: none!important; color: black; cursor: pointer "
@@ -114,7 +119,9 @@ const t = useTranslations(lang);
               <div class="service-hover"></div>
             </div>
           </a>
+          <!-- Career -->
 
+          <!-- Courses -->
           <a
             href="#"
             style="text-decoration: none!important; color: black; cursor: pointer "
@@ -135,7 +142,9 @@ const t = useTranslations(lang);
               <div class="service-hover"></div>
             </div>
           </a>
+          <!-- Courses -->
 
+          <!-- Programs -->
           <a
             href="#our-programes"
             style="text-decoration: none!important; color: black; cursor: pointer "
@@ -156,6 +165,7 @@ const t = useTranslations(lang);
               <div class="service-hover"></div>
             </div>
           </a>
+          <!-- Programs -->
         </div>
       </div>
     </div>
