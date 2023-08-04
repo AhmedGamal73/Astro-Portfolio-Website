@@ -28,8 +28,8 @@ export const ui = {
     "home.hero.consaltBtn": "Free consaltant now",
 
     "home.ourServices.tag": "Our Services",
-    "home.ourServices.title": "Our tax specialists are ready",
-    "home.ourServices.subtitle": "Streamline Your Tax Processes for Maximum Efficiency and Compliance.Our tax specialists are ready",
+    "home.ourServices.title": "Our Expert Team Ready to Propel Your Company's Growth!",
+    "home.ourServices.subtitle": "Fueling Your Company's Future: Our Accounting Team is the Catalyst for Your Unprecedented Growth!",
     "home.ourServices.btn": "See More",
 
     "home.ourServices.accounting.title": "Accounting Solutions",

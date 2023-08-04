@@ -15,6 +15,10 @@ body {
     line-height: 1.1;
     font-family: 'Poppins regular';
   }
+
+  h6,h5 {
+    color: var(--prim2)
+  }
   h6,h5, p, span  {
     font-family: "Poppins Light";
   }
