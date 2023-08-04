@@ -54,20 +54,18 @@
       padding: 12px;
       width: 80%;
       padding-inline-start: 3rem;
+      gap: 1rem;
     }
     .feature {
       display: flex;
       align-items: center;
       justify-content: start;
 
-      a {
+      p {
         text-align: start;
         color: var(--prim1);
-        transition: 300ms; 
-        &:hover {
-          margin-inline-end: -1.3rem;
-          color: var(--blue)
-        }
+        font-size: 1vw;
+        margin-bottom: 0;
       }
     }
 

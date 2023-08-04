@@ -15,6 +15,7 @@ export interface props {
   featureSort: string;
   newTab: string;
   bgc?: string;
+  display?: string;
   imgAlt: string;
 }
 
@@ -34,18 +35,18 @@ const { bgc = "var(--accent1)" } = Astro.props;
     <div style={{ flexdirection: p.featuresort }} class="feature-wrap">
       <div class="feature">
         <Icon name="approve" />
-        <a class="feature">{p.feature1}</a>
+        <p class="feature">{p.feature1}</p>
       </div>
       <div class="feature">
         <Icon name="approve" />
-        <a class="feature">{p.feature2}</a>
+        <p class="feature">{p.feature2}</p>
       </div>
       <div class="feature">
         <Icon name="approve" />
-        <a class="feature">{p.feature3}</a>
+        <p class="feature">{p.feature3}</p>
       </div>
     </div>
-    <div class="btn">
+    <div class="btn" style={{ display: p.display }}>
       <a class="btn-stroke-blue-heavy" href={p.btnSrc}>{p.btn}</a>
     </div>
   </div>

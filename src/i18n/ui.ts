@@ -111,19 +111,19 @@ export const ui = {
 
     "services.programs.title": "Our Programms",
     "services.programs.subtitle": "We Have Programms to Help Your Bussines",
-    "services.program1.title": "Dinner Mind",
+    "services.program1.title": "Food & Beverage POS",
     "services.program1.subtitle": "With the dinermind program, you can control everything large and small in your restaurant or cafe from the first accounts, inventory, stores, suppliers, pilots and customers",
     "services.program1.feature1": "Procurement system for used resources",
     "services.program1.feature2": "The tree of varieties is a section-main",
     "services.program1.feature3": "Registration of all components",
 
-    "services.program2.title": "Tracker ERP",
+    "services.program2.title": "ERP System",
     "services.program2.subtitle": "Complete management of the purchasing cycle within the organization, starting from registering an exchange request for items to find out what is available in stores",
     "services.program2.feature1": "Organize cash flow.",
     "services.program2.feature2": "Creation of the administrative structure",  
     "services.program2.feature3": "Meet the customer's requirements.",
 
-    "services.program3.title": "Trade",
+    "services.program3.title": "SHOPS POS",
     "services.program3.subtitle": "With the trade program you can control everything large and small in your trading shop from the first accounts, inventory, stores, suppliers, pilots and customers",
     "services.program3.feature1": "Accommodate both large and small trading shops.",
     "services.program3.feature2": "Handle the management of stores, suppliers, and customers.",

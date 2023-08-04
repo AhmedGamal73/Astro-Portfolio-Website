@@ -1,45 +1,20 @@
 import { useState, FC } from "react";
-import { Schedule } from "./Schedule";
 import { userDate } from "../../global/appoinmentStore";
 import "./../../styles/Modal.scss";
-import Information from "./Information";
+import ConsaltantForm from "../Form/ContactForms/ConsaltantForm";
 
-// First Step Address
-const Address = () => {
-  return (
-    <>
-      <h1>What's Your Address</h1>
-      <input
-        type="text"
-        id="government"
-        placeholder="Your Government"
-        required
-      />
-
-      <input type="text" id="city" placeholder="Your City" required />
-    </>
-  );
-};
-// First Step Address
-
-// Third Step Info
-
-// Third Step Info
-
-// Third Step Info
 const ThankYou = () => {
   return (
     <>
-      <h1>Thank You For Communicating With Us We Will Call In The Time</h1>
+      <h1> 🫶 Thank You For Communicating With Us We Will Call In The Time</h1>
     </>
   );
 };
-// Third Step Info
 
 type AppoinmentData = {
   government: String;
   city: String;
-  finrstName: String;
+  name: String;
   lastName: String;
   issue: String;
   phoneNumber: Number;
@@ -48,22 +23,16 @@ type AppoinmentData = {
 const INITIAL_DATA: AppoinmentData = {
   government: "",
   city: "",
-  finrstName: "",
+  name: "",
   lastName: "",
   issue: "",
   phoneNumber: 0,
 };
 
 export const Modal = ({ isOpen, onClose }) => {
-  const [data, setData] = useState(INITIAL_DATA);
   const [currentStep, setCurrentStep] = useState(0);
 
-  const content: JSX.Element[] = [
-    <Address />,
-    <Schedule />,
-    <Information />,
-    <ThankYou />,
-  ];
+  const content: JSX.Element[] = [<ConsaltantForm />, <ThankYou />];
 
   console.log(userDate);
 
@@ -104,7 +73,7 @@ export const Modal = ({ isOpen, onClose }) => {
             onClick={() => next()}
             className="btn-stroke-blue-heavy next-btn"
           >
-            {currentStep == content.length - 1 ? "Submit" : "Next"}
+            {currentStep == content.length - 1 ? "Close" : "Submit"}
           </button>
         )}
       </div>

@@ -187,6 +187,7 @@ const t = useTranslations(lang);
         feature3={t("services.program1.feature3")}
         btn="See All Features"
         newTab="_blanck"
+        display="none"
       />
       <Card
         img="/service/program2.png"
@@ -196,9 +197,9 @@ const t = useTranslations(lang);
         feature1={t("services.program2.feature1")}
         feature2={t("services.program2.feature2")}
         feature3={t("services.program2.feature3")}
-        btn="See All Features"
         bgc="var(--accent2)"
         newTab="_blanck"
+        display="none"
       />
       <Card
         size="60%"
@@ -212,6 +213,7 @@ const t = useTranslations(lang);
         btn="See All Features"
         newTab="_blanck"
         bgc="var(--accent1)"
+        display="none"
       />
     </div>
   </section>
@@ -398,6 +400,10 @@ const t = useTranslations(lang);
   }
   section.consaltant-container .left img {
     margin-bottom: 2rem;
+  }
+
+  .bottom a {
+    display: none !important;
   }
 
   @media (max-width: 768px) {
