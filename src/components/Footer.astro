@@ -61,7 +61,12 @@ const t = useTranslations(lang);
 
     <div class="footer-icons">
       <a><Icon name="linkedin" /></a>
-      <a href="tel:+20-1557144441"><Icon name="baseline-whatsapp" /></a>
+
+      <a target="_blank" href="https://wa.link/v0yr8e"
+        ><Icon name="baseline-whatsapp" /></a
+      >
+      <a href="tel:+20-1557144441"><Icon name="phone-outlined" /></a>
+
       <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY"
         ><Icon name="baseline-facebook" /></a
       >
@@ -276,10 +281,6 @@ const t = useTranslations(lang);
       margin-left: 0;
     }
 
-    .footer-distributed .footer-center {
-      gap: 2rem !important;
-    }
-
     [astro-icon] {
       padding: 0.2rem;
       background-color: var(--prim3);
@@ -289,6 +290,18 @@ const t = useTranslations(lang);
     }
     .footer-right p {
       display: none;
+    }
+
+    .footer-distributed .footer-center {
+      gap: 1rem !important;
+      display: flex;
+    }
+    .footer-distributed .footer-icons {
+      flex-direction: row;
+      padding-top: 2rem;
+      width: 90%;
+      justify-content: center;
+      gap: 1rem;
     }
   }
 </style>

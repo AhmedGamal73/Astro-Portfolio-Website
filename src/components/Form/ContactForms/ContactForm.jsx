@@ -1,10 +1,9 @@
-import '../../../styles/ContactForm.scss'
+import "../../../styles/ContactForm.scss";
 
 const ContactForm = () => {
-
   return (
     <>
-      <div >
+      <div>
         <form id="contact-form" method="post">
           <input
             type="text"
@@ -35,6 +34,12 @@ const ContactForm = () => {
             placeholder="Address"
             required
           />
+          <select required defaultValue="select" id="gender">
+            <option value="">Type of Message</option>
+            <option value="male">Suggestion</option>
+            <option value="fmale">Complain</option>
+            <option value="fmale">Consultation</option>
+          </select>
           <textarea
             placeholder="Your Message"
             id="message"
@@ -57,6 +62,6 @@ const ContactForm = () => {
       <div id="success-msg"></div>
     </>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;

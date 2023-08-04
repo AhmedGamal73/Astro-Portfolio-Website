@@ -1,72 +1,201 @@
 ---
 import { Layout } from "../../layouts";
-import ContentToggle from "../../components/ContentToggle";
+import ContactFrom from "../../components/Form/ContactForms/ContactForm";
+import IconTextCard from "../../components/IconTextCard.astro";
+import Icon from "astro-icon";
 ---
 
 <Layout title="Contact Us">
   <div class="contact-container">
     <div class="left-col">
-      <img src="https://images.pexels.com/photos/10303889/pexels-photo-10303889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div class="contact-info">
+        <div class="icon-text-box">
+          <span class="icon-icon-con">
+            <Icon name="person" />
+          </span>
+          <div class="icon-text-cont">
+            <h5>Chat to Us</h5>
+            <p>Our friendly team is here to help.</p>
+            <h6>info@businesspartners-eg.com</h6>
+          </div>
+        </div>
+
+        <div class="icon-text-box">
+          <span class="icon-icon-con">
+            <Icon name="person" />
+          </span>
+          <div class="icon-text-cont">
+            <h5>Office</h5>
+            <p>Come say hello in our office</p>
+            <h6>
+              شارع الجلاء وسط البلد برج التوحيد الدور العاشر Zagazig, Al Sharqia
+              Governorate, Egypt 055
+            </h6>
+          </div>
+        </div>
+
+        <div class="icon-text-box">
+          <span class="icon-icon-con">
+            <Icon name="person" />
+          </span>
+          <div class="icon-text-cont">
+            <h5>Phone</h5>
+            <p>Saturday to Thurasday from 9:00AM to 5:00PM</p>
+            <h6>(+20)-155-714-4441</h6>
+          </div>
+        </div>
+      </div>
+      <div class="contact-social-links">
+        <span class="icon-social-cont">
+          <a href="mailto:support@company.com"
+            ><Icon name="email-fast-outline" /></a
+          >
+        </span>
+        <span class="icon-social-cont">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/businesspartnersegy/?fbclid=IwAR2xnU-pjLzT441cD7ikd3y6L2kwdcVDdG3mqP5mdGsQ2pyuGNI8ZjBJnyA"
+            ><Icon name="instagram" /></a
+          >
+        </span>
+        <span class="icon-social-cont">
+          <a target="_blank" href="https://www.facebook.com/BusinessPartnersEGY"
+            ><Icon name="baseline-facebook" /></a
+          >
+        </span>
+        <span class="icon-social-cont">
+          <a target="_blank" href="https://wa.link/v0yr8e"
+            ><Icon name="baseline-whatsapp" /></a
+          >
+        </span>
+      </div>
     </div>
+
     <div class="right-col">
-      <ContentToggle client:load/>
+      <h3>👋 Hey We Here To Answer Any Question From You.</h3>
+      <ContactFrom />
     </div>
   </div>
 </Layout>
 
-
 <style>
+  /* icon-text-box */
+
   * {
     transition: all 0.3s ease-in-out;
   }
-  
+
   .contact-container {
     display: flex;
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background: var(--bg-color);
   }
-  
-  .left-col {
-    width: 50%;
+
+  .contact-container .left-col {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-content: space-between;
     position: relative;
-    min-height: 120vh;
-    background-size: cover;
+    min-height: 80vh;
+    background-color: white;
+    padding: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 6rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
-  
-  .left-col img {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    position: -webkit-sticky;
-    background-repeat: no-repeat;
-    top: 0;
+
+  .left-col .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6rem;
   }
-  
+
+  .contact-container .left-col .icon-text-box {
+    display: flex;
+    justify-content: start;
+    padding-inline-start: ;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  /* Social Links */
+  .left-col .contact-social-links {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .left-col .icon-social-cont [astro-icon] {
+    padding: 0.3rem !important;
+    background-color: var(--bg-color) !important;
+    border: 2px solid rgba(196, 196, 196, 0.567);
+    border-radius: 4px !important;
+    width: 27px !important;
+    height: 30px !important;
+    color: var(--prim2) !important;
+  }
+
+  .icon-social-cont {
+    cursor: pointer;
+  }
+
+  /* Social Links */
+
+  .left-col .icon-text-box .icon-text-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .icon-text-cont p {
+    color: var(--prim2);
+  }
+
+  .left-col .icon-text-box [astro-icon] {
+    padding: 0.3rem !important;
+    background-color: var(--bg-color) !important;
+    border: 2px solid var(--bgc);
+    border-radius: 4px !important;
+    width: 27px !important;
+    height: 30px !important;
+    color: var(--prim2) !important;
+  }
+
   .right-col {
-    background: var(--bg-color);
+    background: var(--blue-gradiant);
     width: 50%;
-    padding: 5rem 3.5rem;
+    padding: 3.5rem;
+    padding-top: 10rem;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
   }
 
+  .right-col form button {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     .contact-container {
       flex-direction: column;
-
     }
 
     .left-col {
-      display: none;
+      width: 80% !important;
+      padding: 2rem !important;
+      gap: 5rem;
     }
 
     .right-col {
       width: 100%;
-      padding: 0!important;
+      padding-inline: 0 !important;
+      padding-block: 5rem !important;
+      text-align: center;
     }
   }
 </style>

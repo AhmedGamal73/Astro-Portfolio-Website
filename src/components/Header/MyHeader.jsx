@@ -81,7 +81,7 @@ const MyHeader = (props) => {
             <li>
               <a href={`/${props.lang}/about`}>About</a>
             </li>
-            <li>
+          <li>
               <a href={`/${props.lang}/contact`}>Contact</a>
             </li>
             <li>

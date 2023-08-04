@@ -39,16 +39,25 @@
     position: relative;
     margin-top: 2rem;
     align-items: center;
+    button {
+      width: 100%;
+      font-size: 1.2vw;
+      padding-block: .5rem;
+    }
   }
 
   input, textarea, select  {
-    width: 90%;
+    width: 100%;
     display: block;
     font-weight: 500;
     background: var(--bg-color);
     padding: 0.5rem 0;
     margin-bottom: 1rem;
     outline: none;
+  }
+
+  select {
+    width: 108%;
   }
   
   input::placeholder, textarea::placeholder {
@@ -91,8 +100,12 @@
     p {
       font-size: 0.7rem;
     }
-    input, textarea, button {
+    input, textarea, button,select {
       font-size: 0.65rem;
+      width: 90%;
+    }
+    button {
+      font-size: 3vw!important;
     }
     .description {
       font-size: 0.3rem;
